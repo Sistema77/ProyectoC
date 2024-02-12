@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ProyectoCShar/1.0.0": {
+        "runtime": {
+          "ProyectoCShar.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProyectoCShar/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
