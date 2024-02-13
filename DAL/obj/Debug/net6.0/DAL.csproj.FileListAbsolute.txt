@@ -1,0 +1,14 @@
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\bin\Debug\net6.0\DAL.deps.json
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\bin\Debug\net6.0\DAL.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\bin\Debug\net6.0\DAL.pdb
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\refint\DAL.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.pdb
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\ref\DAL.dll

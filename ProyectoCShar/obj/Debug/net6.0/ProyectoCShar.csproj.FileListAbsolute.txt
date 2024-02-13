@@ -28,3 +28,17 @@ C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\obj\D
 C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\obj\Debug\net6.0\ProyectoCShar.pdb
 C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\obj\Debug\net6.0\ProyectoCShar.genruntimeconfig.cache
 C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\obj\Debug\net6.0\ref\ProyectoCShar.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\Humanizer.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\Npgsql.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\DAL.dll
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\bin\Debug\net6.0\DAL.pdb
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\obj\Debug\net6.0\ProyectoCShar.csproj.AssemblyReference.cache
+C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\ProyectoCShar\obj\Debug\net6.0\ProyectoCShar.csproj.CopyComplete
