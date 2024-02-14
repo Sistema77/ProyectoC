@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PilZhvYuaAMyDG87tGdz7UeFLy1CdC3wliPVx/Z/vHcPqedaw+yI1r9nt54iT/OiFwxPR3x30h73+08oTFvlJg==",
+  "dgSpecHash": "1TPrE5cVXfCE+mC7QPieswhZCbVPhJypHVkcsQC+r6PqB8drFjhoxypW5kq6hKpZN9gX8gPgIws6x0gv0g1XfA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Puesto20\\.nuget\\packages\\bootstrap\\5.3.2\\bootstrap.5.3.2.nupkg.sha512",
     "C:\\Users\\Puesto20\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Puesto20\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.27\\microsoft.entityframeworkcore.6.0.27.nupkg.sha512",
     "C:\\Users\\Puesto20\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.27\\microsoft.entityframeworkcore.abstractions.6.0.27.nupkg.sha512",

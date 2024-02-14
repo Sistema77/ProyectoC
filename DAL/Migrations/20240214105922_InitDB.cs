@@ -10,8 +10,15 @@ namespace DAL.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "schemabody");
+
+            migrationBuilder.EnsureSchema(
+                name: "schemausuario");
+
             migrationBuilder.CreateTable(
-                name: "usuarioDAO",
+                name: "Usuario",
+                schema: "schemausuario",
                 columns: table => new
                 {
                     id_usuario = table.Column<int>(type: "integer", nullable: false)
@@ -31,11 +38,12 @@ namespace DAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_usuarioDAO", x => x.id_usuario);
+                    table.PrimaryKey("PK_Usuario", x => x.id_usuario);
                 });
 
             migrationBuilder.CreateTable(
-                name: "cuentaDAO",
+                name: "Cuenta",
+                schema: "schemabody",
                 columns: table => new
                 {
                     id_cuenta = table.Column<int>(type: "integer", nullable: false)
@@ -48,17 +56,19 @@ namespace DAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_cuentaDAO", x => x.id_cuenta);
+                    table.PrimaryKey("PK_Cuenta", x => x.id_cuenta);
                     table.ForeignKey(
-                        name: "FK_cuentaDAO_usuarioDAO_id_usuario",
+                        name: "FK_Cuenta_Usuario_id_usuario",
                         column: x => x.id_usuario,
-                        principalTable: "usuarioDAO",
+                        principalSchema: "schemausuario",
+                        principalTable: "Usuario",
                         principalColumn: "id_usuario",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "creditoDAO",
+                name: "Credito",
+                schema: "schemabody",
                 columns: table => new
                 {
                     id_credito = table.Column<int>(type: "integer", nullable: false)
@@ -74,17 +84,19 @@ namespace DAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_creditoDAO", x => x.id_credito);
+                    table.PrimaryKey("PK_Credito", x => x.id_credito);
                     table.ForeignKey(
-                        name: "FK_creditoDAO_cuentaDAO_id_cuenta",
+                        name: "FK_Credito_Cuenta_id_cuenta",
                         column: x => x.id_cuenta,
-                        principalTable: "cuentaDAO",
+                        principalSchema: "schemabody",
+                        principalTable: "Cuenta",
                         principalColumn: "id_cuenta",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "transaccionDAO",
+                name: "Transaccion",
+                schema: "schemabody",
                 columns: table => new
                 {
                     id_transaccion = table.Column<int>(type: "integer", nullable: false)
@@ -97,44 +109,52 @@ namespace DAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_transaccionDAO", x => x.id_transaccion);
+                    table.PrimaryKey("PK_Transaccion", x => x.id_transaccion);
                     table.ForeignKey(
-                        name: "FK_transaccionDAO_cuentaDAO_id_cuenta",
+                        name: "FK_Transaccion_Cuenta_id_cuenta",
                         column: x => x.id_cuenta,
-                        principalTable: "cuentaDAO",
+                        principalSchema: "schemabody",
+                        principalTable: "Cuenta",
                         principalColumn: "id_cuenta",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_creditoDAO_id_cuenta",
-                table: "creditoDAO",
+                name: "IX_Credito_id_cuenta",
+                schema: "schemabody",
+                table: "Credito",
                 column: "id_cuenta");
 
             migrationBuilder.CreateIndex(
-                name: "IX_cuentaDAO_id_usuario",
-                table: "cuentaDAO",
+                name: "IX_Cuenta_id_usuario",
+                schema: "schemabody",
+                table: "Cuenta",
                 column: "id_usuario");
 
             migrationBuilder.CreateIndex(
-                name: "IX_transaccionDAO_id_cuenta",
-                table: "transaccionDAO",
+                name: "IX_Transaccion_id_cuenta",
+                schema: "schemabody",
+                table: "Transaccion",
                 column: "id_cuenta");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "creditoDAO");
+                name: "Credito",
+                schema: "schemabody");
 
             migrationBuilder.DropTable(
-                name: "transaccionDAO");
+                name: "Transaccion",
+                schema: "schemabody");
 
             migrationBuilder.DropTable(
-                name: "cuentaDAO");
+                name: "Cuenta",
+                schema: "schemabody");
 
             migrationBuilder.DropTable(
-                name: "usuarioDAO");
+                name: "Usuario",
+                schema: "schemausuario");
         }
     }
 }

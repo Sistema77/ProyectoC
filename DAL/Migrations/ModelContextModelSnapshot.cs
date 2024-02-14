@@ -60,7 +60,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("id_cuenta");
 
-                    b.ToTable("creditoDAO");
+                    b.ToTable("Credito", "schemabody");
                 });
 
             modelBuilder.Entity("DAL.DAO.CuentaDAO", b =>
@@ -91,7 +91,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("id_usuario");
 
-                    b.ToTable("cuentaDAO");
+                    b.ToTable("Cuenta", "schemabody");
                 });
 
             modelBuilder.Entity("DAL.DAO.TransaccionDAO", b =>
@@ -122,7 +122,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("id_cuenta");
 
-                    b.ToTable("transaccionDAO");
+                    b.ToTable("Transaccion", "schemabody");
                 });
 
             modelBuilder.Entity("DAL.DAO.UsuarioDAO", b =>
@@ -180,7 +180,7 @@ namespace DAL.Migrations
 
                     b.HasKey("id_usuario");
 
-                    b.ToTable("usuarioDAO");
+                    b.ToTable("Usuario", "schemausuario");
                 });
 
             modelBuilder.Entity("DAL.DAO.CreditoDAO", b =>

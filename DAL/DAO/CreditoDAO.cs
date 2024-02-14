@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.DAO
 {
-    [Table("Usuario", Schema = "schemabody")]
+    [Table("Credito", Schema = "schemabody")]
     public class CreditoDAO
     {
         [Key]
