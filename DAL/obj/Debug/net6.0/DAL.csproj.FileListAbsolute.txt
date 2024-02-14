@@ -12,3 +12,17 @@ C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.
 C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.pdb
 C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoCShar\DAL\obj\Debug\net6.0\ref\DAL.dll
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\bin\Debug\net6.0\DAL.deps.json
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\bin\Debug\net6.0\DAL.dll
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\bin\Debug\net6.0\DAL.pdb
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\DAL.dll
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\refint\DAL.dll
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\DAL.pdb
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\DAL\obj\Debug\net6.0\ref\DAL.dll

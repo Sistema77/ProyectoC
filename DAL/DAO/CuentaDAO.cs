@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.DAO
 {
+    [Table("Usuario", Schema = "schemabody")]
     public class CuentaDAO
     {
         [Key]
@@ -18,7 +19,7 @@ namespace DAL.DAO
         public string numero_cuenta { get; set; }
         public decimal saldo { get; set; }
 
-        [ForeignKey("id_user")]
+        [ForeignKey("id_usuario")]
         public virtual UsuarioDAO Usuario { get; set; }
         public virtual ICollection<CreditoDAO> Creditos { get; set; }
         public virtual ICollection<TransaccionDAO> Transacciones { get; set; }

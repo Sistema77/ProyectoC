@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.DAO
 {
+    [Table("Usuario", Schema = "schemabody")]
     public class TransaccionDAO
     {
         [Key]
@@ -15,10 +16,11 @@ namespace DAL.DAO
         public int id_transaccion { get; set; }
         public DateTime fch_hora { get; set; }
         public decimal cantidad_dinero { get; set; }
-        [ForeignKey("cuenta_envia")]
-        public virtual CuentaDAO CuentaEnvia { get; set; }
-        [ForeignKey("cuenta_recibe")]
-        public virtual CuentaDAO CuentaRecibe { get; set; }
+        public string TipoTransacion {  get; set; }
+        public long NumeroTrasaccion {  get; set; }
+
+        [ForeignKey("id_cuenta")]
+        public virtual CuentaDAO Cuenta { get; set; }
 
     }
 }
