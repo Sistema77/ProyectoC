@@ -9,8 +9,9 @@ namespace ProyectoCShar.Servicio
         {
             try
             {
+                ////////////////////////////////
                 Console.WriteLine("Envia Correo");
-                string urlDominio = "https://localhost:7142";
+                string urlDominio = "https://localhost:5071";
 
                 string EmailOrigen = "parafirebaseestudiar@gmail.com";
 
@@ -31,7 +32,7 @@ namespace ProyectoCShar.Servicio
                 smtpCliente.EnableSsl = true;
                 smtpCliente.UseDefaultCredentials = false;
                 smtpCliente.Port = 587;
-                smtpCliente.Credentials = new System.Net.NetworkCredential(EmailOrigen, "");
+                smtpCliente.Credentials = new System.Net.NetworkCredential(EmailOrigen, "kctpbonxybeipmqr");
 
                 smtpCliente.Send(mensajeDelCorreo);
 
@@ -56,7 +57,7 @@ namespace ProyectoCShar.Servicio
             try
             {
 
-                string urlDominio = "https://localhost:7142";
+                string urlDominio = "https://localhost:5071";
 
                 string EmailOrigen = "parafirebaseestudiar@gmail.com";
                 //Se crea la URL de recuperación con el token que se enviará al mail del user.
@@ -77,7 +78,7 @@ namespace ProyectoCShar.Servicio
                 smtpCliente.EnableSsl = true;
                 smtpCliente.UseDefaultCredentials = false;
                 smtpCliente.Port = 587;
-                smtpCliente.Credentials = new System.Net.NetworkCredential(EmailOrigen, "");
+                smtpCliente.Credentials = new System.Net.NetworkCredential(EmailOrigen, "kctpbonxybeipmqr");
 
                 smtpCliente.Send(mensajeDelCorreo);
 

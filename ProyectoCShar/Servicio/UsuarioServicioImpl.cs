@@ -96,7 +96,6 @@ namespace ProyectoCShar.Servicio
         {
             try
             {
-                
 
                 UsuarioDAO? usuarioExistente = _contexto.usuarioDAO.Where(u => u.token == token).FirstOrDefault();
 

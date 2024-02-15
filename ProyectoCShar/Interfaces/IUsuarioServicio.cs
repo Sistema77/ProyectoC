@@ -10,5 +10,7 @@ namespace ProyectoCShar.Interfaces
         public bool verificarCredenciales(String email, String password);
 
         public UsuarioDTO obtenerUsuarioPorEmail(string email);
+
+        public bool confirmarCuenta(string token);
     }
 }

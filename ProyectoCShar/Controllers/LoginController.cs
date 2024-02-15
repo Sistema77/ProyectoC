@@ -81,5 +81,35 @@ namespace ProyectoCShar.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("/auth/confirmar-cuenta")]
+        public IActionResult ConfirmarCuenta([FromQuery] string token)
+        {
+            try
+            {
+                Console.WriteLine("Entra en Confirmar Cuenta");
+
+                bool confirmacionExitosa = _usuarioServicio.confirmarCuenta(token);
+
+                if (confirmacionExitosa)
+                {
+                    ViewData["CuentaVerificada"] = "La dirección de correo ha sido confirmada correctamente";
+                }
+                else
+                {
+                    ViewData["yaEstabaVerificada"] = "El usuario ya estaba registrado y verificado";
+                }
+
+               
+                return View("~/Views/Home/login.cshtml");
+            }
+            catch (Exception e)
+            {
+                ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
+               
+                return View("~/Views/Home/login.cshtml");
+            }
+        }
+
     }
 }
