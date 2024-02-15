@@ -24,17 +24,12 @@ namespace ProyectoCShar.Servicio
         }
         public UsuarioDTO registrarUsuario(UsuarioDTO userDTO)
         {
-            Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////");
-            Console.WriteLine(userDTO.email);
             try
             {
-                Console.WriteLine("Entra en Registro");
                 var usuarioExistente = _contexto.usuarioDAO.FirstOrDefault(u => u.email == userDTO.email && !u.cuentaConfirmada);
                 
                 if (usuarioExistente != null)
                 {
-                    Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////");
-                    Console.WriteLine("Entra como Email no Confirmado");
                     userDTO.email = "EmailNoConfirmado";
                     return userDTO;
                 }
@@ -43,28 +38,17 @@ namespace ProyectoCShar.Servicio
 
                 if (emailExistente != null)
                 {
-                    Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////");
-                    Console.WriteLine("Entra como Email Repetido");
                     userDTO.email = "EmailRepetido";
                     return userDTO;
                 }
                 
                 userDTO.password = _servicioEncriptar.Encriptar(userDTO.password);
-                Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////");
-                Console.WriteLine("Pone COntraseña" + userDTO.password);
                 UsuarioDAO usuarioDao = _pasaraDAO.usuarioToDao(userDTO);
                 
                 usuarioDao.fch_alta = DateTime.Now.ToUniversalTime();
-                Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////");
-                Console.WriteLine("Pone Fecha Actial" + usuarioDao.fch_alta);
-               
                 usuarioDao.tipo_usuario = "ROLE_USER";
-                Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////");
-                Console.WriteLine("Asigna Rol" + usuarioDao.tipo_usuario);
                 string token = generarToken();
                 usuarioDao.token = token;
-                Console.WriteLine("/////////////////////////////////////////////////////////////////////////////////");
-                Console.WriteLine("Asigna TOKEN" + usuarioDao.token);
 
                 _contexto.usuarioDAO.Add(usuarioDao);
                 _contexto.SaveChanges();
@@ -91,7 +75,6 @@ namespace ProyectoCShar.Servicio
             {
                 using (RandomNumberGenerator rng = new RNGCryptoServiceProvider())
                 {
-                    Console.WriteLine("Genera TOKEN");
                     byte[] tokenBytes = new byte[30];
                     rng.GetBytes(tokenBytes);
 
@@ -143,5 +126,56 @@ namespace ProyectoCShar.Servicio
                 return false;
             }
         }
+
+        public bool verificarCredenciales(string emailUsuario, string claveUsuario)
+        {
+            try
+            {
+ 
+                string contraseñaEncriptada = _servicioEncriptar.Encriptar(claveUsuario);
+                UsuarioDAO? usuarioExistente = _contexto.usuarioDAO.FirstOrDefault(u => u.email == emailUsuario && u.password == contraseñaEncriptada);
+                
+                if (usuarioExistente == null)
+                {
+                   //log
+                }
+                if (!usuarioExistente.cuentaConfirmada)
+                {
+                    
+                    return false;
+                }
+
+                return true;
+            }
+            catch (ArgumentNullException e)
+            {
+               
+                return false;
+            }
+
+        }
+
+        public UsuarioDTO obtenerUsuarioPorEmail(string email)
+        {
+            try
+            {
+
+                UsuarioDTO usuarioDTO = new UsuarioDTO();
+                var usuario = _contexto.usuarioDAO.FirstOrDefault(u => u.email == email);
+
+                if (usuario != null)
+                {
+                    usuarioDTO = _pasaraDTO.usuarioToDto(usuario);
+                }
+
+                return usuarioDTO;
+            }
+            catch (ArgumentNullException e)
+            {
+                // Console.WriteLine("[Error UsuarioServicioImpl - obtenerUsuarioPorEmail()] Error al obtener el usuario por email: " + e.Message);
+                return null;
+            }
+        }
+
     }
 }

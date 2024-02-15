@@ -34,8 +34,6 @@ namespace ProyectoCShar.Controllers
         public IActionResult RegistrarPost(UsuarioDTO usuarioDTO)
         {
 
-            Console.WriteLine("UUSUARIO: " + usuarioDTO.email);
-
             try
             {
                 Console.WriteLine(usuarioDTO);
