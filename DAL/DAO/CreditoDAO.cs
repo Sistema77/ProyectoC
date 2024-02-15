@@ -17,8 +17,8 @@ namespace DAL.DAO
         public decimal cantidad_prestamo { get; set; }
         public decimal cuota_mensual { get; set; }
         public string estado_prestamo { get; set; }
-        public DateTime fch_final { get; set; }
-        public DateTime fch_inicio { get; set; }
+        public DateTime? fch_final { get; set; }
+        public DateTime? fch_inicio { get; set; }
         public decimal tasa_interes { get; set; }
         public string tipo_prestamo { get; set; }
         [ForeignKey("id_cuenta")]

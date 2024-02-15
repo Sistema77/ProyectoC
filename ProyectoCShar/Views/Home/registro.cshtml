@@ -3,28 +3,28 @@
 
 <div class="container py-4">
     <div class="registro cardPrincipal">
-        <form class="custom-form" method="post" asp-for="UsuarioDTO">
+        <form class="custom-form" asp-action="RegistrarPost" method="post" asp-for="usuarioDTO">
             <h2 class="text-center mb-5"><i class="bi bi-person-vcard-fill" style="color: #1f3c85;"> Registro nuevo usuario</i></h2>
-            <input type="hidden" name="returnUrl" value="@TempData["ReturnUrl"]" />
+            <input type="hidden" name="returnUrl" value="@TempData["ReturnUrl"]" /> 
             <div class="mb-3">
                 <label for="Email" class="form-label textoPrincipal">Correo Electrónico</label>
-                <input type="email" id="Email" name="Email" class="form-control" placeholder="Escribe tu correo electrónico" required />
+               <input type="email" id="Email" name="Email" class="form-control" placeholder="Escribe tu correo electrónico" required /> 
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label textoPrincipal">Contraseña</label>
-                <input type="password" id="password" name="password" class="form-control" placeholder="Escribe tu contraseña" required oninput="revisarContraseña()" />
+                <input type="password" id="password" name="password" class="form-control" placeholder="Escribe tu contraseña" required oninput="revisarContraseña()" /> 
             </div>
             <div class="mensajeContrasenya mt-4 text-center " id="mensajeContrasenya"></div>
             <hr class="border border-primary border-2 opacity-80 mt-5 mb-5">
 
             <div class="mb-3">
-                <label for="dni" class="form-label textoPrincipal">Nombre</label>
-                <input type="text" id="dni" name="dni" class="form-control" placeholder="Escribe tu nombre" required />
+                <label for="dni" class="form-label textoPrincipal">DNI</label>
+                 <input type="text" id="dni" name="dni" class="form-control" placeholder="Escribe tu nombre" required /> 
             </div>
 
             <div class="mb-3">
                 <label for="name" class="form-label textoPrincipal">Nombre</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Escribe tu nombre" required />
+                <input type="text" id="name" name="name" class="form-control" placeholder="Escribe tu nombre" required /> 
             </div>
             <div class="mb-3">
                 <label for="last_name" class="form-label textoPrincipal">Apellidos</label>
@@ -32,8 +32,8 @@
             </div>
             <div class="mb-3">
                 <label for="tlf" class="form-label textoPrincipal">Teléfono</label>
-                <input type="tel" id="tlf" name="tlf" class="form-control" placeholder="Escribe tu número de teléfono" required />
+                <input type="tel" id="tlf" name="tlf" class="form-control" placeholder="Escribe tu número de teléfono" required /> 
             </div>
             <button type="submit" id="btnRegistro" class="btn btn-primary mt-5"><i class="bi bi-person-add fs-5"> Crear cuenta</i></button>
-        </form>
+        </form> 
     </div>

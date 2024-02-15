@@ -1,10 +1,11 @@
 ﻿using DAL.DAO;
 using ProyectoCShar.DTOs;
+using ProyectoCShar.Interfaces;
 using System.Text;
 
 namespace ProyectoCShar.Servicio
 {
-    public class PasarADTOImpl
+    public class PasarADTOImpl : IPasarADTO
     {
         public UsuarioDTO usuarioToDto(UsuarioDAO UsuarioDAO)
         {

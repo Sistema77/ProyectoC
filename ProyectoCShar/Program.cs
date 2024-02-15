@@ -1,5 +1,9 @@
 using DAL;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using ProyectoCShar.Interfaces;
+using ProyectoCShar.Servicio;
+using ProyectoCShar.Util;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,13 +13,29 @@ builder.Services.AddControllersWithViews();
 
 // Inyectar el String de la conexion a la base de datos y crear la conexion
 builder.Services.AddDbContext<ModelContext>(options =>
-    {
-        options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
-    }
-);
+     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IUsuarioServicio, UsuarioServicioImpl>();
+builder.Services.AddScoped<IServicioEncriptar, ServicioEncriptarImpl>();
+builder.Services.AddScoped<IPasarADAO, PasarADAOImpl>();
+builder.Services.AddScoped<IPasarADTO, PasarADTOImpl>();
+builder.Services.AddScoped<IServicioEmail, ServicioEmailImpl>();
+
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+})
+.AddCookie(options =>
+{
+    options.LoginPath = "/auth/login";
+});
 ///////////////////////////
 
-    var app = builder.Build();
+var app = builder.Build();
 
 //////////////////////
 

@@ -40,10 +40,10 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("fch_final")
+                    b.Property<DateTime?>("fch_final")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("fch_inicio")
+                    b.Property<DateTime?>("fch_inicio")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("id_cuenta")
@@ -74,7 +74,7 @@ namespace DAL.Migrations
                     b.Property<bool>("con_nomina")
                         .HasColumnType("boolean");
 
-                    b.Property<DateTime>("fch_apertura")
+                    b.Property<DateTime?>("fch_apertura")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("id_usuario")
@@ -112,7 +112,7 @@ namespace DAL.Migrations
                     b.Property<decimal>("cantidad_dinero")
                         .HasColumnType("numeric");
 
-                    b.Property<DateTime>("fch_hora")
+                    b.Property<DateTime?>("fch_hora")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("id_cuenta")
@@ -129,56 +129,69 @@ namespace DAL.Migrations
                 {
                     b.Property<int>("id_usuario")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("id_usuario");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id_usuario"));
 
                     b.Property<bool>("cuentaConfirmada")
-                        .HasColumnType("boolean");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("cuentaConfirmada");
 
                     b.Property<string>("dni")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("dni");
 
                     b.Property<string>("email")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("email");
 
-                    b.Property<DateTime>("expiracion_token")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<DateTime?>("expiracion_token")
+                        .HasColumnType("timestamp(6) without time zone")
+                        .HasColumnName("expiracion_token");
 
-                    b.Property<DateTime>("fch_alta")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<DateTime?>("fch_alta")
+                        .HasColumnType("timestamp(6) without time zone")
+                        .HasColumnName("fch_alta");
 
-                    b.Property<string>("foto")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<byte[]>("foto")
+                        .HasColumnType("bytea")
+                        .HasColumnName("foto");
 
                     b.Property<string>("last_name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("last_name");
 
                     b.Property<string>("name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("name");
 
                     b.Property<string>("password")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("password");
 
                     b.Property<string>("tipo_usuario")
-                        .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("tipo_usuario");
 
                     b.Property<string>("tlf")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("tlf");
 
                     b.Property<string>("token")
-                        .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("text")
+                        .HasColumnName("token");
 
-                    b.HasKey("id_usuario");
+                    b.HasKey("id_usuario")
+                        .HasName("usuarios_pkey");
 
                     b.ToTable("Usuario", "schemausuario");
                 });

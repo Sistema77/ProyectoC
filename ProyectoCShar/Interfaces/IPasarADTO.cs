@@ -5,6 +5,6 @@ namespace ProyectoCShar.Interfaces
 {
     public interface IPasarADTO
     {
-        public UsuarioDTO usuarioToDao(UsuarioDAO usuarioDAO);
+        public UsuarioDTO usuarioToDto(UsuarioDAO usuarioDAO);
     }
 }

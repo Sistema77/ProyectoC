@@ -1,25 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProyectoCShar.DTOs;
+using ProyectoCShar.Interfaces;
 
 namespace ProyectoCShar.Controllers
 {
-    public class LoginRegitroController : Controller
+    public class RegistroController : Controller
     {
-        [HttpGet]
-        [Route("/auth/login")]
-        public IActionResult Login()
+        private readonly IUsuarioServicio _usuarioServicio;
+            
+        public RegistroController(IUsuarioServicio usuarioServicio)
         {
-            try
-            {
-                UsuarioDTO usuarioDTO = new UsuarioDTO();
-                return View("~/Views/Home/login.cshtml", usuarioDTO);
-
-            }
-            catch (Exception e)
-            {
-                ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
-                return View("~/Views/Home/login.cshtml");
-            }
+            _usuarioServicio = usuarioServicio;
         }
 
         [HttpGet]
@@ -30,12 +21,10 @@ namespace ProyectoCShar.Controllers
             {
                 UsuarioDTO usuarioDTO = new UsuarioDTO();
                 return View("~/Views/Home/registro.cshtml", usuarioDTO);
-
             }
             catch (Exception e)
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
-                
                 return View("~/Views/Home/registro.cshtml");
             }
         }
@@ -44,22 +33,26 @@ namespace ProyectoCShar.Controllers
         [Route("/auth/crear-cuenta")]
         public IActionResult RegistrarPost(UsuarioDTO usuarioDTO)
         {
+
+            Console.WriteLine("UUSUARIO: " + usuarioDTO.email);
+
             try
             {
+                Console.WriteLine(usuarioDTO);
 
-                UsuarioDTO nuevoUsuario = usuarioServicio.registrarUsuario(usuarioDTO);
+                UsuarioDTO nuevoUsuario = _usuarioServicio.registrarUsuario(usuarioDTO);
 
-                if (nuevoUsuario.EmailUsuario == "EmailNoConfirmado")
+                if (nuevoUsuario.email == "EmailNoConfirmado")
                 {
                     ViewData["EmailNoConfirmado"] = "Ya existe un usuario registrado con ese email pero con la cuenta sin verificar";
-                    EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método RegistrarGet() de la clase RegistroController. " + ViewData["EmailNoConfirmado"]);
+
                     return View("~/Views/Home/login.cshtml");
 
                 }
-                else if (nuevoUsuario.EmailUsuario == "EmailRepetido")
+                else if (nuevoUsuario.email == "EmailRepetido")
                 {
                     ViewData["EmailRepetido"] = "Ya existe un usuario con ese email registrado en el sistema";
-                   
+
                     return View("~/Views/Home/registro.cshtml");
                 }
                 else
@@ -67,14 +60,13 @@ namespace ProyectoCShar.Controllers
                     ViewData["MensajeRegistroExitoso"] = "Registro del nuevo usuario OK";
                     return View("~/Views/Home/login.cshtml");
                 }
-
-
             }
             catch (Exception e)
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
                 return View("~/Views/Home/registro.cshtml");
             }
+            
         }
     }
 }

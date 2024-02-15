@@ -2,11 +2,11 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ProyectoCShar.Servicio
+namespace ProyectoCShar.Util
 {
-    public class EncriptarImpl : IEncriptar
+    public class ServicioEncriptarImpl : IServicioEncriptar
     {
-        public string encriptar(string password)
+        public string Encriptar(string password)
         {
             try
             {
