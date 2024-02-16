@@ -7,7 +7,7 @@
         public string email { get; set; }
         public DateTime? expiracion_token { get; set; }
         public DateTime? fch_alta { get; set; }
-        public byte[] foto { get; set; }
+        public byte[]? foto { get; set; }
         public string last_name { get; set; }
         public string name { get; set; }
         public string password { get; set; }

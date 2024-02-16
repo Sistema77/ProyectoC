@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProyectoCShar.DTOs;
 using ProyectoCShar.Interfaces;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProyectoCShar.Controllers
 {
@@ -41,9 +42,6 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
-                Console.WriteLine("777777777777777");
-                Console.WriteLine(usuarioDTO.email + " " + usuarioDTO.password);
-                Console.WriteLine("777777777777777");
                 bool credencialesValidas = _usuarioServicio.verificarCredenciales(usuarioDTO.email, usuarioDTO.password);
 
                 if (credencialesValidas)
@@ -67,7 +65,13 @@ namespace ProyectoCShar.Controllers
                     // establece una cookie en el navegador con los datos del usuario antes mencionados y se mantiene en el contexto.
                     HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identidadDeReclamaciones));
 
-                    return RedirectToAction("Dashboard", "Login");
+                    //return RedirectToAction("Dashboard", "Login");
+
+                    UsuarioDTO user = _usuarioServicio.obtenerUsuarioPorEmail(User.Identity.Name);
+                    ViewBag.UsuarioDTO = user;
+
+                    return View("~/Views/Home/dashboard.cshtml");
+
                 }
                 else
                 {
@@ -114,5 +118,17 @@ namespace ProyectoCShar.Controllers
             }
         }
 
+        [Authorize]
+        [HttpGet]
+        [Route("/privada/dashboard")]
+        public IActionResult Dashboard()
+        {
+            Console.WriteLine("22222222222222222222222222222222222");
+            Console.WriteLine(User.Identity.Name);
+            UsuarioDTO u = _usuarioServicio.obtenerUsuarioPorEmail(User.Identity.Name);
+            ViewBag.UsuarioDTO = u;
+            
+            return View("~/Views/Home/dashboard.cshtml");
+        }
     }
 }

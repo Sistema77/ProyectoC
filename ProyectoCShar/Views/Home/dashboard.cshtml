@@ -1,0 +1,72 @@
+﻿﻿@{
+    ViewData["Title"] = "dashboard";
+    var noAdmin = ViewData["noAdmin"] as string;
+    var noSePuedeEliminar = ViewData["noSePuedeEliminar"] as string;
+    var error = ViewData["error"] as string;
+}
+<div class="container py-4">
+    <div class="row cardPrincipal">
+        <div class="col">
+            <h3 class="text-center mt-5 subtituloSecundario3">Dashboard</h3>
+            <hr class="border border-primary border-2 opacity-55 mb-5 mt-4">
+            <h4 class="text-light text-center subtituloSecundario">Bienvenido/a <span>@User.Identity.Name</span></h4>
+            <div class="text-center mt-4">
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @if (User.IsInRole("ROLE_ADMIN"))
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 dashboardCard border border-dark cardPrincipal">
+                    <i class="bi bi-person-fill-gear fs-1 ms-4" style="color: #1f3c85"></i>
+                    <div class="card-body">
+                        <h5 class="card-title">Administrarción</h5>
+                        <p class="card-text">Acceda para gestionar usuarios.</p>
+                        <a href="/privada/administracion-usuarios" class="btn buttonPrincipal"><i class="bi bi-arrow-right-circle"> Acceder</i></a>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-md-4">
+            <div class="card mb-4 dashboardCard border border-dark cardPrincipal">
+                <i class="bi bi-bicycle fs-1 ms-3" style="color: #1f3c85"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Mis motos</h5>
+                    <p class="card-text">Acceda para gestionar sus motos.</p>
+                    <a asp-controller="MisMotos" asp-action="MostrarMisMotos" class="btn buttonPrincipal"><i class="bi bi-arrow-right-circle"> Acceder</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 dashboardCard border border-dark cardPrincipal">
+                <i class="bi bi-people-fill fs-1 ms-3" style="color: #1f3c85"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Quedadas</h5>
+                    <p class="card-text">Asistir o planificar una nueva quedada.</p>
+                    <a asp-controller="Privada" asp-action="Quedadas" class="btn buttonPrincipal"><i class="bi bi-arrow-right-circle"> Acceder</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (!string.IsNullOrEmpty(noAdmin))
+    {
+        <script>
+            mostrarNotificacion("¡Recurso prohibido!", "No tiene los permisos suficientes para acceder a este recurso", 'error');
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(noSePuedeEliminar))
+    {
+        <script>
+            mostrarNotificacion("¡Error!", "No se puede eliminar a un usuario con permisos de administrador", 'error');
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(error))
+    {
+        <script>
+            mostrarNotificacion("¡Error!", "Ocurrio un error no esperado, intentelo de nuevo", 'error');
+        </script>
+    }
+
+</div>

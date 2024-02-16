@@ -132,14 +132,11 @@ namespace ProyectoCShar.Servicio
         {
             try
             {
-                Console.WriteLine("/////////////////");
-                Console.WriteLine("Verifica Credenciales");
+               
                 string contraseñaEncriptada = _servicioEncriptar.Encriptar(claveUsuario);
-                Console.WriteLine("/////////////////");
-                Console.WriteLine("Encripta");
+
                 UsuarioDAO? usuarioExistente = _contexto.usuarioDAO.FirstOrDefault(u => u.email == emailUsuario && u.password == contraseñaEncriptada);
-                Console.WriteLine("/////////////////");
-                Console.WriteLine("Busca Usuario");
+
                 Console.WriteLine(usuarioExistente.email);
                 if (usuarioExistente == null)
                 {
@@ -165,17 +162,13 @@ namespace ProyectoCShar.Servicio
         {
             try
             {
-                Console.WriteLine("/////////////////");
-                Console.WriteLine("obtenerUsuarioPorEmail");
+
                 UsuarioDTO usuarioDTO = new UsuarioDTO();
                 var usuario = _contexto.usuarioDAO.FirstOrDefault(u => u.email == email);
-                Console.WriteLine("/////////////////");
-                Console.WriteLine("Buscar Email");
+
                 if (usuario != null)
                 {
                     usuarioDTO = _pasaraDTO.usuarioToDto(usuario);
-                    Console.WriteLine("/////////////////");
-                    Console.WriteLine("Pasar a DTO");
                 }
 
                 return usuarioDTO;
