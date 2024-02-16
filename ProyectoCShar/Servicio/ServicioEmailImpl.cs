@@ -11,7 +11,7 @@ namespace ProyectoCShar.Servicio
             {
                 ////////////////////////////////
                 Console.WriteLine("Envia Correo");
-                string urlDominio = "https://localhost:5071";
+                string urlDominio = "http://localhost:5071";
 
                 string EmailOrigen = "parafirebaseestudiar@gmail.com";
 
@@ -57,7 +57,7 @@ namespace ProyectoCShar.Servicio
             try
             {
 
-                string urlDominio = "https://localhost:5071";
+                string urlDominio = "http://localhost:5071";
 
                 string EmailOrigen = "parafirebaseestudiar@gmail.com";
                 //Se crea la URL de recuperación con el token que se enviará al mail del user.

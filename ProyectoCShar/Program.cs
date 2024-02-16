@@ -15,6 +15,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ModelContext>(options =>
      options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicioImpl>();
 builder.Services.AddScoped<IServicioEncriptar, ServicioEncriptarImpl>();
 builder.Services.AddScoped<IPasarADAO, PasarADAOImpl>();

@@ -21,6 +21,7 @@ namespace ProyectoCShar.Servicio
                 usuarioDao.id_usuario = usuarioDTO.id_usuario;
                 usuarioDao.name = usuarioDTO.name;
                 usuarioDao.dni = usuarioDTO.dni;
+                usuarioDao.expiracion_token = usuarioDTO.expiracion_token;
                 usuarioDao.last_name = usuarioDTO.last_name;
                 usuarioDao.email = usuarioDTO.email;
                 usuarioDao.password = usuarioDTO.password;

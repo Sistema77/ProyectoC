@@ -41,6 +41,9 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
+                Console.WriteLine("777777777777777");
+                Console.WriteLine(usuarioDTO.email + " " + usuarioDTO.password);
+                Console.WriteLine("777777777777777");
                 bool credencialesValidas = _usuarioServicio.verificarCredenciales(usuarioDTO.email, usuarioDTO.password);
 
                 if (credencialesValidas)
