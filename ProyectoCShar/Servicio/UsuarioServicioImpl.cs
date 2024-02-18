@@ -139,7 +139,8 @@ namespace ProyectoCShar.Servicio
 
                 if (usuarioExistente == null)
                 {
-                   //log
+                    //log
+                    return false;
                 }
                 if (!usuarioExistente.cuentaConfirmada)
                 {

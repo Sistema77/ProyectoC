@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using ProyectoCShar.Interfaces;
 using ProyectoCShar.Servicio;
 using ProyectoCShar.Util;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,7 @@ builder.Services.AddAuthentication(options =>
 .AddCookie(options =>
 {
     options.LoginPath = "/auth/login";
+    options.AccessDeniedPath = "/auth/AccessDenied";
 });
 ///////////////////////////
 
@@ -55,11 +57,15 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",

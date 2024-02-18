@@ -38,7 +38,7 @@ namespace ProyectoCShar.Controllers
 
         [HttpPost]
         [Route("/auth/iniciar-sesion")]
-        public IActionResult ProcesarInicioSesion(UsuarioDTO usuarioDTO)
+        public async Task<IActionResult> ProcesarInicioSesionAsync(UsuarioDTO usuarioDTO)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace ProyectoCShar.Controllers
                     var identidadDeReclamaciones = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
                     // establece una cookie en el navegador con los datos del usuario antes mencionados y se mantiene en el contexto.
-                    HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identidadDeReclamaciones));
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identidadDeReclamaciones));
 
                     //return RedirectToAction("Dashboard", "Login");
 
