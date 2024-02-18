@@ -70,7 +70,7 @@ namespace ProyectoCShar.Servicio
                 //Asignamos el nombre de usuario que tendrá el cuerpo del mail y el URL de recuperación con el token al HTML.
                 htmlContent = String.Format(htmlContent, nombreUsuario, urlDeRecuperacion);
 
-                MailMessage mensajeDelCorreo = new MailMessage(EmailOrigen, emailDestino, "RESTABLECER CONTRASEÑA BIKERCONNECT", htmlContent);
+                MailMessage mensajeDelCorreo = new MailMessage(EmailOrigen, emailDestino, "RESTABLECER CONTRASEÑA RoBank", htmlContent);
 
                 mensajeDelCorreo.IsBodyHtml = true;
 

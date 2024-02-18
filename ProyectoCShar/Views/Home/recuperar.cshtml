@@ -1,0 +1,21 @@
+﻿@model ProyectoCShar.DTOs.UsuarioDTO
+@{
+    ViewData["Title"] = "recuperar";
+}
+
+<div class="container py-4">
+    <div class="recuperar cardPrincipal">
+        <form class="custom-form" asp-action="Recuperar" asp-controller="Auth" method="post">
+            <h2 class="text-center mb-5"><i class="bi bi-asterisk" style="color: #1f3c85;"><i class="bi bi-asterisk"></i><i class="bi bi-asterisk"></i><i class="bi bi-asterisk"></i> Restablezca su contraseña</i></h2>
+            <input type="hidden" asp-for="token" />
+            <div class="mb-3">
+                <label for="password" class="form-label textoPrincipal">Contraseña</label>
+                <input type="password" name="password" class="form-control" oninput="revisarContraseña()" id="password" placeholder="Introduzca su nueva contraseña" required autofocus />
+            </div>
+            <div class="mensajeContrasenya text-center" id="mensajeContrasenya"></div>
+            <div class="text-right mt-3">
+                <button type="submit" id="btnRegistro" class="btn btn-primary"><i class="bi bi-asterisk"><i class="bi bi-asterisk"></i><i class="bi bi-asterisk"></i><i class="bi bi-asterisk"></i> Restablecer</i></button>
+            </div>
+        </form>
+    </div>
+</div>

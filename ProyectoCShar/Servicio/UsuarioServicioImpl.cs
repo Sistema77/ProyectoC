@@ -137,7 +137,6 @@ namespace ProyectoCShar.Servicio
 
                 UsuarioDAO? usuarioExistente = _contexto.usuarioDAO.FirstOrDefault(u => u.email == emailUsuario && u.password == contraseñaEncriptada);
 
-                Console.WriteLine(usuarioExistente.email);
                 if (usuarioExistente == null)
                 {
                    //log
@@ -180,5 +179,105 @@ namespace ProyectoCShar.Servicio
             }
         }
 
+        public bool iniciarProcesoRecuperacion(string emailUsuario)
+        {
+            try
+            {
+                UsuarioDAO? usuarioExistente = _contexto.usuarioDAO.FirstOrDefault(u => u.email == emailUsuario);
+
+                if (usuarioExistente != null)
+                {
+                    // Generar el token y establecer la fecha de expiración
+                    string token = generarToken();
+                    DateTime fechaExpiracion = DateTime.Now.AddMinutes(1);
+
+                    // Actualizar el usuario con el nuevo token y la fecha de expiración
+                    usuarioExistente.token = token;
+                    usuarioExistente.expiracion_token = fechaExpiracion;
+
+                    // Actualizar el usuario en la base de datos
+                    _contexto.usuarioDAO.Update(usuarioExistente);
+                    _contexto.SaveChanges();
+
+                    // Enviar el correo de recuperación
+                    string nombreUsuario = usuarioExistente.name;
+                    _servicioEmail.enviarEmailRecuperacion(emailUsuario, nombreUsuario, token);
+
+                    return true;
+                }
+                else
+                {
+                    //Log
+                    return false;
+                }
+            }
+            catch (DbUpdateException dbe)
+            {
+                Console.WriteLine("[Error UsuarioServicioImpl - iniciarProcesoRecuperacion()] Error de persistencia al actualizar la bbdd: " + dbe.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("[Error UsuarioServicioImpl - iniciarProcesoRecuperacion()] Error al iniciar el proceso de recuperación: " + ex.Message);
+                return false;
+            }
+        }
+
+        public UsuarioDTO obtenerUsuarioPorToken(string token)
+        {
+            try
+            {
+                
+                UsuarioDAO? usuarioExistente = _contexto.usuarioDAO.FirstOrDefault(u => u.token == token);
+
+                if (usuarioExistente != null)
+                {
+                    UsuarioDTO usuario = _pasaraDTO.usuarioToDto(usuarioExistente);
+                    
+                    return usuario;
+                }
+                else
+                {
+                   //LOG
+                    return null;
+                }
+            }
+            catch (ArgumentNullException e)
+            {
+               
+                return null;
+            }
+        }
+
+        public bool modificarContraseñaConToken(UsuarioDTO usuario)
+        {
+            try
+            {
+
+                UsuarioDAO? usuarioExistente = _contexto.usuarioDAO.FirstOrDefault(u => u.token == usuario.token);
+
+                if (usuarioExistente != null)
+                {
+                    string nuevaContraseña = _servicioEncriptar.Encriptar(usuario.password);
+                    usuarioExistente.password = nuevaContraseña;
+                    usuarioExistente.token = null; // Se establece como null para invalidar el token ya consumido al cambiar la contraseña
+                    _contexto.usuarioDAO.Update(usuarioExistente);
+                    _contexto.SaveChanges();
+
+                    
+                    return true;
+                }
+            }
+            catch (DbUpdateException dbe)
+            {
+                //Log
+            }
+            catch (ArgumentNullException e)
+            {
+                //Log
+                return false;
+            }
+            return false;
+        }
     }
 }

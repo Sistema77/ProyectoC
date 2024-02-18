@@ -12,5 +12,11 @@ namespace ProyectoCShar.Interfaces
         public UsuarioDTO obtenerUsuarioPorEmail(string email);
 
         public bool confirmarCuenta(string token);
+
+        public UsuarioDTO obtenerUsuarioPorToken(string token);
+
+        public bool modificarContraseñaConToken(UsuarioDTO usuario);
+
+        public bool iniciarProcesoRecuperacion(string emailUsuario);
     }
 }
