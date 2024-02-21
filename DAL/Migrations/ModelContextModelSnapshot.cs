@@ -22,13 +22,16 @@ namespace DAL.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("DAL.DAO.CreditoDAO", b =>
+            modelBuilder.Entity("CreditoDAO", b =>
                 {
-                    b.Property<int>("id_credito")
+                    b.Property<long>("id_credito")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id_credito"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("id_credito"));
+
+                    b.Property<long>("Cuentaid_cuenta")
+                        .HasColumnType("bigint");
 
                     b.Property<decimal>("cantidad_prestamo")
                         .HasColumnType("numeric");
@@ -41,13 +44,13 @@ namespace DAL.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("fch_final")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<DateTime?>("fch_inicio")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
-                    b.Property<int>("id_cuenta")
-                        .HasColumnType("integer");
+                    b.Property<long>("id_cuenta")
+                        .HasColumnType("bigint");
 
                     b.Property<decimal>("tasa_interes")
                         .HasColumnType("numeric");
@@ -58,27 +61,27 @@ namespace DAL.Migrations
 
                     b.HasKey("id_credito");
 
-                    b.HasIndex("id_cuenta");
+                    b.HasIndex("Cuentaid_cuenta");
 
-                    b.ToTable("Credito", "schemabody");
+                    b.ToTable("creditoDAO");
                 });
 
             modelBuilder.Entity("DAL.DAO.CuentaDAO", b =>
                 {
-                    b.Property<int>("id_cuenta")
+                    b.Property<long>("id_cuenta")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id_cuenta"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("id_cuenta"));
 
                     b.Property<bool>("con_nomina")
                         .HasColumnType("boolean");
 
                     b.Property<DateTime?>("fch_apertura")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
-                    b.Property<int>("id_usuario")
-                        .HasColumnType("integer");
+                    b.Property<long>("id_usuario")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("numero_cuenta")
                         .IsRequired()
@@ -96,11 +99,14 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.DAO.TransaccionDAO", b =>
                 {
-                    b.Property<int>("id_transaccion")
+                    b.Property<long>("id_transaccion")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id_transaccion"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("id_transaccion"));
+
+                    b.Property<long>("Cuentaid_cuenta")
+                        .HasColumnType("bigint");
 
                     b.Property<long>("NumeroTrasaccion")
                         .HasColumnType("bigint");
@@ -113,94 +119,78 @@ namespace DAL.Migrations
                         .HasColumnType("numeric");
 
                     b.Property<DateTime?>("fch_hora")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
-                    b.Property<int>("id_cuenta")
-                        .HasColumnType("integer");
+                    b.Property<long>("id_cuenta")
+                        .HasColumnType("bigint");
 
                     b.HasKey("id_transaccion");
 
-                    b.HasIndex("id_cuenta");
+                    b.HasIndex("Cuentaid_cuenta");
 
                     b.ToTable("Transaccion", "schemabody");
                 });
 
             modelBuilder.Entity("DAL.DAO.UsuarioDAO", b =>
                 {
-                    b.Property<int>("id_usuario")
+                    b.Property<long>("id_usuario")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id_usuario");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id_usuario"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("id_usuario"));
 
                     b.Property<bool>("cuentaConfirmada")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(false)
-                        .HasColumnName("cuentaConfirmada");
+                        .HasColumnType("boolean");
 
                     b.Property<string>("dni")
                         .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("dni");
+                        .HasColumnType("text");
 
                     b.Property<string>("email")
                         .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("email");
+                        .HasColumnType("text");
 
                     b.Property<DateTime?>("expiracion_token")
-                        .HasColumnType("timestamp(6) without time zone")
-                        .HasColumnName("expiracion_token");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<DateTime?>("fch_alta")
-                        .HasColumnType("timestamp(6) without time zone")
-                        .HasColumnName("fch_alta");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<byte[]>("foto")
-                        .HasColumnType("bytea")
-                        .HasColumnName("foto");
+                        .HasColumnType("bytea");
 
                     b.Property<string>("last_name")
                         .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("last_name");
+                        .HasColumnType("text");
 
                     b.Property<string>("name")
                         .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("name");
+                        .HasColumnType("text");
 
                     b.Property<string>("password")
                         .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("password");
+                        .HasColumnType("text");
 
                     b.Property<string>("tipo_usuario")
-                        .HasColumnType("text")
-                        .HasColumnName("tipo_usuario");
+                        .HasColumnType("text");
 
                     b.Property<string>("tlf")
                         .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("tlf");
+                        .HasColumnType("text");
 
                     b.Property<string>("token")
-                        .HasColumnType("text")
-                        .HasColumnName("token");
+                        .HasColumnType("text");
 
-                    b.HasKey("id_usuario")
-                        .HasName("usuarios_pkey");
+                    b.HasKey("id_usuario");
 
                     b.ToTable("Usuario", "schemausuario");
                 });
 
-            modelBuilder.Entity("DAL.DAO.CreditoDAO", b =>
+            modelBuilder.Entity("CreditoDAO", b =>
                 {
                     b.HasOne("DAL.DAO.CuentaDAO", "Cuenta")
                         .WithMany("Creditos")
-                        .HasForeignKey("id_cuenta")
+                        .HasForeignKey("Cuentaid_cuenta")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -222,7 +212,7 @@ namespace DAL.Migrations
                 {
                     b.HasOne("DAL.DAO.CuentaDAO", "Cuenta")
                         .WithMany("Transacciones")
-                        .HasForeignKey("id_cuenta")
+                        .HasForeignKey("Cuentaid_cuenta")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

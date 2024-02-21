@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DAL.DAO;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DAL.DAO
+public class CreditoDAO
 {
-    [Table("Credito", Schema = "schemabody")]
-    public class CreditoDAO
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id_credito { get; set; }
-        public decimal cantidad_prestamo { get; set; }
-        public decimal cuota_mensual { get; set; }
-        public string estado_prestamo { get; set; }
-        public DateTime? fch_final { get; set; }
-        public DateTime? fch_inicio { get; set; }
-        public decimal tasa_interes { get; set; }
-        public string tipo_prestamo { get; set; }
-        [ForeignKey("id_cuenta")]
-        public virtual CuentaDAO Cuenta { get; set; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public long id_credito { get; set; }
+    public decimal cantidad_prestamo { get; set; }
+    public decimal cuota_mensual { get; set; }
+    public string estado_prestamo { get; set; }
+    public DateTime? fch_final { get; set; }
+    public DateTime? fch_inicio { get; set; }
+    public decimal tasa_interes { get; set; }
+    public string tipo_prestamo { get; set; }
 
-    }
+    // Cambia el tipo de datos de la propiedad id_cuenta a long
+    [ForeignKey("id_cuenta")]
+    public long id_cuenta { get; set; }
+
+    public virtual CuentaDAO Cuenta { get; set; }
 }

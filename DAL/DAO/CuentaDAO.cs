@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL.DAO
 {
@@ -13,7 +8,7 @@ namespace DAL.DAO
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id_cuenta { get; set; }
+        public long id_cuenta { get; set; }
         public bool con_nomina { get; set; }
         public DateTime? fch_apertura { get; set; }
         public string numero_cuenta { get; set; }
@@ -24,5 +19,9 @@ namespace DAL.DAO
         public virtual ICollection<CreditoDAO> Creditos { get; set; }
         public virtual ICollection<TransaccionDAO> Transacciones { get; set; }
 
+        // Cambiar el tipo de datos de la propiedad Usuario
+        // para que coincida con el tipo de datos de la clave primaria en UsuarioDAO
+        [ForeignKey("id_usuario")]
+        public long id_usuario { get; set; }
     }
 }

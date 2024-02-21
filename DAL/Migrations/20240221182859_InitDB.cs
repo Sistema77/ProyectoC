@@ -21,12 +21,12 @@ namespace DAL.Migrations
                 schema: "schemausuario",
                 columns: table => new
                 {
-                    id_usuario = table.Column<int>(type: "integer", nullable: false)
+                    id_usuario = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     dni = table.Column<string>(type: "text", nullable: false),
                     email = table.Column<string>(type: "text", nullable: false),
-                    expiracion_token = table.Column<DateTime>(type: "timestamp(6) without time zone", nullable: true),
-                    fch_alta = table.Column<DateTime>(type: "timestamp(6) without time zone", nullable: true),
+                    expiracion_token = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    fch_alta = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
                     foto = table.Column<byte[]>(type: "bytea", nullable: true),
                     last_name = table.Column<string>(type: "text", nullable: false),
                     name = table.Column<string>(type: "text", nullable: false),
@@ -34,11 +34,11 @@ namespace DAL.Migrations
                     tipo_usuario = table.Column<string>(type: "text", nullable: true),
                     tlf = table.Column<string>(type: "text", nullable: false),
                     token = table.Column<string>(type: "text", nullable: true),
-                    cuentaConfirmada = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false)
+                    cuentaConfirmada = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("usuarios_pkey", x => x.id_usuario);
+                    table.PrimaryKey("PK_Usuario", x => x.id_usuario);
                 });
 
             migrationBuilder.CreateTable(
@@ -46,13 +46,13 @@ namespace DAL.Migrations
                 schema: "schemabody",
                 columns: table => new
                 {
-                    id_cuenta = table.Column<int>(type: "integer", nullable: false)
+                    id_cuenta = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     con_nomina = table.Column<bool>(type: "boolean", nullable: false),
-                    fch_apertura = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    fch_apertura = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
                     numero_cuenta = table.Column<string>(type: "text", nullable: false),
                     saldo = table.Column<decimal>(type: "numeric", nullable: false),
-                    id_usuario = table.Column<int>(type: "integer", nullable: false)
+                    id_usuario = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -67,27 +67,27 @@ namespace DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Credito",
-                schema: "schemabody",
+                name: "creditoDAO",
                 columns: table => new
                 {
-                    id_credito = table.Column<int>(type: "integer", nullable: false)
+                    id_credito = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     cantidad_prestamo = table.Column<decimal>(type: "numeric", nullable: false),
                     cuota_mensual = table.Column<decimal>(type: "numeric", nullable: false),
                     estado_prestamo = table.Column<string>(type: "text", nullable: false),
-                    fch_final = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    fch_inicio = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    fch_final = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
+                    fch_inicio = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
                     tasa_interes = table.Column<decimal>(type: "numeric", nullable: false),
                     tipo_prestamo = table.Column<string>(type: "text", nullable: false),
-                    id_cuenta = table.Column<int>(type: "integer", nullable: false)
+                    id_cuenta = table.Column<long>(type: "bigint", nullable: false),
+                    Cuentaid_cuenta = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Credito", x => x.id_credito);
+                    table.PrimaryKey("PK_creditoDAO", x => x.id_credito);
                     table.ForeignKey(
-                        name: "FK_Credito_Cuenta_id_cuenta",
-                        column: x => x.id_cuenta,
+                        name: "FK_creditoDAO_Cuenta_Cuentaid_cuenta",
+                        column: x => x.Cuentaid_cuenta,
                         principalSchema: "schemabody",
                         principalTable: "Cuenta",
                         principalColumn: "id_cuenta",
@@ -99,20 +99,21 @@ namespace DAL.Migrations
                 schema: "schemabody",
                 columns: table => new
                 {
-                    id_transaccion = table.Column<int>(type: "integer", nullable: false)
+                    id_transaccion = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    fch_hora = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    fch_hora = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
                     cantidad_dinero = table.Column<decimal>(type: "numeric", nullable: false),
                     TipoTransacion = table.Column<string>(type: "text", nullable: false),
                     NumeroTrasaccion = table.Column<long>(type: "bigint", nullable: false),
-                    id_cuenta = table.Column<int>(type: "integer", nullable: false)
+                    id_cuenta = table.Column<long>(type: "bigint", nullable: false),
+                    Cuentaid_cuenta = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Transaccion", x => x.id_transaccion);
                     table.ForeignKey(
-                        name: "FK_Transaccion_Cuenta_id_cuenta",
-                        column: x => x.id_cuenta,
+                        name: "FK_Transaccion_Cuenta_Cuentaid_cuenta",
+                        column: x => x.Cuentaid_cuenta,
                         principalSchema: "schemabody",
                         principalTable: "Cuenta",
                         principalColumn: "id_cuenta",
@@ -120,10 +121,9 @@ namespace DAL.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Credito_id_cuenta",
-                schema: "schemabody",
-                table: "Credito",
-                column: "id_cuenta");
+                name: "IX_creditoDAO_Cuentaid_cuenta",
+                table: "creditoDAO",
+                column: "Cuentaid_cuenta");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Cuenta_id_usuario",
@@ -132,17 +132,16 @@ namespace DAL.Migrations
                 column: "id_usuario");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Transaccion_id_cuenta",
+                name: "IX_Transaccion_Cuentaid_cuenta",
                 schema: "schemabody",
                 table: "Transaccion",
-                column: "id_cuenta");
+                column: "Cuentaid_cuenta");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Credito",
-                schema: "schemabody");
+                name: "creditoDAO");
 
             migrationBuilder.DropTable(
                 name: "Transaccion",
