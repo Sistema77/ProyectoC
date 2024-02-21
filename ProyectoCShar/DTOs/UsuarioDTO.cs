@@ -2,7 +2,7 @@
 {
     public class UsuarioDTO
     {
-        public int id_usuario { get; set; }
+        public long id_usuario { get; set; }
         public string dni { get; set; }
         public string email { get; set; }
         public DateTime? expiracion_token { get; set; }

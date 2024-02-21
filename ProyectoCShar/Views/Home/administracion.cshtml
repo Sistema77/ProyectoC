@@ -9,8 +9,6 @@
     var noTePuedesEliminar = ViewData["noTePuedesEliminar"] as string;
     var usuarioNoEncontrado = ViewData["usuarioNoEncontrado"] as string;
     var error = ViewData["error"] as string;
-
-
 }
 
 <div class="container py-4">
@@ -49,12 +47,14 @@
                                 <td class="text-center">@(usuario.cuentaConfirmada ? "Sí" : "No")</td>
                                 <td>@(usuario.tipo_usuario == "ROLE_USER" ? "USER" : "ADMIN")</td>
                                 <td asp:authorize="User.IsInRole('ROLE_ADMIN')">
-                                    <a class="btn buttonPrincipal" asp-action="MostrarFormularioEdicion" asp-controller="AdministracionUsuarios" asp-route-id="@usuario.id_usuario">
+                                    <a class="btn buttonPrincipal" asp-action="MostrarFormularioEdicion" 
+                                    asp-controller="AdministracionController" asp-route-id="@usuario.id_usuario">
                                         <i class="bi bi-pencil-square"> Editar</i>
                                     </a>
                                 </td>
-                                <td asp:authorize="User.IsInRole('ROLE_ADMIN')">
-                                    <a class="btn btn-danger" data-id="@usuario.id_usuario" asp-action="EliminarUsuario" asp-controller="AdministracionUsuarios">
+                                <td asp-authorize="User.IsInRole('ROLE_ADMIN')">
+                                    <a class="btn btn-danger" asp-route-id="@usuario.id_usuario"
+                                       asp-action="EliminarUsuario" asp-controller="AdministracionController">
                                         <i class="bi bi-trash"> Eliminar</i>
                                     </a>
                                 </td>
@@ -71,56 +71,56 @@
     </div>
     @if (!string.IsNullOrEmpty(usuarioNoEncontrado))
     {
-        <script>
-            mostrarNotificacion("¡No se encontraron usuarios!", "No hay ninguna coincidencia en ningún email con la busqueda introducida", 'info');
-        </script>
+        <div class="alert alert-danger" role="alert">
+            ¡No se encontraron usuarios!, No hay ninguna coincidencia en ningún email con la busqueda introducida
+        </div>
     }
     @if (!string.IsNullOrEmpty(mensajeRegistroExitoso))
     {
-        <script>
-            mostrarNotificacion("¡El usuario fue registrado!", "Para usar la cuenta tiene que confirmar su cuenta de correo electrónico.", 'info');
-        </script>
+        <div class="alert alert-danger" role="alert">
+            El usuario fue registrado!, Para usar la cuenta tiene que confirmar su cuenta de correo electrónico
+        </div>
     }
     @if (!string.IsNullOrEmpty(noSePuedeEliminar))
     {
-        <script>
-            mostrarNotificacion("¡Error!", "No se puede eliminar al ultimo usuario con permisos de administrador", 'error');
-        </script>
+        <div class="alert alert-danger" role="alert">
+            ¡Error!, No se puede eliminar al ultimo usuario con permisos de administrador
+        </div>
     }
     @if (!string.IsNullOrEmpty(elUsuarioTieneQuedadas))
     {
-        <script>
-            mostrarNotificacion("¡No se puede eliminar!", "El usuario tiene quedadas pendientes en las que participa y para poder eliminarlo antes debe salir de todas ellas", 'info');
-        </script>
+        <div class="alert alert-danger" role="alert">
+            ¡No se puede eliminar!, El usuario tiene quedadas pendientes en las que participa y para poder eliminarlo antes debe salir de todas ellas
+        </div>
     }
     @if (!string.IsNullOrEmpty(eliminacionCorrecta))
     {
-        <script>
-            mostrarNotificacion("¡Usuario eliminado!", "El usuario ha sido eliminado correctamente", 'success');
-        </script>
+        <div class="alert alert-danger" role="alert">
+            ¡Usuario eliminado!, El usuario ha sido eliminado correctamente
+        </div>
     }
     @if (!string.IsNullOrEmpty(cuentaNoVerificada))
     {
-        <script>
-            mostrarNotificacion("¡Email registrado pero sin verificar!", "Para que pueda usar la cuenta, antes debe confirmar su cuenta de correo electrónico", 'error');
-        </script>
+        <div class="alert alert-danger" role="alert">
+            ¡Email registrado pero sin verificar!, Para que pueda usar la cuenta, antes debe confirmar su cuenta de correo electrónico
+        </div>
     }
     @if (!string.IsNullOrEmpty(EdicionCorrecta))
     {
-        <script>
-            mostrarNotificacion("¡Cambios guardados!", "El usuario ha sido modificado", 'info');
-        </script>
+        <div class="alert alert-danger" role="alert">
+            ¡Cambios guardados!, El usuario ha sido modificado
+        </div>
     }
     @if (!string.IsNullOrEmpty(noTePuedesEliminar))
     {
-        <script>
-            mostrarNotificacion("¡No puede eliminarse a sí mismo!", "Debe ser otro administrador quien realice esta acción", 'info');
-        </script>
+        <div class="alert alert-danger" role="alert">
+            ¡No puede eliminarse a sí mismo!, Debe ser otro administrador quien realice esta acción
+        </div>
     }
     @if (!string.IsNullOrEmpty(error))
     {
-        <script>
-            mostrarNotificacion("¡Error!", "Ocurrio un error no esperado, intentelo de nuevo", 'error');
-        </script>
+        <div class="alert alert-danger" role="alert">
+            ¡Error!, Ocurrio un error no esperado, intentelo de nuevo
+        </div>
     }
 </div>

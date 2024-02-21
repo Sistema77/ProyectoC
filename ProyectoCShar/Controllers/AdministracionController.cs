@@ -17,7 +17,7 @@ namespace ProyectoCShar.Controllers
         [Authorize(Roles = "ROLE_ADMIN")]
         [HttpGet]
         [Route("/privada/eliminar-usuario/{id}")]
-        public IActionResult EliminarUsuario(long id)
+        public IActionResult eliminarUsuario(long id)
         {
             try
             {
