@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "23uD9w8xBc2lhzEJJPLzjuh1mA3/NwNcAQyj3zIwGGhWSVz6Cnpp3UqdLEkDN8NCrwBx1Ejzw/emd3wBd892xQ==",
+  "dgSpecHash": "71fvw6m0A1REQukCwnnFXXhIEIDes/OcPZ1lHzEjc+jWT+nKIzhMrXO6daI6kb5YRiSsHyEGqHUE5BOxnxZRwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoC\\clone\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
+  "projectFilePath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Puesto20\\.nuget\\packages\\bootstrap\\5.3.2\\bootstrap.5.3.2.nupkg.sha512",
     "C:\\Users\\Puesto20\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

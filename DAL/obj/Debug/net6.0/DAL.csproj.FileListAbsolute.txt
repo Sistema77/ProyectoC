@@ -54,3 +54,17 @@ C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\clone\ProyectoC\DAL\obj\Debug\net6
 C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\clone\ProyectoC\DAL\obj\Debug\net6.0\DAL.pdb
 C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\clone\ProyectoC\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 C:\Users\Puesto20\Desktop\ProyectoC\ProyectoC\clone\ProyectoC\DAL\obj\Debug\net6.0\ref\DAL.dll
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\bin\Debug\net6.0\DAL.deps.json
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\bin\Debug\net6.0\DAL.dll
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\bin\Debug\net6.0\DAL.pdb
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\DAL.dll
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\refint\DAL.dll
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\DAL.pdb
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+C:\Users\Puesto20\Desktop\ProyectoC\DAL\obj\Debug\net6.0\ref\DAL.dll

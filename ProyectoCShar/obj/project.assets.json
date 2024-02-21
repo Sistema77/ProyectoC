@@ -11476,11 +11476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoC\\clone\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
+      "projectUniqueName": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
       "projectName": "ProyectoCShar",
-      "projectPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoC\\clone\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
+      "projectPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
       "packagesPath": "C:\\Users\\Puesto20\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoC\\clone\\ProyectoC\\ProyectoCShar\\obj\\",
+      "outputPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoCShar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Puesto20\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11497,8 +11497,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoC\\clone\\ProyectoC\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoC\\clone\\ProyectoC\\DAL\\DAL.csproj"
+            "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\DAL\\DAL.csproj"
             }
           }
         }

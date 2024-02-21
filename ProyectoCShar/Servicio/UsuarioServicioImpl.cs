@@ -1,5 +1,6 @@
 ﻿using DAL;
 using DAL.DAO;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProyectoCShar.DTOs;
 using ProyectoCShar.Interfaces;
@@ -279,6 +280,67 @@ namespace ProyectoCShar.Servicio
                 return false;
             }
             return false;
+        }
+
+        public void eliminar(long id)
+        {
+            try
+            {
+                UsuarioDAO usuario = _contexto.usuarioDAO.Find(id);
+                if (usuario != null)
+                {
+                    _contexto.usuarioDAO.Remove(usuario);
+                    _contexto.SaveChanges();
+                }
+            }
+            catch (DbUpdateException dbe)
+            {
+                // Log
+            }
+        }
+
+        public UsuarioDTO buscarPorId(long id)
+        {
+            try
+            {
+               
+
+                UsuarioDAO? usuario = _contexto.usuarioDAO.FirstOrDefault(u => u.id_usuario == id);
+                if (usuario != null)
+                {
+                    return _pasaraDTO.usuarioToDto(usuario);
+                }
+            }
+            catch (ArgumentException iae)
+            {
+               //Log
+            }
+            return null;
+        }
+
+        public List<UsuarioDTO> obtenerTodosLosUsuarios()
+        {
+            return _pasaraDTO.listaUsuarioToDto(_contexto.usuarioDAO.ToList());
+        }
+        public int contarUsuariosPorRol(string rol)
+        {
+            return _contexto.usuarioDAO.Count(u => u.tipo_usuario == rol);
+        }
+        public List<UsuarioDTO> buscarPorCoincidenciaEnEmail(string palabra)
+        {
+            try
+            {
+                List<UsuarioDAO> usuarios = _contexto.usuarioDAO.Where(u => u.email.Contains(palabra)).ToList();
+                if (usuarios != null)
+                {
+                    return _pasaraDTO.listaUsuarioToDto(usuarios);
+                }
+            }
+            catch (Exception e)
+            {
+                //Log
+            }
+            return null;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DAL.DAO;
+using Microsoft.AspNetCore.Mvc;
 using ProyectoCShar.DTOs;
 
 namespace ProyectoCShar.Interfaces
@@ -18,5 +19,16 @@ namespace ProyectoCShar.Interfaces
         public bool modificarContraseñaConToken(UsuarioDTO usuario);
 
         public bool iniciarProcesoRecuperacion(string emailUsuario);
+
+        public List<UsuarioDTO> obtenerTodosLosUsuarios();
+
+        public UsuarioDTO buscarPorId(long id);
+        
+        public int contarUsuariosPorRol(string rol);
+        
+        public void eliminar(long id);
+        
+        public List<UsuarioDTO> buscarPorCoincidenciaEnEmail(string palabra);
+
     }
 }

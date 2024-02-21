@@ -11,7 +11,6 @@ namespace ProyectoCShar.Servicio
         {
             try
             {
-
                 UsuarioDTO dto = new UsuarioDTO();
 
                 dto.name = UsuarioDAO.name;
@@ -37,6 +36,25 @@ namespace ProyectoCShar.Servicio
             {
                 return null;
             }
+        }
+
+        public List<UsuarioDTO> listaUsuarioToDto(List<UsuarioDAO> listaUsuario)
+        {
+            try
+            {
+                List<UsuarioDTO> listaDto = new List<UsuarioDTO>();
+                foreach (UsuarioDAO u in listaUsuario)
+                {
+                    listaDto.Add(usuarioToDto(u));
+                }
+                
+                return listaDto;
+            }
+            catch (Exception e)
+            {
+                //Log
+            }
+            return null;
         }
     }
 }
