@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using ProyectoCShar.Interfaces;
+using ProyectoCShar.Util;
 using System.Net.Mail;
 
 namespace ProyectoCShar.Servicio
@@ -40,16 +41,16 @@ namespace ProyectoCShar.Servicio
 
                 smtpCliente.Dispose();
 
-                //_logger.LogInformation("Mensaje enviado");
+                Logs.log("Mensaje enviado");
 
             }
             catch (IOException ioe)
             {
-                //_logger.LogError("A ocurrido un error de entrada o salida");
+                Logs.log("A ocurrido un error de entrada o salida");
             }
             catch (SmtpException se)
             {
-                //_logger.LogError("A avida un error al envio del mensaje SMTP");
+                Logs.log("A avida un error al envio del mensaje SMTP");
             }
 
         }
@@ -86,16 +87,16 @@ namespace ProyectoCShar.Servicio
 
                 smtpCliente.Dispose();
 
-                //_logger.LogInformation("Mensaje enviado");
+                Logs.log("Mensaje enviado");
 
             }
             catch (IOException ioe)
             {
-                //_logger.LogError("A ocurrido un error de entrada o salida");
+                Logs.log("A ocurrido un error de entrada o salida");
             }
             catch (SmtpException se)
             {
-                //_logger.LogError("A avida un error al envio del mensaje SMTP");
+                Logs.log("A avida un error al envio del mensaje SMTP");
             }
 
         }

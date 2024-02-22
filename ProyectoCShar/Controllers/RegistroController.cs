@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProyectoCShar.DTOs;
 using ProyectoCShar.Interfaces;
+using ProyectoCShar.Util;
 
 namespace ProyectoCShar.Controllers
 {
@@ -50,7 +51,7 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["EmailNoConfirmado"] = "Ya existe un usuario registrado con ese email pero con la cuenta sin verificar";
 
-                    //_logger.LogError("Ya existe un usuario registrado con ese email pero con la cuenta sin verificar");
+                    Logs.log("Ya existe un usuario registrado con ese email pero con la cuenta sin verificar");
 
                     return View("~/Views/Home/login.cshtml");
 
@@ -59,7 +60,7 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["EmailRepetido"] = "Ya existe un usuario con ese email registrado en el sistema";
 
-                    //_logger.LogError("Ya existe un usuario con ese email registrado en el sistema");
+                    Logs.log("Ya existe un usuario con ese email registrado en el sistema");
 
                     return View("~/Views/Home/registro.cshtml");
                 }
@@ -67,7 +68,7 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["MensajeRegistroExitoso"] = "Registro del nuevo usuario OK";
 
-                    //_logger.LogInformation("Registro del nuevo usuario OK");
+                    Logs.log("Registro del nuevo usuario OK");
 
                     return View("~/Views/Home/login.cshtml");
                 }
@@ -76,7 +77,7 @@ namespace ProyectoCShar.Controllers
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
 
-                //_logger.LogError("Error al procesar la solicitud");
+                Logs.log("Error al procesar la solicitud");
 
                 return View("~/Views/Home/registro.cshtml");
             }

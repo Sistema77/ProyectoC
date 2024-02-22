@@ -1,6 +1,7 @@
 ﻿using DAL.DAO;
 using ProyectoCShar.DTOs;
 using ProyectoCShar.Interfaces;
+using ProyectoCShar.Util;
 
 namespace ProyectoCShar.Servicio
 {
@@ -29,7 +30,7 @@ namespace ProyectoCShar.Servicio
             }
             catch (Exception e)
             {
-                //_logger.LogError("Error a pasar de DTO a DAO");
+                Logs.log("Error a pasar de DTO a DAO");
 
                 return null;
             }

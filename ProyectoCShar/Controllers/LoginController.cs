@@ -6,6 +6,7 @@ using ProyectoCShar.Interfaces;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using System;
+using ProyectoCShar.Util;
 
 namespace ProyectoCShar.Controllers
 {
@@ -31,7 +32,7 @@ namespace ProyectoCShar.Controllers
             }
             catch (Exception e)
             {
-                //_logger.LogError("Error al procesar la solicitud");
+                Logs.log("Error al procesar la solicitud");
 
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
                 return View("~/Views/Home/login.cshtml");
@@ -72,7 +73,7 @@ namespace ProyectoCShar.Controllers
                     UsuarioDTO user = _usuarioServicio.obtenerUsuarioPorEmail(User.Identity.Name);
                     ViewBag.UsuarioDTO = user;
 
-                    //_logger.LogInformation("Usuario " + User.Identity.Name + " Autentificado");
+                    Logs.log("Usuario " + User.Identity.Name + " Autentificado");
                     
                     // Redirigir al dashboard
                     return View("~/Views/Home/dashboard.cshtml");
@@ -81,8 +82,8 @@ namespace ProyectoCShar.Controllers
                 {
                     // Si las credenciales no son válidas, mostrar mensaje de error
                     ViewData["MensajeErrorInicioSesion"] = "Credenciales inválidas o cuenta no confirmada. Inténtelo de nuevo.";
-                    
-                    //_logger.LogError("Error, Credenciales inválidas o cuenta no confirmada");
+
+                    Logs.log("Error, Credenciales inválidas o cuenta no confirmada");
 
                     return View("~/Views/Home/login.cshtml");
                 }
@@ -91,8 +92,8 @@ namespace ProyectoCShar.Controllers
             {
                 
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
-                
-                //_logger.LogError("Error al procesar la solicitud");
+
+                Logs.log("Error al procesar la solicitud");
                
                 return View("~/Views/Home/login.cshtml");
             }
@@ -114,12 +115,12 @@ namespace ProyectoCShar.Controllers
                 if (confirmacionExitosa)
                 {
                     ViewData["CuentaVerificada"] = "La dirección de correo ha sido confirmada correctamente";
-                    //_logger.LogInformation("La dirección de correo ha sido confirmada correctamente");
+                    Logs.log("La dirección de correo ha sido confirmada correctamente");
                 }
                 else
                 {
                     ViewData["yaEstabaVerificada"] = "El usuario ya estaba registrado y verificado";
-                    //_logger.LogError("El usuario ya estaba registrado y verificado");
+                    Logs.log("El usuario ya estaba registrado y verificado");
                 }
 
                 return View("~/Views/Home/login.cshtml");
@@ -128,7 +129,7 @@ namespace ProyectoCShar.Controllers
             {   
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
 
-                //_logger.LogError("Error al procesar la solicitud");
+                Logs.log("Error al procesar la solicitud");
                 
                 return View("~/Views/Home/login.cshtml");
             }

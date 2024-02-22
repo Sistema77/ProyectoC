@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging; // Añadir este using para el Logger
 using ProyectoCShar.DTOs;
 using ProyectoCShar.Interfaces;
+using ProyectoCShar.Util;
 using System;
 using System.Collections.Generic;
 
@@ -26,8 +27,8 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
-                //_logger.LogInformation("Inicio de Eliminación del usuario " + id); 
-
+                Logs.log("Inicio de Eliminación del usuario " + id);
+                
                 // Buscar el usuario por su id
                 UsuarioDTO usuario = _usuarioServicio.buscarPorId(id);
                 List<UsuarioDTO> usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
@@ -55,7 +56,7 @@ namespace ProyectoCShar.Controllers
 
                 // Eliminar el usuario
                 _usuarioServicio.eliminar(id);
-               // _logger.LogInformation("Usuario " + id + " Eliminado");
+                Logs.log("Usuario " + id + " Eliminado");
                 ViewData["eliminacionCorrecta"] = "El usuario se ha eliminado correctamente";
                 ViewBag.Usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
 
@@ -63,7 +64,7 @@ namespace ProyectoCShar.Controllers
             }
             catch (Exception e)
             {
-                //_logger.LogError("Error al eliminar el usuario", e);
+                Logs.log("Error al eliminar el usuario" + e);
                 ViewData["error"] = "Ocurrió un error al eliminar el usuario";
                 return View("~/Views/Home/dashboard.cshtml");
             }
@@ -77,7 +78,7 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
-                //_logger.LogInformation("Inicio de la obtención de la lista de usuarios");
+                Logs.log("Inicio de la obtención de la lista de usuarios");
 
                 List<UsuarioDTO> usuarios = new List<UsuarioDTO>();
 
@@ -104,7 +105,7 @@ namespace ProyectoCShar.Controllers
             }
             catch (Exception e)
             {
-               // _logger.LogError("Error al obtener la lista de usuarios", e); 
+                Logs.log("Error al obtener la lista de usuarios" + e); 
                 ViewData["error"] = "Ocurrió un error al obtener la lista de usuarios";
                 return View("~/Views/Home/dashboard.cshtml");
             }
@@ -118,7 +119,7 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
-                //_logger.LogInformation("Inicio de edición de usuario " + id); 
+                Logs.log("Inicio de edición de usuario " + id); 
 
                 UsuarioDTO usuarioDTO = _usuarioServicio.buscarPorId(id);
 
@@ -132,7 +133,7 @@ namespace ProyectoCShar.Controllers
             }
             catch (Exception e)
             {
-               // _logger.LogError("Error al obtener el usuario para editar", e); 
+                Logs.log("Error al obtener el usuario para editar" + e); 
                 ViewData["error"] = "Ocurrió un error al obtener el usuario para editar";
                 return View("~/Views/Home/dashboard.cshtml");
             }
@@ -146,7 +147,7 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
-               // _logger.LogInformation("Inicio de procesamiento de edición del usuario " + id); 
+                Logs.log("Inicio de procesamiento de edición del usuario " + id); 
 
                 // Buscar el usuario por su id
                 UsuarioDTO usuarioDTO = _usuarioServicio.buscarPorId(id);
@@ -165,7 +166,7 @@ namespace ProyectoCShar.Controllers
             }
             catch (Exception e)
             {
-               // _logger.LogError("Error al editar el usuario", e); 
+                Logs.log("Error al editar el usuario" + e); 
                 ViewData["Error"] = "Ocurrió un error al editar el usuario";
                 return View("~/Views/Home/dashboard.cshtml");
             }

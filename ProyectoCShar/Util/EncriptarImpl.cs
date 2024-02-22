@@ -20,6 +20,7 @@ namespace ProyectoCShar.Util
             }
             catch (ArgumentException e)
             {
+                Logs.log("Error al Encriptar la contraseña");
                 return null;
             }
 

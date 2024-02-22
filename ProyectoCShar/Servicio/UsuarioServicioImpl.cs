@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProyectoCShar.DTOs;
 using ProyectoCShar.Interfaces;
+using ProyectoCShar.Util;
 using System.Security.Cryptography;
 
 namespace ProyectoCShar.Servicio
@@ -22,7 +23,6 @@ namespace ProyectoCShar.Servicio
             _pasaraDTO = pasaraDTO;
             _servicioEncriptar = servicioEncriptar;
             _servicioEmail = servicioEmail;
-           // _logger = logger;
         }
         public UsuarioDTO registrarUsuario(UsuarioDTO userDTO)
         {
@@ -35,7 +35,7 @@ namespace ProyectoCShar.Servicio
                 {
                     userDTO.email = "EmailNoConfirmado";
 
-                    //_logger.LogInformation("Email no Encontrado o no Existente");
+                    Logs.log("Email no Encontrado o no Existente");
                     
                     return userDTO;
                 }
@@ -47,7 +47,7 @@ namespace ProyectoCShar.Servicio
                 {
                     userDTO.email = "EmailRepetido";
 
-                    //_logger.LogInformation("Email esta repetido");
+                    Logs.log("Email esta repetido");
                     
                     return userDTO;
                 }
@@ -71,10 +71,12 @@ namespace ProyectoCShar.Servicio
             }
             catch (DbUpdateException dbe)
             {
+                Logs.log("Error al intentar actualizar la base de datos");
                 return null;
             }
             catch (Exception e)
             {
+                Logs.log("Error al intentar registrar al usuario");
                 return null;
             }
         }
@@ -87,16 +89,20 @@ namespace ProyectoCShar.Servicio
                 {
                     byte[] tokenBytes = new byte[30];
                     rng.GetBytes(tokenBytes);
+                    
+                    Logs.log("Token Generado");
 
                     return BitConverter.ToString(tokenBytes).Replace("-", "").ToLower();
                 }
             }
             catch (ArgumentException ae)
             {
+                Logs.log("Error en el Argumento");
                 return null;
             }
             catch (Exception ae)
             {
+                Logs.log("Error al intentar generar el Token");
                 return null;
             }
 
@@ -119,21 +125,23 @@ namespace ProyectoCShar.Servicio
                     
                     _contexto.SaveChanges();
 
+                    Logs.log("Usuario Confirmado");
                     return true;
                 }
                 else
                 {
+                    Logs.log("Usuario No se a Confirmado");
                     return false;
                 }
             }
             catch (ArgumentException ae)
             {
-               
+                Logs.log("Error Argumento Incorrecto al confirmarCuenta");
                 return false;
             }
             catch (Exception e)
             {
-                
+                Logs.log("Error al Confirmar Usuario");
                 return false;
             }
         }
@@ -149,12 +157,12 @@ namespace ProyectoCShar.Servicio
 
                 if (usuarioExistente == null)
                 {
-                    //log
+                    Logs.log("usuario encontrado");
                     return false;
                 }
                 if (!usuarioExistente.cuentaConfirmada)
                 {
-                    
+                    Logs.log("Usuario encontrado pero sin Confirmar");
                     return false;
                 }
 
@@ -162,7 +170,7 @@ namespace ProyectoCShar.Servicio
             }
             catch (ArgumentNullException e)
             {
-               
+                Logs.log("Error al intentar verigicar Credenciales del usuario");
                 return false;
             }
 
@@ -185,7 +193,7 @@ namespace ProyectoCShar.Servicio
             }
             catch (ArgumentNullException e)
             {
-                // Console.WriteLine("[Error UsuarioServicioImpl - obtenerUsuarioPorEmail()] Error al obtener el usuario por email: " + e.Message);
+                Logs.log("[Error UsuarioServicioImpl - obtenerUsuarioPorEmail()] Error al obtener el usuario por email: " + e.Message);
                 return null;
             }
         }
@@ -214,22 +222,23 @@ namespace ProyectoCShar.Servicio
                     string nombreUsuario = usuarioExistente.name;
                     _servicioEmail.enviarEmailRecuperacion(emailUsuario, nombreUsuario, token);
 
+                    Logs.log("Proceso de recuperacion iniciado");
                     return true;
                 }
                 else
                 {
-                    //Log
+                    Logs.log("Usuario no encontrado");
                     return false;
                 }
             }
             catch (DbUpdateException dbe)
             {
-                Console.WriteLine("[Error UsuarioServicioImpl - iniciarProcesoRecuperacion()] Error de persistencia al actualizar la bbdd: " + dbe.Message);
+                Logs.log("[Error UsuarioServicioImpl - iniciarProcesoRecuperacion()] Error de persistencia al actualizar la bbdd: " + dbe.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("[Error UsuarioServicioImpl - iniciarProcesoRecuperacion()] Error al iniciar el proceso de recuperación: " + ex.Message);
+                Logs.log("[Error UsuarioServicioImpl - iniciarProcesoRecuperacion()] Error al iniciar el proceso de recuperación: " + ex.Message);
                 return false;
             }
         }
@@ -249,13 +258,13 @@ namespace ProyectoCShar.Servicio
                 }
                 else
                 {
-                   //LOG
+                    Logs.log("Problemas al comprara el Token y el Token del Usuario");
                     return null;
                 }
             }
             catch (ArgumentNullException e)
             {
-               
+                Logs.log("Error de Argumentos");
                 return null;
             }
         }
@@ -275,17 +284,18 @@ namespace ProyectoCShar.Servicio
                     _contexto.usuarioDAO.Update(usuarioExistente);
                     _contexto.SaveChanges();
 
-                    
+                    Logs.log("Contraseña Actualizada");
+
                     return true;
                 }
             }
             catch (DbUpdateException dbe)
             {
-                //Log
+                Logs.log("Error al Actualizar la Contraseña del usuario");
             }
             catch (ArgumentNullException e)
             {
-                //Log
+                Logs.log("Error en el Argumento");
                 return false;
             }
             return false;
@@ -300,11 +310,12 @@ namespace ProyectoCShar.Servicio
                 {
                     _contexto.usuarioDAO.Remove(usuario);
                     _contexto.SaveChanges();
+                    Logs.log("Usuario Eliminado");
                 }
             }
             catch (DbUpdateException dbe)
             {
-                // Log
+                Logs.log("Error al Eliminar al usuariario");
             }
         }
 
@@ -312,8 +323,6 @@ namespace ProyectoCShar.Servicio
         {
             try
             {
-               
-
                 UsuarioDAO? usuario = _contexto.usuarioDAO.FirstOrDefault(u => u.id_usuario == id);
                 if (usuario != null)
                 {
@@ -322,19 +331,35 @@ namespace ProyectoCShar.Servicio
             }
             catch (ArgumentException iae)
             {
-               //Log
+                Logs.log("Error en el Argumento");
             }
             return null;
         }
 
         public List<UsuarioDTO> obtenerTodosLosUsuarios()
         {
-            return _pasaraDTO.listaUsuarioToDto(_contexto.usuarioDAO.ToList());
+            try
+            {
+                return _pasaraDTO.listaUsuarioToDto(_contexto.usuarioDAO.ToList());
+            }
+            catch (Exception e)
+            {
+                Logs.log("Error al optener Todos los usuarios");
+                return null;
+            }
         }
         public int contarUsuariosPorRol(string rol)
         {
-            return _contexto.usuarioDAO.Count(u => u.tipo_usuario == rol);
+            try
+            {
+                return _contexto.usuarioDAO.Count(u => u.tipo_usuario == rol);
+            }catch(Exception e)
+            {
+                Logs.log("Error Contar cuantos Administradores hay");
+                return 0;
+            }
         }
+
         /// <summary>
         /// Por si da tiempo
         /// </summary>
@@ -352,7 +377,8 @@ namespace ProyectoCShar.Servicio
             }
             catch (Exception e)
             {
-                //Log
+                Logs.log("Error al buscoar por Email");
+                return null;
             }
             return null;
         }
@@ -372,15 +398,17 @@ namespace ProyectoCShar.Servicio
 
                     _contexto.usuarioDAO.Update(usuarioActual);
                     _contexto.SaveChanges();
+
+                    Logs.log("Usuario Actualizado");
                 }
                 else
                 {
-                   //Log
+                    Logs.log("Usuario no encontrado");
                 }
             }
             catch (DbUpdateException e)
             {
-              //Log
+                Logs.log("Error al Actualizar el Usuario");
             }
         }
 
