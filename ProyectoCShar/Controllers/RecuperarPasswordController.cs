@@ -7,12 +7,15 @@ namespace ProyectoCShar.Controllers
     public class RecuperarPasswordController : Controller
     {
         private readonly IUsuarioServicio _usuarioServicio;
+        private readonly ILogger<RecuperarPasswordController> _logger;
 
-        public RecuperarPasswordController(IUsuarioServicio usuarioServicio)
+        public RecuperarPasswordController(IUsuarioServicio usuarioServicio, ILogger<RecuperarPasswordController> logger)
         {
             _usuarioServicio = usuarioServicio;
+            _logger = logger;
         }
 
+        // Constructor de recuperación
         [HttpGet]
         [Route("/auth/recuperar")]
         public IActionResult MostrarVistaRecuperar([FromQuery(Name = "token")] string token)
@@ -20,17 +23,23 @@ namespace ProyectoCShar.Controllers
 
             try
             {
+                _logger.LogInformation("Error al procesar a recuperar Contraseña");
 
+                // Obtiene el usuario por token
                 UsuarioDTO usuario = _usuarioServicio.obtenerUsuarioPorToken(token);
 
                 if (usuario != null)
                 {
+                    // Si el usuario es válido, lo pasa a la vista
                     ViewData["UsuarioDTO"] = usuario;
                 }
                 else
                 {
+                    // Si el usuario no es válido, registra un mensaje de error y redirige a una vista
                     ViewData["MensajeErrorTokenValidez"] = "El enlace de recuperación no es válido o el usuario no se ha encontrado";
-                   
+
+                    _logger.LogError("El enlace de recuperación no es válido o el usuario no se ha encontrado");
+
                     return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
                 }
                 
@@ -39,23 +48,29 @@ namespace ProyectoCShar.Controllers
             catch (Exception e)
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
-               
+
+                _logger.LogError("Error al procesar la solicitud");
+
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
             }
         }
 
+        // Controlador que realiza la Recuperacion
         [HttpPost]
         [Route("/auth/recuperar")]
         public IActionResult ProcesarRecuperacionContraseña(UsuarioDTO usuarioDTO)
         {
             try
             {
-
+                // Obtiene el usuario por token
                 UsuarioDTO usuarioExistente = _usuarioServicio.obtenerUsuarioPorToken(usuarioDTO.token);
 
                 if (usuarioExistente == null)
                 {
+
                     ViewData["MensajeErrorTokenValidez"] = "El enlace de recuperación no es válido";
+
+                    _logger.LogError("El enlace de recuperación no es válido");
                     
                     return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
                 }
@@ -63,21 +78,28 @@ namespace ProyectoCShar.Controllers
                 if (usuarioExistente.expiracion_token.HasValue && usuarioExistente.expiracion_token.Value < DateTime.Now)
                 {
                     ViewData["MensajeErrorTokenExpirado"] = "El enlace de recuperación ha expirado";
-                    
+
+                    _logger.LogError("El enlace de recuperación ha expirado");
+
                     return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
                 }
 
+                // Modifica la contraseña del usuario
                 bool modificadaPassword = _usuarioServicio.modificarContraseñaConToken(usuarioDTO);
 
                 if (modificadaPassword)
                 {
                     ViewData["ContraseñaModificadaExito"] = "Contraseña modificada OK";
+
+                    _logger.LogInformation("Contraseña modificada OK");
                     
                     return View("~/Views/Home/login.cshtml");
                 }
                 else
                 {
                     ViewData["ContraseñaModificadaError"] = "Error al cambiar de contraseña";
+
+                    _logger.LogError("Error al cambiar de contraseña");
                    
                     return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
                 }
@@ -85,18 +107,20 @@ namespace ProyectoCShar.Controllers
             catch (Exception e)
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
-                
+
+                _logger.LogError("Error al procesar la solicitud");
+
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
             }
         }
 
+        // Controlador que maneja la solicitud de la Recuperación
         [HttpGet]
         [Route("/auth/solicitar-recuperacion")]
         public IActionResult MostrarVistaIniciarRecuperacion()
         {
             try
             {
-               
 
                 UsuarioDTO usuarioDTO = new UsuarioDTO();
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml", usuarioDTO);
@@ -105,34 +129,35 @@ namespace ProyectoCShar.Controllers
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
                 
+                _logger.LogError("Error al procesar la solicitud");
+                
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
             }
         }
 
-        /// <summary>
-        /// Método HTTP POST para procesar el inicio del proceso de recuperación de contraseña.
-        /// </summary>
-        /// <param name="usuarioDTO">DTO del usuario con el email para iniciar la recuperación</param>
-        /// <returns>La vista correspondiente según el resultado del inicio de recuperación</returns>
+        // Controlador que realiza la Recuperacion
         [HttpPost]
         [Route("/auth/iniciar-recuperacion")]
         public IActionResult ProcesarInicioRecuperacion([Bind("email")] UsuarioDTO usuarioDTO)
         {
             try
             {
-               
-
+                // Iniciar el proceso de recuperación de contraseña
                 bool envioConExito = _usuarioServicio.iniciarProcesoRecuperacion(usuarioDTO.email);
 
                 if (envioConExito)
                 {
                     ViewData["MensajeExitoMail"] = "Proceso de recuperación OK";
-                    
+
+                    _logger.LogInformation("Proceso de recuperación OK");
+
                     return View("~/Views/Home/login.cshtml");
                 }
                 else
                 {
                     ViewData["MensajeErrorMail"] = "No se inició el proceso de recuperación, cuenta de correo electrónico no encontrada.";
+                    
+                    _logger.LogError("No se inició el proceso de recuperación, cuenta de correo electrónico no encontrada.");
                 }
                 
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
@@ -140,6 +165,8 @@ namespace ProyectoCShar.Controllers
             catch (Exception e)
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
+                
+                _logger.LogError("Error al procesar la solicitud");
                 
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
             }

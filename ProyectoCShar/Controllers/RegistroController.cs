@@ -7,12 +7,16 @@ namespace ProyectoCShar.Controllers
     public class RegistroController : Controller
     {
         private readonly IUsuarioServicio _usuarioServicio;
+        private readonly ILogger<RegistroController> _logger;
             
-        public RegistroController(IUsuarioServicio usuarioServicio)
+        public RegistroController(IUsuarioServicio usuarioServicio, ILogger<RegistroController> logger)
         {
             _usuarioServicio = usuarioServicio;
+            _logger = logger;
         }
 
+
+        // Controlador Que redireciona para crear un nuevo usuario
         [HttpGet]
         [Route("/auth/crear-cuenta")]
         public IActionResult RegistrarGet()
@@ -29,6 +33,7 @@ namespace ProyectoCShar.Controllers
             }
         }
 
+        // Controlador que gestiona la creacion de Usuario
         [HttpPost]
         [Route("/auth/crear-cuenta")]
         public IActionResult RegistrarPost(UsuarioDTO usuarioDTO)
@@ -38,11 +43,14 @@ namespace ProyectoCShar.Controllers
             {
                 Console.WriteLine(usuarioDTO);
 
+                // Crea el Usuario y lo registra en la BD
                 UsuarioDTO nuevoUsuario = _usuarioServicio.registrarUsuario(usuarioDTO);
 
                 if (nuevoUsuario.email == "EmailNoConfirmado")
                 {
                     ViewData["EmailNoConfirmado"] = "Ya existe un usuario registrado con ese email pero con la cuenta sin verificar";
+
+                    _logger.LogError("Ya existe un usuario registrado con ese email pero con la cuenta sin verificar");
 
                     return View("~/Views/Home/login.cshtml");
 
@@ -51,17 +59,25 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["EmailRepetido"] = "Ya existe un usuario con ese email registrado en el sistema";
 
+                    _logger.LogError("Ya existe un usuario con ese email registrado en el sistema");
+
                     return View("~/Views/Home/registro.cshtml");
                 }
                 else
                 {
                     ViewData["MensajeRegistroExitoso"] = "Registro del nuevo usuario OK";
+
+                    _logger.LogInformation("Registro del nuevo usuario OK");
+
                     return View("~/Views/Home/login.cshtml");
                 }
             }
             catch (Exception e)
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
+
+                _logger.LogError("Error al procesar la solicitud");
+
                 return View("~/Views/Home/registro.cshtml");
             }
             
