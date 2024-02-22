@@ -95,5 +95,59 @@ namespace ProyectoCShar.Controllers
                 return View("~/Views/Home/dashboard.cshtml");
             }
         }
+
+        [Authorize(Roles = "ROLE_ADMIN")]
+        [HttpGet]
+        [Route("/privada/editar-usuario/{id}")]
+        public IActionResult FormularioEdicion(long id)
+        {
+            try
+            {
+                UsuarioDTO usuarioDTO = _usuarioServicio.buscarPorId(id);
+
+                if (usuarioDTO == null)
+                {
+                    ViewData["usuarioNoEncontrado"] = "Ocurrió un error al obtener el usuario para editar";
+                    return View("~/Views/Home/administracion.cshtml");
+                }
+
+                return View("~/Views/Home/editarUsuario.cshtml", usuarioDTO);
+            }
+            catch (Exception e)
+            {
+                ViewData["error"] = "Ocurrió un error al obtener el usuario para editar";
+                
+                return View("~/Views/Home/dashboard.cshtml");
+            }
+        }
+
+        [Authorize(Roles = "ROLE_ADMIN")]
+        [HttpPost]
+        [Route("/privada/procesar-editar")]
+        public IActionResult ProcesarFormularioEdicion(long id, string nombre, string apellidos, string telefono, string rol, IFormFile foto)
+        {
+            try
+            {
+
+                UsuarioDTO usuarioDTO = _usuarioServicio.buscarPorId(id);
+                usuarioDTO.name = nombre;
+                usuarioDTO.last_name = apellidos;
+                usuarioDTO.tlf = telefono;
+
+                _usuarioServicio.actualizarUsuario(usuarioDTO);
+
+                ViewData["EdicionCorrecta"] = "El Usuario se ha editado correctamente";
+                ViewBag.Usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
+
+                return View("~/Views/Home/administracion.cshtml");
+            }
+            catch (Exception e)
+            {
+                ViewData["Error"] = "Ocurrió un error al editar el usuario";
+               
+                return View("~/Views/Home/dashboard.cshtml");
+            }
+        }
+
     }
 }

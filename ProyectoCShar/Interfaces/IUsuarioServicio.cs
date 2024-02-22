@@ -30,5 +30,7 @@ namespace ProyectoCShar.Interfaces
         
         public List<UsuarioDTO> buscarPorCoincidenciaEnEmail(string palabra);
 
+        public void actualizarUsuario(UsuarioDTO usuario);
+
     }
 }

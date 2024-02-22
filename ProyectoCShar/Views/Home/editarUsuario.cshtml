@@ -1,0 +1,46 @@
+﻿﻿
+@model ProyectoCShar.DTOs.UsuarioDTO
+
+@{
+    ViewData["Title"] = "Editar usuario";
+}
+
+<div class="container py-4">
+    <form class="custom-form cardPrincipal" asp-action="ProcesarFormularioEdicion" asp-controller="Administracion" 
+    enctype="multipart/form-data" method="post" asp-route-id="@Model.id_usuario">
+        <h2 class="text-center mb-5">
+            <i class="bi bi-person-fill-gear" style="color: #1f3c85">Editar usuario</i>
+        </h2>
+        <div class="d-flex justify-content-center mt-4 mb-4">
+            @if (Model.foto != null)
+            {
+                <img src="data:image/jpeg;base64,@(Model.foto != null ? Convert.ToBase64String(Model.foto) : "")" 
+                class="rounded-circle img-fluid mx-auto" alt="Imagen de usuario" style="max-width: 200px; max-height: 200px;">
+            }
+            else
+            {
+                <span class="badge bg-dark">El usuario no tiene foto de perfil</span>
+            }
+        </div>
+        <input type="hidden" name="id" value="@Model.id_usuario" />
+        <div class="mb-3">
+            <label for="email" class="form-label textoPrincipal">Correo Electrónico</label>
+            <input type="email" id="email" name="email" class="form-control" value="@Model.email" readonly disabled />
+        </div>
+        <div class="mb-3">
+            <label for="nombre" class="form-label textoPrincipal">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" value="@Model.name" required />
+        </div>
+        <div class="mb-3">
+            <label for="apellidos" class="form-label textoPrincipal">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" class="form-control" value="@Model.last_name" required />
+        </div>
+        <div class="mb-3">
+            <label for="telefono" class="form-label textoPrincipal">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="form-control" value="@Model.tlf" required />
+        </div>
+        <button type="submit" class="btn btn-primary mt-5">
+            <i class="bi bi-person-fill-gear fs-5"> Guardar cambios</i>
+        </button>
+    </form>
+</div>

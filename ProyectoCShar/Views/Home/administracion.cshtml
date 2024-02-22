@@ -40,21 +40,21 @@
                         {
                             <tr>
                                 <td>@usuario.id_usuario</td>
-                                <td>@(usuario.name + (usuario.name + " " + usuario.last_name))</td>
+                                <td>@usuario.name</td>
                                 <td>@usuario.email</td>
                                 <td class="text-center">@usuario.tlf</td>
                                 <td>@usuario.fch_alta</td>
                                 <td class="text-center">@(usuario.cuentaConfirmada ? "Sí" : "No")</td>
                                 <td>@(usuario.tipo_usuario == "ROLE_USER" ? "USER" : "ADMIN")</td>
                                 <td asp:authorize="User.IsInRole('ROLE_ADMIN')">
-                                    <a class="btn buttonPrincipal" asp-action="MostrarFormularioEdicion" 
-                                    asp-controller="AdministracionController" asp-route-id="@usuario.id_usuario">
+                                    <a class="btn btn-primary" asp-action="FormularioEdicion"
+                                       asp-controller="Administracion" asp-route-id="@usuario.id_usuario">
                                         <i class="bi bi-pencil-square"> Editar</i>
                                     </a>
                                 </td>
                                 <td asp-authorize="User.IsInRole('ROLE_ADMIN')">
                                     <a class="btn btn-danger" asp-route-id="@usuario.id_usuario"
-                                       asp-action="EliminarUsuario" asp-controller="AdministracionController">
+                                       asp-action="eliminarUsuario" asp-controller="Administracion">
                                         <i class="bi bi-trash"> Eliminar</i>
                                     </a>
                                 </td>

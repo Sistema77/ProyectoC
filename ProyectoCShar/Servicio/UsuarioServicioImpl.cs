@@ -342,5 +342,33 @@ namespace ProyectoCShar.Servicio
             }
             return null;
         }
+
+        public void actualizarUsuario(UsuarioDTO usuario)
+        {
+            try
+            {
+
+                UsuarioDAO? usuarioActual = _contexto.usuarioDAO.Find(usuario.id_usuario);
+
+                if (usuarioActual != null)
+                {
+                    usuarioActual.name = usuario.name;
+                    usuarioActual.last_name = usuario.last_name;
+                    usuarioActual.tlf = usuario.tlf;
+
+                    _contexto.usuarioDAO.Update(usuarioActual);
+                    _contexto.SaveChanges();
+                }
+                else
+                {
+                   //Log
+                }
+            }
+            catch (DbUpdateException e)
+            {
+              //Log
+            }
+        }
+
     }
 }
