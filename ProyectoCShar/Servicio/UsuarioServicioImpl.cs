@@ -23,8 +23,9 @@ namespace ProyectoCShar.Servicio
             _pasaraDTO = pasaraDTO;
             _servicioEncriptar = servicioEncriptar;
             _servicioEmail = servicioEmail;
+
         }
-        public UsuarioDTO registrarUsuario(UsuarioDTO userDTO)
+        public UsuarioDTO registrarUsuario(UsuarioDTO userDTO, IFormFile fotofile)
         {
             try
             {
@@ -51,8 +52,16 @@ namespace ProyectoCShar.Servicio
                     
                     return userDTO;
                 }
-                
+                // Encriptando la contraseña
                 userDTO.password = _servicioEncriptar.Encriptar(userDTO.password);
+
+                if(fotofile != null)
+                {
+                    //Pasando a byte[] la foto
+                    var imagenesBinarios = new ImagenesBinarios();
+                    userDTO.foto = imagenesBinarios.PasarAByte(fotofile);
+                }
+
                 UsuarioDAO usuarioDao = _pasaraDAO.usuarioToDao(userDTO);
                 
                 usuarioDao.fch_alta = DateTime.Now.ToUniversalTime();

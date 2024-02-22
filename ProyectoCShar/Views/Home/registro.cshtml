@@ -3,7 +3,7 @@
 
 <div class="container py-4">
     <div class="registro cardPrincipal">
-        <form class="custom-form" asp-action="RegistrarPost" method="post" asp-for="usuarioDTO">
+        <form class="custom-form" asp-action="RegistrarPost" enctype="multipart/form-data" method="post" asp-for="usuarioDTO">
             <h2 class="text-center mb-5"><i class="bi bi-person-vcard-fill" style="color: #1f3c85;"> Registro nuevo usuario</i></h2>
             <input type="hidden" name="returnUrl" value="@TempData["ReturnUrl"]" /> 
             <div class="mb-3">
@@ -34,6 +34,11 @@
                 <label for="tlf" class="form-label textoPrincipal">Teléfono</label>
                 <input type="tel" id="tlf" name="tlf" class="form-control" placeholder="Escribe tu número de teléfono" required /> 
             </div>
+            <div class="mb-3">
+                <label for="fotofile" class="form-label textoPrincipal">Foto de Perfil</label>
+                <input type="file" id="fotofile" name="fotofile" class="form-control" accept="image/*" />
+            </div>
+
             <button type="submit" id="btnRegistro" class="btn btn-primary mt-5"><i class="bi bi-person-add fs-5"> Crear cuenta</i></button>
         </form> 
     </div>

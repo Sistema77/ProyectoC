@@ -37,15 +37,22 @@ namespace ProyectoCShar.Controllers
         // Controlador que gestiona la creacion de Usuario
         [HttpPost]
         [Route("/auth/crear-cuenta")]
-        public IActionResult RegistrarPost(UsuarioDTO usuarioDTO)
+        public IActionResult RegistrarPost(UsuarioDTO usuarioDTO, IFormFile fotofile)
         {
 
             try
             {
-                Console.WriteLine(usuarioDTO);
+                if(fotofile == null)
+                {
+                    Console.WriteLine("Foto: NULL" + fotofile);
+                }
+                else
+                {
+                    Console.WriteLine("Foto: TRUE" + fotofile);
+                }
 
                 // Crea el Usuario y lo registra en la BD
-                UsuarioDTO nuevoUsuario = _usuarioServicio.registrarUsuario(usuarioDTO);
+                UsuarioDTO nuevoUsuario = _usuarioServicio.registrarUsuario(usuarioDTO, fotofile);
 
                 if (nuevoUsuario.email == "EmailNoConfirmado")
                 {
@@ -81,7 +88,6 @@ namespace ProyectoCShar.Controllers
 
                 return View("~/Views/Home/registro.cshtml");
             }
-            
         }
     }
 }

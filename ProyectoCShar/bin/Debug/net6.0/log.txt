@@ -15,3 +15,22 @@
 22/02/2024 14:07:11 - Inicio de Eliminación del usuario 11
 22/02/2024 14:07:11 - Usuario Eliminado
 22/02/2024 14:07:11 - Usuario 11 Eliminado
+22/02/2024 19:14:37 - Token Generado
+22/02/2024 19:14:38 - Mensaje enviado
+22/02/2024 19:14:38 - Registro del nuevo usuario OK
+22/02/2024 19:39:41 - Error a pasar Foto a byte[]
+22/02/2024 19:39:52 - Token Generado
+22/02/2024 19:39:56 - Mensaje enviado
+22/02/2024 19:40:02 - Registro del nuevo usuario OK
+22/02/2024 19:49:30 - Token Generado
+22/02/2024 19:49:31 - Mensaje enviado
+22/02/2024 19:49:31 - Registro del nuevo usuario OK
+22/02/2024 19:50:55 - Token Generado
+22/02/2024 19:50:57 - Mensaje enviado
+22/02/2024 19:50:57 - Registro del nuevo usuario OK
+22/02/2024 20:03:03 - Token Generado
+22/02/2024 20:03:04 - Mensaje enviado
+22/02/2024 20:03:04 - Registro del nuevo usuario OK
+22/02/2024 20:08:59 - Token Generado
+22/02/2024 20:09:03 - Mensaje enviado
+22/02/2024 20:09:08 - Registro del nuevo usuario OK

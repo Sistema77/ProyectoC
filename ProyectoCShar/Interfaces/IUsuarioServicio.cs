@@ -7,7 +7,7 @@ namespace ProyectoCShar.Interfaces
     public interface IUsuarioServicio
     {
         // Registrar Usuario en la BD
-        public UsuarioDTO registrarUsuario(UsuarioDTO userDTO);
+        public UsuarioDTO registrarUsuario(UsuarioDTO userDTO, IFormFile fotofile);
 
         // Verifica si el usuario es el que esta iniciando sesion
         public bool verificarCredenciales(String email, String password);

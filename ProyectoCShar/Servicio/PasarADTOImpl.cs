@@ -19,6 +19,7 @@ namespace ProyectoCShar.Servicio
                 dto.name = UsuarioDAO.name;
                 dto.tlf = UsuarioDAO.tlf;
                 dto.email = UsuarioDAO.email;
+                dto.foto = UsuarioDAO.foto; 
                 dto.password = UsuarioDAO.password;
                 dto.token = UsuarioDAO.token;
                 dto.expiracion_token = UsuarioDAO.expiracion_token;

@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProyectoCShar
 build_property.RootNamespace = ProyectoCShar
-build_property.ProjectDir = C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\
+build_property.ProjectDir = C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoC\ProyectoCShar\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar
+build_property.MSBuildProjectDirectory = C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoC\ProyectoCShar
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Home/administracion.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/administracion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhZG1pbmlzdHJhY2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Home/dashboard.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Home/editarUsuario.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/editarUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxlZGl0YXJVc3VhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Home/Index.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Home/login.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Home/Privacy.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Home/recuperar.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/recuperar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZWN1cGVyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Home/registro.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZWdpc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Home/solicitarRecuperacionPassword.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/solicitarRecuperacionPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzb2xpY2l0YXJSZWN1cGVyYWNpb25QYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Shared/Error.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/_ViewImports.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/_ViewStart.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto20/Desktop/ProyectoC/ProyectoCShar/Views/Shared/_Layout.cshtml]
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zdz9f6ha13

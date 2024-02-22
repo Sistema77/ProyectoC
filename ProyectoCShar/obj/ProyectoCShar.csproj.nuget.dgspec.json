@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj": {}
+    "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\DAL\\DAL.csproj": {
+    "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Puesto20\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Puesto20\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,21 +73,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj": {
+    "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
+        "projectUniqueName": "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
         "projectName": "ProyectoCShar",
-        "projectPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
-        "packagesPath": "C:\\Users\\Puesto20\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\ProyectoCShar\\obj\\",
+        "projectPath": "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\ProyectoCShar\\ProyectoCShar.csproj",
+        "packagesPath": "C:\\Users\\josem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\ProyectoCShar\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Puesto20\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\josem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,8 +101,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Puesto20\\Desktop\\ProyectoC\\DAL\\DAL.csproj"
+              "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\josem\\OneDrive\\Escritorio\\Proyect\\DWS\\ProyectoC\\DAL\\DAL.csproj"
               }
             }
           }
@@ -159,7 +159,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
