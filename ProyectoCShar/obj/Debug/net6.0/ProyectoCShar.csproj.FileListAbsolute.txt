@@ -1166,8 +1166,3 @@ C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\obj\Debug\net6.0\refint\Proyec
 C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\obj\Debug\net6.0\ProyectoCShar.pdb
 C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\obj\Debug\net6.0\ProyectoCShar.genruntimeconfig.cache
 C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\obj\Debug\net6.0\ref\ProyectoCShar.dll
-C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
-C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
-C:\Users\Puesto20\Desktop\ProyectoC\ProyectoCShar\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll

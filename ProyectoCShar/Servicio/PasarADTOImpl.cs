@@ -13,8 +13,9 @@ namespace ProyectoCShar.Servicio
             {
                 UsuarioDTO dto = new UsuarioDTO();
 
-                dto.name = UsuarioDAO.name;
+                // Pasar de DAO a DTO
 
+                dto.name = UsuarioDAO.name;
                 dto.tlf = UsuarioDAO.tlf;
                 dto.email = UsuarioDAO.email;
                 dto.password = UsuarioDAO.password;
@@ -34,6 +35,7 @@ namespace ProyectoCShar.Servicio
             }
             catch (Exception e)
             {
+                //_logger.LogError("Error al pasar los datos del de DAO a DTO");
                 return null;
             }
         }
@@ -43,6 +45,8 @@ namespace ProyectoCShar.Servicio
             try
             {
                 List<UsuarioDTO> listaDto = new List<UsuarioDTO>();
+
+                // va de Usuario a Usuario pasando a DTO 
                 foreach (UsuarioDAO u in listaUsuario)
                 {
                     listaDto.Add(usuarioToDto(u));
@@ -52,7 +56,7 @@ namespace ProyectoCShar.Servicio
             }
             catch (Exception e)
             {
-                //Log
+                //_logger.LogError("Error al pasar los datos del de DAO a DTO");
             }
             return null;
         }

@@ -11,13 +11,11 @@ namespace ProyectoCShar.Controllers
     public class AdministracionController : Controller
     {
         private readonly IUsuarioServicio _usuarioServicio;
-        private readonly ILogger<AdministracionController> _logger; // Agregar el logger
-
-        // Agregar ILogger<AdministracionController> logger como parámetro del constructor
-        public AdministracionController(IUsuarioServicio usuarioServicio, ILogger<AdministracionController> logger)
+       
+        public AdministracionController(IUsuarioServicio usuarioServicio)
         {
             _usuarioServicio = usuarioServicio;
-            _logger = logger;
+
         }
 
         // Controlador para eliminar un usuario
@@ -28,7 +26,7 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
-                _logger.LogInformation("Inicio de Eliminación del usuario " + id); 
+                //_logger.LogInformation("Inicio de Eliminación del usuario " + id); 
 
                 // Buscar el usuario por su id
                 UsuarioDTO usuario = _usuarioServicio.buscarPorId(id);
@@ -57,7 +55,7 @@ namespace ProyectoCShar.Controllers
 
                 // Eliminar el usuario
                 _usuarioServicio.eliminar(id);
-                _logger.LogInformation("Usuario " + id + " Eliminado");
+               // _logger.LogInformation("Usuario " + id + " Eliminado");
                 ViewData["eliminacionCorrecta"] = "El usuario se ha eliminado correctamente";
                 ViewBag.Usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
 
@@ -65,7 +63,7 @@ namespace ProyectoCShar.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError("Error al eliminar el usuario", e);
+                //_logger.LogError("Error al eliminar el usuario", e);
                 ViewData["error"] = "Ocurrió un error al eliminar el usuario";
                 return View("~/Views/Home/dashboard.cshtml");
             }
@@ -79,7 +77,7 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
-                _logger.LogInformation("Inicio de la obtención de la lista de usuarios");
+                //_logger.LogInformation("Inicio de la obtención de la lista de usuarios");
 
                 List<UsuarioDTO> usuarios = new List<UsuarioDTO>();
 
@@ -106,7 +104,7 @@ namespace ProyectoCShar.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError("Error al obtener la lista de usuarios", e); 
+               // _logger.LogError("Error al obtener la lista de usuarios", e); 
                 ViewData["error"] = "Ocurrió un error al obtener la lista de usuarios";
                 return View("~/Views/Home/dashboard.cshtml");
             }
@@ -120,7 +118,7 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
-                _logger.LogInformation("Inicio de edición de usuario " + id); 
+                //_logger.LogInformation("Inicio de edición de usuario " + id); 
 
                 UsuarioDTO usuarioDTO = _usuarioServicio.buscarPorId(id);
 
@@ -134,7 +132,7 @@ namespace ProyectoCShar.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError("Error al obtener el usuario para editar", e); 
+               // _logger.LogError("Error al obtener el usuario para editar", e); 
                 ViewData["error"] = "Ocurrió un error al obtener el usuario para editar";
                 return View("~/Views/Home/dashboard.cshtml");
             }
@@ -148,7 +146,7 @@ namespace ProyectoCShar.Controllers
         {
             try
             {
-                _logger.LogInformation("Inicio de procesamiento de edición del usuario " + id); 
+               // _logger.LogInformation("Inicio de procesamiento de edición del usuario " + id); 
 
                 // Buscar el usuario por su id
                 UsuarioDTO usuarioDTO = _usuarioServicio.buscarPorId(id);
@@ -167,7 +165,7 @@ namespace ProyectoCShar.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError("Error al editar el usuario", e); 
+               // _logger.LogError("Error al editar el usuario", e); 
                 ViewData["Error"] = "Ocurrió un error al editar el usuario";
                 return View("~/Views/Home/dashboard.cshtml");
             }

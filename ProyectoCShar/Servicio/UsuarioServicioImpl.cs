@@ -22,24 +22,33 @@ namespace ProyectoCShar.Servicio
             _pasaraDTO = pasaraDTO;
             _servicioEncriptar = servicioEncriptar;
             _servicioEmail = servicioEmail;
+           // _logger = logger;
         }
         public UsuarioDTO registrarUsuario(UsuarioDTO userDTO)
         {
             try
             {
+                //Veo si el Usuario Existe y si esta confirmado 
                 var usuarioExistente = _contexto.usuarioDAO.FirstOrDefault(u => u.email == userDTO.email && !u.cuentaConfirmada);
                 
                 if (usuarioExistente != null)
                 {
                     userDTO.email = "EmailNoConfirmado";
+
+                    //_logger.LogInformation("Email no Encontrado o no Existente");
+                    
                     return userDTO;
                 }
 
+                // Veo si el email del usuario existe y el usuario esta confirmado
                 var emailExistente = _contexto.usuarioDAO.FirstOrDefault(u => u.email == userDTO.email && u.cuentaConfirmada);
 
                 if (emailExistente != null)
                 {
                     userDTO.email = "EmailRepetido";
+
+                    //_logger.LogInformation("Email esta repetido");
+                    
                     return userDTO;
                 }
                 
@@ -326,6 +335,11 @@ namespace ProyectoCShar.Servicio
         {
             return _contexto.usuarioDAO.Count(u => u.tipo_usuario == rol);
         }
+        /// <summary>
+        /// Por si da tiempo
+        /// </summary>
+        /// <param name="palabra"></param>
+        /// <returns></returns>
         public List<UsuarioDTO> buscarPorCoincidenciaEnEmail(string palabra)
         {
             try

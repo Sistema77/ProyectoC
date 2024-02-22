@@ -7,12 +7,12 @@ namespace ProyectoCShar.Controllers
     public class RecuperarPasswordController : Controller
     {
         private readonly IUsuarioServicio _usuarioServicio;
-        private readonly ILogger<RecuperarPasswordController> _logger;
 
-        public RecuperarPasswordController(IUsuarioServicio usuarioServicio, ILogger<RecuperarPasswordController> logger)
+
+        public RecuperarPasswordController(IUsuarioServicio usuarioServicio)
         {
             _usuarioServicio = usuarioServicio;
-            _logger = logger;
+         
         }
 
         // Constructor de recuperación
@@ -23,7 +23,7 @@ namespace ProyectoCShar.Controllers
 
             try
             {
-                _logger.LogInformation("Error al procesar a recuperar Contraseña");
+               // _logger.LogInformation("Error al procesar a recuperar Contraseña");
 
                 // Obtiene el usuario por token
                 UsuarioDTO usuario = _usuarioServicio.obtenerUsuarioPorToken(token);
@@ -38,7 +38,7 @@ namespace ProyectoCShar.Controllers
                     // Si el usuario no es válido, registra un mensaje de error y redirige a una vista
                     ViewData["MensajeErrorTokenValidez"] = "El enlace de recuperación no es válido o el usuario no se ha encontrado";
 
-                    _logger.LogError("El enlace de recuperación no es válido o el usuario no se ha encontrado");
+                  //  _logger.LogError("El enlace de recuperación no es válido o el usuario no se ha encontrado");
 
                     return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
                 }
@@ -49,7 +49,7 @@ namespace ProyectoCShar.Controllers
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
 
-                _logger.LogError("Error al procesar la solicitud");
+                //_logger.LogError("Error al procesar la solicitud");
 
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
             }
@@ -70,7 +70,7 @@ namespace ProyectoCShar.Controllers
 
                     ViewData["MensajeErrorTokenValidez"] = "El enlace de recuperación no es válido";
 
-                    _logger.LogError("El enlace de recuperación no es válido");
+                    //_logger.LogError("El enlace de recuperación no es válido");
                     
                     return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
                 }
@@ -79,7 +79,7 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["MensajeErrorTokenExpirado"] = "El enlace de recuperación ha expirado";
 
-                    _logger.LogError("El enlace de recuperación ha expirado");
+                    //_logger.LogError("El enlace de recuperación ha expirado");
 
                     return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
                 }
@@ -91,7 +91,7 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["ContraseñaModificadaExito"] = "Contraseña modificada OK";
 
-                    _logger.LogInformation("Contraseña modificada OK");
+                    //_logger.LogInformation("Contraseña modificada OK");
                     
                     return View("~/Views/Home/login.cshtml");
                 }
@@ -99,7 +99,7 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["ContraseñaModificadaError"] = "Error al cambiar de contraseña";
 
-                    _logger.LogError("Error al cambiar de contraseña");
+                    //_logger.LogError("Error al cambiar de contraseña");
                    
                     return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
                 }
@@ -108,7 +108,7 @@ namespace ProyectoCShar.Controllers
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
 
-                _logger.LogError("Error al procesar la solicitud");
+               // _logger.LogError("Error al procesar la solicitud");
 
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
             }
@@ -129,7 +129,7 @@ namespace ProyectoCShar.Controllers
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
                 
-                _logger.LogError("Error al procesar la solicitud");
+                //_logger.LogError("Error al procesar la solicitud");
                 
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
             }
@@ -149,7 +149,7 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["MensajeExitoMail"] = "Proceso de recuperación OK";
 
-                    _logger.LogInformation("Proceso de recuperación OK");
+                    //_logger.LogInformation("Proceso de recuperación OK");
 
                     return View("~/Views/Home/login.cshtml");
                 }
@@ -157,7 +157,7 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["MensajeErrorMail"] = "No se inició el proceso de recuperación, cuenta de correo electrónico no encontrada.";
                     
-                    _logger.LogError("No se inició el proceso de recuperación, cuenta de correo electrónico no encontrada.");
+                    //_logger.LogError("No se inició el proceso de recuperación, cuenta de correo electrónico no encontrada.");
                 }
                 
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
@@ -166,7 +166,7 @@ namespace ProyectoCShar.Controllers
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
                 
-                _logger.LogError("Error al procesar la solicitud");
+                //_logger.LogError("Error al procesar la solicitud");
                 
                 return View("~/Views/Home/solicitarRecuperacionPassword.cshtml");
             }

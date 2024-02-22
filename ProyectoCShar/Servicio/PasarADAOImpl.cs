@@ -7,16 +7,14 @@ namespace ProyectoCShar.Servicio
 
     public class PasarADAOImpl : IPasarADAO
     {
-        /// <summary>
-        /// Pasar A DAO
-        /// </summary>
-        /// <param name="usuarioDTO"></param>
-        /// <returns></returns>
+
         public UsuarioDAO usuarioToDao(UsuarioDTO usuarioDTO)
         {
             try
             {
                 UsuarioDAO usuarioDao = new UsuarioDAO();
+
+                // Pasar los datos de DTO a DAO
 
                 usuarioDao.id_usuario = usuarioDTO.id_usuario;
                 usuarioDao.name = usuarioDTO.name;
@@ -31,6 +29,8 @@ namespace ProyectoCShar.Servicio
             }
             catch (Exception e)
             {
+                //_logger.LogError("Error a pasar de DTO a DAO");
+
                 return null;
             }
         }
