@@ -136,5 +136,35 @@ namespace ProyectoCShar.Controllers
                 return View("~/Views/Home/login.cshtml");
             }
         }
+
+        // Controlador Para Cerrar Sesión
+
+        [HttpPost]
+        [Route("/auth/cerrar-sesion")]
+        public async Task<IActionResult> CerrarSesionAsync()
+        {
+            try
+            {
+                // Cerrar la sesión del usuario
+                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+                // Hace lo mismo que el de arriba pero con las demas Cookis de
+                // Autentificación, lo hago asi porque me da muchos errores si
+                // lo ahora de uno en uno o todo a la vez :(
+                await HttpContext.SignOutAsync(); 
+
+                Logs.log("Usuario Cerro Sesión");
+                // Redirigir al inicio de sesión
+                        //string url = Url.Action("Login", "Login") + "?timestamp=" + DateTime.Now.Ticks;
+                        //return Redirect(url);
+                return View("~/Views/Home/login.cshtml");
+            }
+            catch (Exception e)
+            {
+                Logs.log("Error al Cerrar Sesión");
+                ViewData["error"] = "Error al cerrar la sesión. Por favor, inténtelo de nuevo.";
+                return View("~/Views/Home/login.cshtml");
+            }
+        }
     }
 }

@@ -53,3 +53,109 @@
 23/02/2024 11:32:12 - Registro del nuevo usuario OK
 23/02/2024 11:32:38 - Usuario jose12@gmail.com Autentificado
 23/02/2024 11:32:42 - Usuario josee@gmail.com Autentificado
+23/02/2024 11:40:14 - usuario encontrado
+23/02/2024 11:40:14 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 11:40:18 - usuario encontrado
+23/02/2024 11:40:18 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 11:40:23 - usuario encontrado
+23/02/2024 11:40:23 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 11:40:26 - Usuario josee@gmail.com Autentificado
+23/02/2024 11:40:31 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 11:40:31 - Error al pasar Foto a IFormFile
+23/02/2024 11:42:16 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 11:42:16 - Error al pasar Foto a IFormFile
+23/02/2024 11:42:20 - Usuario admin@admin.com Autentificado
+23/02/2024 11:42:20 - Error al pasar Foto a IFormFile
+23/02/2024 11:42:38 - Usuario admin@admin.com Autentificado
+23/02/2024 11:42:38 - Error al pasar Foto a IFormFile
+23/02/2024 11:42:42 - Usuario admin@admin.com Autentificado
+23/02/2024 11:42:42 - Error al pasar Foto a IFormFile
+23/02/2024 11:43:09 - Usuario admin@admin.com Autentificado
+23/02/2024 11:43:09 - Error al pasar Foto a IFormFile
+23/02/2024 11:43:28 - Usuario admin@admin.com Autentificado
+23/02/2024 11:43:28 - Error al pasar Foto a IFormFile
+23/02/2024 11:43:35 - Usuario admin@admin.com Autentificado
+23/02/2024 11:43:35 - Error al pasar Foto a IFormFile
+23/02/2024 11:45:39 - Usuario admin@admin.com Autentificado
+23/02/2024 11:45:40 - Error al pasar Foto a IFormFile
+23/02/2024 11:45:41 - Usuario Cerro Sesión
+23/02/2024 11:45:47 - Usuario  Autentificado
+23/02/2024 11:45:47 - Error al pasar Foto a IFormFile
+23/02/2024 11:45:51 - Usuario admin@admin.com Autentificado
+23/02/2024 11:45:51 - Error al pasar Foto a IFormFile
+23/02/2024 11:45:54 - Usuario Cerro Sesión
+23/02/2024 11:46:00 - Usuario  Autentificado
+23/02/2024 11:46:00 - Error al pasar Foto a IFormFile
+23/02/2024 11:46:03 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:46:23 - Inicio de la obtención de la lista de usuarios
+23/02/2024 11:48:55 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:48:58 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:51:20 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:52:15 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:53:02 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:56:34 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:59:26 - Usuario Cerro Sesión
+23/02/2024 12:01:23 - Usuario  Autentificado
+23/02/2024 12:01:23 - Error al pasar Foto a IFormFile
+23/02/2024 12:01:31 - Usuario jose12@gmail.com Autentificado
+23/02/2024 12:02:33 - Usuario jose12@gmail.com Autentificado
+23/02/2024 12:02:36 - Usuario admin@admin.com Autentificado
+23/02/2024 12:02:37 - Error al pasar Foto a IFormFile
+23/02/2024 12:02:38 - Usuario Cerro Sesión
+23/02/2024 12:06:53 - Usuario  Autentificado
+23/02/2024 12:06:53 - Error al pasar Foto a IFormFile
+23/02/2024 12:06:56 - Usuario jose12@gmail.com Autentificado
+23/02/2024 12:06:58 - Usuario Cerro Sesión
+23/02/2024 12:07:01 - Usuario Cerro Sesión
+23/02/2024 12:07:04 - Usuario Cerro Sesión
+23/02/2024 12:12:34 - Usuario  Autentificado
+23/02/2024 12:12:34 - Error al pasar Foto a IFormFile
+23/02/2024 12:12:37 - Usuario jose12@gmail.com Autentificado
+23/02/2024 12:12:39 - Usuario Cerro Sesión
+23/02/2024 13:01:17 - Token Generado
+23/02/2024 13:01:18 - Mensaje enviado
+23/02/2024 13:01:18 - Registro del nuevo usuario OK
+23/02/2024 13:01:30 - Usuario Confirmado
+23/02/2024 13:01:30 - La dirección de correo ha sido confirmada correctamente
+23/02/2024 13:01:35 - Usuario  Autentificado
+23/02/2024 13:01:35 - Error al pasar Foto a IFormFile
+23/02/2024 13:01:39 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 13:01:56 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 13:01:58 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 13:07:01 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 13:07:28 - Usuario Cerro Sesión
+23/02/2024 13:07:31 - Usuario  Autentificado
+23/02/2024 13:07:31 - Error al pasar Foto a IFormFile
+23/02/2024 13:09:59 - Token Generado
+23/02/2024 13:10:00 - Mensaje enviado
+23/02/2024 13:10:00 - Registro del nuevo usuario OK
+23/02/2024 13:10:12 - Usuario Confirmado
+23/02/2024 13:10:12 - La dirección de correo ha sido confirmada correctamente
+23/02/2024 13:10:15 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 13:10:20 - Usuario No se a Confirmado
+23/02/2024 13:10:20 - El usuario ya estaba registrado y verificado
+23/02/2024 13:10:20 - Usuario No se a Confirmado
+23/02/2024 13:10:20 - El usuario ya estaba registrado y verificado
+23/02/2024 13:10:21 - Usuario No se a Confirmado
+23/02/2024 13:10:21 - El usuario ya estaba registrado y verificado
+23/02/2024 13:10:21 - Usuario No se a Confirmado
+23/02/2024 13:10:21 - El usuario ya estaba registrado y verificado
+23/02/2024 13:10:22 - Usuario Cerro Sesión
+23/02/2024 13:10:25 - Usuario Cerro Sesión
+23/02/2024 13:10:35 - Token Generado
+23/02/2024 13:10:36 - Mensaje enviado
+23/02/2024 13:10:36 - Proceso de recuperacion iniciado
+23/02/2024 13:10:36 - Proceso de recuperación OK
+23/02/2024 13:10:39 - Iniciol procesar a recuperar Contraseña
+23/02/2024 13:10:43 - Contraseña Actualizada
+23/02/2024 13:10:43 - Contraseña modificada OK
+23/02/2024 13:10:46 - Usuario  Autentificado
+23/02/2024 13:10:46 - Error al pasar Foto a IFormFile
+23/02/2024 13:10:49 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 13:11:30 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 13:13:04 - usuario encontrado
+23/02/2024 13:13:04 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 13:13:08 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 13:13:10 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 13:13:13 - Usuario Cerro Sesión
+23/02/2024 13:13:15 - Usuario Cerro Sesión

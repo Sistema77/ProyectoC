@@ -27,6 +27,22 @@
                         </li>
                     </ul>
                 </div>
+                    @if (User.Identity.IsAuthenticated) { 
+                        @if (@ViewData["foto"] != null)
+                        {
+                            <img src="data:image/jpeg;base64,@ViewData["foto"]"
+                                 class="rounded-circle img-fluid mx-auto" alt="Imagen de usuario"
+                                 style="max-width: 100px; max-height: 100px;">
+                        }
+                        else
+                        {
+                            <span class="badge bg-dark">El usuario no tiene foto de perfil</span>
+                        }
+                
+                        <form id="formCerrarSesion" action="/auth/cerrar-sesion" method="post">
+                            <button class="btn btn-primary" type="submit">Cerrar Sesión</button>
+                        </form>
+                    }
             </div>
         </nav>
     </header>

@@ -19,6 +19,26 @@ namespace ProyectoCShar.Controllers
 
         }
 
+        // Metodo Para redirigir 
+        [HttpGet]
+        [Route("/privada/administracion")]
+        public IActionResult Administracion()
+        {
+            try
+            {
+                UsuarioDTO usuarioDTO = new UsuarioDTO();
+                return View("~/Views/Home/administracion.cshtml", usuarioDTO);
+            }
+            catch (Exception e)
+            {
+                Logs.log("Error al procesar la solicitud");
+
+                ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
+                return View("~/Views/Home/login.cshtml");
+            }
+        }
+
+
         // Controlador para eliminar un usuario
         [Authorize(Roles = "ROLE_ADMIN")]
         [HttpGet]
@@ -47,7 +67,8 @@ namespace ProyectoCShar.Controllers
 
                     // Pasa a la vista la foto del usuario
                     ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
-                    return View("~/Views/Home/administracion.cshtml");
+                    string url = Url.Action("Login", "Login") + "?timestamp=" + DateTime.Now.Ticks;
+                    return Redirect(url);
                 }
                 // Verificar si el usuario actual es administrador, y si es el último, no permitir la eliminación
                 else if (User.IsInRole("ROLE_ADMIN") && adminsRestantes == 1 && usuario.tipo_usuario == "ROLE_ADMIN")
