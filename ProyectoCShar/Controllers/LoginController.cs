@@ -74,7 +74,9 @@ namespace ProyectoCShar.Controllers
                     ViewBag.UsuarioDTO = user;
 
                     Logs.log("Usuario " + User.Identity.Name + " Autentificado");
-                    
+
+                    // Pasa a la vista la foto del usuario
+                    ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
                     // Redirigir al dashboard
                     return View("~/Views/Home/dashboard.cshtml");
                 }

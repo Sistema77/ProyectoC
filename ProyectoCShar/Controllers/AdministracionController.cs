@@ -66,12 +66,18 @@ namespace ProyectoCShar.Controllers
                 ViewData["eliminacionCorrecta"] = "El usuario se ha eliminado correctamente";
                 ViewBag.Usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
 
+                // Pasa a la vista la foto del usuario
+                ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
+
                 return View("~/Views/Home/administracion.cshtml");
             }
             catch (Exception e)
             {
                 Logs.log("Error al eliminar el usuario" + e);
                 ViewData["error"] = "Ocurrió un error al eliminar el usuario";
+                // Pasa a la vista la foto del usuario
+                ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
+
                 return View("~/Views/Home/dashboard.cshtml");
             }
         }
@@ -144,7 +150,9 @@ namespace ProyectoCShar.Controllers
                 }
 
                 // Pasa a la vista la foto del usuario
-                ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
+                ImagenesBinarios imagenes = new ImagenesBinarios();
+                ViewBag.foto = _usuarioServicio.mostrarFoto(imagenes.PasarAFile(usuarioDTO.foto));
+
                 return View("~/Views/Home/editarUsuario.cshtml", usuarioDTO);
             }
             catch (Exception e)

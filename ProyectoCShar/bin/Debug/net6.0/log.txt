@@ -41,3 +41,15 @@
 23/02/2024 11:16:24 - Usuario jose12@gmail.com Autentificado
 23/02/2024 11:16:27 - Inicio de la obtención de la lista de usuarios
 23/02/2024 11:16:31 - Inicio de edición de usuario 7
+23/02/2024 11:29:40 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:29:50 - Inicio de la obtención de la lista de usuarios
+23/02/2024 11:29:57 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:30:02 - Inicio de la obtención de la lista de usuarios
+23/02/2024 11:30:04 - Inicio de edición de usuario 7
+23/02/2024 11:30:04 - Error al pasar Foto a IFormFile
+23/02/2024 11:30:04 - Error al pasar Foto a IFormFile
+23/02/2024 11:32:10 - Token Generado
+23/02/2024 11:32:12 - Mensaje enviado
+23/02/2024 11:32:12 - Registro del nuevo usuario OK
+23/02/2024 11:32:38 - Usuario jose12@gmail.com Autentificado
+23/02/2024 11:32:42 - Usuario josee@gmail.com Autentificado

@@ -12,6 +12,16 @@
 }
 
 <div class="container py-4">
+    @if (@ViewData["foto"] != null)
+    {
+        <img src="data:image/jpeg;base64,@ViewData["foto"]"
+             class="rounded-circle img-fluid mx-auto" alt="Imagen de usuario"
+             style="max-width: 200px; max-height: 200px;">
+    }
+    else
+    {
+        <span class="badge bg-dark">El usuario no tiene foto de perfil</span>
+    }
     <div class="card bg-light cardPrincipal cardAdminUser">
         <div class="card-header border-bottom border-3">
             <h3 class="subtituloSecundario">Administración</h3>
