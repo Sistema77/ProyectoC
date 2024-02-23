@@ -171,7 +171,9 @@ namespace ProyectoCShar.Controllers
                 }
 
                 // Pasa a la vista la foto del usuario
+
                 ImagenesBinarios imagenes = new ImagenesBinarios();
+
                 ViewBag.foto = _usuarioServicio.mostrarFoto(imagenes.PasarAFile(usuarioDTO.foto));
 
                 return View("~/Views/Home/editarUsuario.cshtml", usuarioDTO);

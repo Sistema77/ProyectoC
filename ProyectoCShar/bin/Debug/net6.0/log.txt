@@ -159,3 +159,115 @@
 23/02/2024 13:13:10 - Usuario parafirebaseestudiar@gmail.com Autentificado
 23/02/2024 13:13:13 - Usuario Cerro Sesión
 23/02/2024 13:13:15 - Usuario Cerro Sesión
+23/02/2024 14:00:15 - Usuario  Autentificado
+23/02/2024 14:00:15 - Error al pasar Foto a IFormFile
+23/02/2024 14:00:18 - Usuario admin@admin.com Autentificado
+23/02/2024 14:00:18 - Error al pasar Foto a IFormFile
+23/02/2024 14:00:20 - Inicio de la obtención de la lista de usuarios
+23/02/2024 14:00:20 - Error al pasar Foto a IFormFile
+23/02/2024 14:00:26 - Inicio de edición de usuario 12
+23/02/2024 14:00:26 - Error al pasar Foto a IFormFile
+23/02/2024 14:00:35 - Inicio de procesamiento de edición del usuario 12
+23/02/2024 14:00:35 - Usuario Actualizado
+23/02/2024 14:00:35 - Error al pasar Foto a IFormFile
+23/02/2024 14:00:58 - Inicio de Eliminación del usuario 12
+23/02/2024 14:00:58 - Usuario Eliminado
+23/02/2024 14:00:58 - Usuario 12 Eliminado
+23/02/2024 14:00:58 - Error al pasar Foto a IFormFile
+23/02/2024 14:00:59 - Inicio de Eliminación del usuario 6
+23/02/2024 14:00:59 - Error al pasar Foto a IFormFile
+23/02/2024 14:01:20 - Usuario admin@admin.com Autentificado
+23/02/2024 14:01:20 - Error al pasar Foto a IFormFile
+23/02/2024 14:01:21 - Inicio de la obtención de la lista de usuarios
+23/02/2024 14:01:21 - Error al pasar Foto a IFormFile
+23/02/2024 14:02:14 - Inicio de edición de usuario 15
+23/02/2024 14:02:14 - Error al pasar Foto a IFormFile
+23/02/2024 14:02:22 - Inicio de edición de usuario 15
+23/02/2024 14:02:22 - Error al pasar Foto a IFormFile
+23/02/2024 14:02:40 - Token Generado
+23/02/2024 14:02:42 - Mensaje enviado
+23/02/2024 14:02:42 - Registro del nuevo usuario OK
+23/02/2024 14:02:45 - Usuario admin@admin.com Autentificado
+23/02/2024 14:02:45 - Error al pasar Foto a IFormFile
+23/02/2024 14:02:46 - Inicio de la obtención de la lista de usuarios
+23/02/2024 14:02:46 - Error al pasar Foto a IFormFile
+23/02/2024 14:02:50 - Inicio de edición de usuario 16
+23/02/2024 14:02:50 - Error al pasar Foto a IFormFile
+23/02/2024 14:02:51 - Inicio de edición de usuario 16
+23/02/2024 14:02:51 - Error al pasar Foto a IFormFile
+23/02/2024 14:03:02 - Inicio de edición de usuario 15
+23/02/2024 14:03:02 - Error al pasar Foto a IFormFile
+23/02/2024 14:03:04 - Inicio de edición de usuario 15
+23/02/2024 14:03:04 - Error al pasar Foto a IFormFile
+23/02/2024 14:05:35 - usuario encontrado
+23/02/2024 14:05:35 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 14:05:41 - Usuario admin@admin.com Autentificado
+23/02/2024 14:05:41 - Error al pasar Foto a IFormFile
+23/02/2024 14:05:45 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 14:05:46 - Inicio de la obtención de la lista de usuarios
+23/02/2024 14:05:52 - Inicio de edición de usuario 6
+23/02/2024 14:05:52 - Error al pasar Foto a IFormFile
+23/02/2024 14:05:52 - Error al pasar Foto a IFormFile
+23/02/2024 14:05:59 - Inicio de edición de usuario 16
+23/02/2024 14:05:59 - Error al pasar Foto a IFormFile
+23/02/2024 14:06:01 - Inicio de edición de usuario 16
+23/02/2024 14:06:01 - Error al pasar Foto a IFormFile
+23/02/2024 14:08:06 - usuario encontrado
+23/02/2024 14:08:06 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 14:08:10 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 14:08:13 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 14:08:15 - Inicio de la obtención de la lista de usuarios
+23/02/2024 14:08:53 - usuario encontrado
+23/02/2024 14:08:53 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 14:08:57 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 14:08:59 - Inicio de la obtención de la lista de usuarios
+23/02/2024 14:09:04 - Inicio de edición de usuario 16
+23/02/2024 14:09:04 - Error al pasar Foto a IFormFile
+23/02/2024 14:09:08 - Inicio de edición de usuario 16
+23/02/2024 14:09:08 - Error al pasar Foto a IFormFile
+23/02/2024 14:09:38 - Usuario Cerro Sesión
+23/02/2024 14:09:44 - Usuario  Autentificado
+23/02/2024 14:09:44 - Error al pasar Foto a IFormFile
+23/02/2024 14:09:47 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 14:09:50 - Usuario Cerro Sesión
+23/02/2024 14:09:51 - Usuario Cerro Sesión
+23/02/2024 14:09:57 - Usuario  Autentificado
+23/02/2024 14:09:57 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:00 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 14:10:02 - Usuario Cerro Sesión
+23/02/2024 14:10:04 - Usuario Cerro Sesión
+23/02/2024 14:10:12 - Usuario  Autentificado
+23/02/2024 14:10:12 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:13 - Inicio de la obtención de la lista de usuarios
+23/02/2024 14:10:13 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:18 - Inicio de edición de usuario 6
+23/02/2024 14:10:18 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:18 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:21 - Inicio de edición de usuario 16
+23/02/2024 14:10:21 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:22 - Inicio de edición de usuario 16
+23/02/2024 14:10:23 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:24 - Inicio de edición de usuario 16
+23/02/2024 14:10:24 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:24 - Inicio de edición de usuario 16
+23/02/2024 14:10:24 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:24 - Inicio de edición de usuario 16
+23/02/2024 14:10:24 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:24 - Inicio de edición de usuario 16
+23/02/2024 14:10:25 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:25 - Inicio de edición de usuario 16
+23/02/2024 14:10:25 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:25 - Inicio de edición de usuario 16
+23/02/2024 14:10:25 - Error al pasar Foto a IFormFile
+23/02/2024 14:10:33 - Usuario Cerro Sesión
+23/02/2024 14:10:35 - Usuario Cerro Sesión
+23/02/2024 14:12:33 - usuario encontrado
+23/02/2024 14:12:33 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 14:12:37 - Usuario  Autentificado
+23/02/2024 14:12:37 - Error al pasar Foto a IFormFile
+23/02/2024 14:12:41 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 14:12:44 - Inicio de la obtención de la lista de usuarios
+23/02/2024 14:25:33 - Usuario parafirebaseestudiar@gmail.com Autentificado
+23/02/2024 14:26:45 - Usuario josee@gmail.com Autentificado
+23/02/2024 14:28:24 - Usuario josee@gmail.com Autentificado
+23/02/2024 14:29:36 - Usuario josee@gmail.com Autentificado

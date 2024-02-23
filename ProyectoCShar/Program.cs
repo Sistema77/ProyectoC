@@ -18,11 +18,15 @@ builder.Services.AddDbContext<ModelContext>(options =>
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
+//Usuarios
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicioImpl>();
-builder.Services.AddScoped<IServicioEncriptar, ServicioEncriptarImpl>();
 builder.Services.AddScoped<IPasarADAO, PasarADAOImpl>();
 builder.Services.AddScoped<IPasarADTO, PasarADTOImpl>();
+//Util
+builder.Services.AddScoped<IServicioEncriptar, ServicioEncriptarImpl>();
 builder.Services.AddScoped<IServicioEmail, ServicioEmailImpl>();
+//Cuentas
+builder.Services.AddScoped<ICuentaServicio, CuentaServicioImplcs>();
 
 
 builder.Services.AddAuthentication(options =>

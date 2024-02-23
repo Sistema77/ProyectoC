@@ -2,7 +2,7 @@
 {
     public class Class
     {
-        public int id_credito { get; set; }
+        public long id_credito { get; set; }
         public decimal cantidad_prestamo { get; set; }
         public decimal cuota_mensual { get; set; }
         public string estado_prestamo { get; set; }

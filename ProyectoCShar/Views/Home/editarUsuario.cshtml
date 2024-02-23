@@ -11,18 +11,6 @@
         <h2 class="text-center mb-5">
             <i class="bi bi-person-fill-gear" style="color: #1f3c85">Editar usuario</i>
         </h2>
-        <div class="d-flex justify-content-center mt-4 mb-4">
-            @if (@ViewData["foto"] != null)
-            {
-                <img src="data:image/jpeg;base64,@ViewData["foto"]"
-                     class="rounded-circle img-fluid mx-auto" alt="Imagen de usuario" 
-                     style="max-width: 200px; max-height: 200px;">
-            }
-            else
-            {
-                <span class="badge bg-dark">El usuario no tiene foto de perfil</span>
-            }
-        </div>
         <input type="hidden" name="id" value="@Model.id_usuario" />
         <div class="mb-3">
             <label for="email" class="form-label textoPrincipal">Correo Electrónico</label>
