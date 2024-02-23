@@ -7,5 +7,6 @@
         public DateTime? fch_apertura { get; set; }
         public string numero_cuenta { get; set; }
         public decimal saldo { get; set; }
+        public long id_usuario { get; set; }
     }
 }

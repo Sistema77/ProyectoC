@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging; // Añadir este using para el Logger
 using ProyectoCShar.DTOs;
 using ProyectoCShar.Interfaces;
 using ProyectoCShar.Util;

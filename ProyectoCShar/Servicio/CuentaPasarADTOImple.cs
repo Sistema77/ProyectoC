@@ -42,6 +42,7 @@ namespace ProyectoCShar.Servicio
                 dto.fch_apertura = cuentaDAO.fch_apertura;
                 dto.numero_cuenta = cuentaDAO.numero_cuenta;
                 dto.con_nomina = cuentaDAO.con_nomina;
+                dto.id_usuario = cuentaDAO.id_usuario;
 
                 return dto;
             }

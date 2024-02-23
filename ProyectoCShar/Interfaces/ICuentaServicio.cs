@@ -6,7 +6,7 @@ namespace ProyectoCShar.Interfaces
     public interface ICuentaServicio 
     {
         // Registrar Cuenta en la BD
-        public CuentaDTO registrarCuenta(CuentaDTO cuentDTO);
+        public CuentaDTO registrarCuenta(/*CuentaDTO cuentDTO,*/ String emailUsuario);
 
         public List<CuentaDTO> obtenerTodosLasCuentas();
 

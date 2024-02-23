@@ -271,3 +271,100 @@
 23/02/2024 14:26:45 - Usuario josee@gmail.com Autentificado
 23/02/2024 14:28:24 - Usuario josee@gmail.com Autentificado
 23/02/2024 14:29:36 - Usuario josee@gmail.com Autentificado
+23/02/2024 18:51:50 - Usuario josemanuelmorenoguerra96@gmail.com Autentificado
+23/02/2024 18:51:50 - Error al pasar Foto a IFormFile
+23/02/2024 18:51:53 - Usuario admin@admin.com Autentificado
+23/02/2024 18:51:53 - Error al pasar Foto a IFormFile
+23/02/2024 18:51:56 - Inicio de la obtención de la lista de cuenta
+23/02/2024 18:52:53 - Error al obtener la lista de usuariosSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at ProyectoCShar.Controllers.CuentaController.ListaCuenta(String busquedaCuenta) in C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoC\ProyectoCShar\Controllers\CuentaController.cs:line 35
+23/02/2024 18:54:07 - Usuario Cerro Sesión
+23/02/2024 18:54:08 - Usuario Cerro Sesión
+23/02/2024 18:54:14 - usuario encontrado
+23/02/2024 18:54:14 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 18:54:19 - Usuario  Autentificado
+23/02/2024 18:54:19 - Error al pasar Foto a IFormFile
+23/02/2024 18:54:21 - Usuario admin@admin.com Autentificado
+23/02/2024 18:54:21 - Error al pasar Foto a IFormFile
+23/02/2024 18:54:25 - Inicio de la obtención de la lista de cuenta
+23/02/2024 18:56:24 - Usuario Cerro Sesión
+23/02/2024 18:56:25 - Usuario Cerro Sesión
+23/02/2024 18:56:32 - Usuario  Autentificado
+23/02/2024 18:56:32 - Error al pasar Foto a IFormFile
+23/02/2024 18:56:34 - Usuario admin@admin.com Autentificado
+23/02/2024 18:56:34 - Error al pasar Foto a IFormFile
+23/02/2024 18:56:38 - Inicio de la obtención de la lista de cuenta
+23/02/2024 18:57:51 - Usuario encontrado pero sin Confirmar
+23/02/2024 18:57:51 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 18:58:05 - Usuario admin@admin.com Autentificado
+23/02/2024 18:58:05 - Error al pasar Foto a IFormFile
+23/02/2024 18:58:07 - Inicio de la obtención de la lista de usuarios
+23/02/2024 18:58:07 - Error al pasar Foto a IFormFile
+23/02/2024 18:58:14 - Inicio de Eliminación del usuario 5
+23/02/2024 18:58:15 - Usuario Eliminado
+23/02/2024 18:58:15 - Usuario 5 Eliminado
+23/02/2024 18:58:15 - Error al pasar Foto a IFormFile
+23/02/2024 18:58:17 - Inicio de Eliminación del usuario 6
+23/02/2024 18:58:17 - Usuario Eliminado
+23/02/2024 18:58:17 - Usuario 6 Eliminado
+23/02/2024 18:58:17 - Error al pasar Foto a IFormFile
+23/02/2024 18:58:18 - Inicio de Eliminación del usuario 7
+23/02/2024 18:58:18 - Usuario Eliminado
+23/02/2024 18:58:18 - Usuario 7 Eliminado
+23/02/2024 18:58:18 - Error al pasar Foto a IFormFile
+23/02/2024 18:58:18 - Inicio de Eliminación del usuario 8
+23/02/2024 18:58:18 - Usuario Eliminado
+23/02/2024 18:58:18 - Usuario 8 Eliminado
+23/02/2024 18:58:19 - Error al pasar Foto a IFormFile
+23/02/2024 18:58:19 - Inicio de Eliminación del usuario 9
+23/02/2024 18:58:19 - Usuario Eliminado
+23/02/2024 18:58:19 - Usuario 9 Eliminado
+23/02/2024 18:58:19 - Error al pasar Foto a IFormFile
+23/02/2024 18:58:21 - Usuario Cerro Sesión
+23/02/2024 18:58:22 - Usuario Cerro Sesión
+23/02/2024 19:02:41 - Token Generado
+23/02/2024 19:02:43 - Mensaje enviado
+23/02/2024 19:02:43 - Registro del nuevo usuario OK
+23/02/2024 19:02:48 - Usuario encontrado pero sin Confirmar
+23/02/2024 19:02:48 - Error, Credenciales inválidas o cuenta no confirmada
+23/02/2024 19:03:16 - Usuario  Autentificado
+23/02/2024 19:03:16 - Error al pasar Foto a IFormFile
+23/02/2024 19:03:18 - Usuario jose@gmail.com Autentificado
+23/02/2024 19:03:22 - Inicio de la obtención de la lista de cuenta
+23/02/2024 19:03:24 - Inicio de la obtención de la lista de cuenta
+23/02/2024 19:03:51 - Usuario jose@gmail.com Autentificado
+23/02/2024 19:03:53 - Inicio de la obtención de la lista de cuenta
+23/02/2024 19:04:28 - Error al obtener la lista de usuariosSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at ProyectoCShar.Controllers.CuentaController.ListaCuenta(String busquedaCuenta) in C:\Users\josem\OneDrive\Escritorio\Proyect\DWS\ProyectoC\ProyectoCShar\Controllers\CuentaController.cs:line 35
+23/02/2024 19:06:46 - Usuario jose@gmail.com Autentificado
+23/02/2024 19:10:00 - Inicio de la obtención de la lista de cuenta
+23/02/2024 19:14:42 - Usuario jose@gmail.com Autentificado
+23/02/2024 19:16:04 - Inicio de la obtención de la lista de cuenta
+23/02/2024 19:18:11 - Usuario jose@gmail.com Autentificado
+23/02/2024 19:20:19 - Usuario Cerro Sesión
+23/02/2024 19:20:19 - Usuario Cerro Sesión
+23/02/2024 19:20:44 - Token Generado
+23/02/2024 19:20:46 - Mensaje enviado
+23/02/2024 19:20:46 - Registro del nuevo usuario OK
+23/02/2024 19:21:17 - Usuario  Autentificado
+23/02/2024 19:21:23 - Error al pasar Foto a IFormFile
+23/02/2024 19:21:27 - Usuario jose2@gmail.com Autentificado
+23/02/2024 19:22:26 - Usuario jose2@gmail.com Autentificado
+23/02/2024 19:22:28 - Inicio de la obtención de la lista de usuarios
+23/02/2024 19:22:54 - Inicio de la obtención de la lista de usuarios
+23/02/2024 19:38:12 - Usuario Cerro Sesión
+23/02/2024 19:38:12 - Usuario Cerro Sesión
+23/02/2024 19:41:14 - Usuario  Autentificado
+23/02/2024 19:41:14 - Error al pasar Foto a IFormFile
+23/02/2024 19:41:17 - Usuario jose@gmail.com Autentificado
+23/02/2024 19:41:18 - Inicio de la obtención de la lista de cuenta
+23/02/2024 20:26:44 - Usuario Cerro Sesión
+23/02/2024 20:26:45 - Usuario Cerro Sesión
+23/02/2024 20:26:53 - Usuario  Autentificado
+23/02/2024 20:26:53 - Error al pasar Foto a IFormFile
+23/02/2024 20:26:56 - Usuario jose@gmail.com Autentificado
+23/02/2024 20:26:59 - Inicio de la obtención de la lista de cuenta
+23/02/2024 20:27:30 - Usuario jose@gmail.com Autentificado
+23/02/2024 20:28:49 - Usuario jose@gmail.com Autentificado
+23/02/2024 20:28:58 - Inicio de la creación de cuenta
+23/02/2024 20:29:02 - Inicio de la creación de cuenta

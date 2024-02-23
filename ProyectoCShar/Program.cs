@@ -27,7 +27,8 @@ builder.Services.AddScoped<IServicioEncriptar, ServicioEncriptarImpl>();
 builder.Services.AddScoped<IServicioEmail, ServicioEmailImpl>();
 //Cuentas
 builder.Services.AddScoped<ICuentaServicio, CuentaServicioImplcs>();
-
+builder.Services.AddScoped<ICuentaPasarADAO, CuentaPasarADAOImple>();
+builder.Services.AddScoped<ICuentaPasarADTO, CuentaPasarADTOImple>();
 
 builder.Services.AddAuthentication(options =>
 {

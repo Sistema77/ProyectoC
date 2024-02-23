@@ -13,24 +13,32 @@ namespace ProyectoCShar.Servicio
         private readonly ModelContext _contexto;
         private readonly ICuentaPasarADAO _pasaraDAO;
         private readonly ICuentaPasarADTO _pasaraDTO;
+        private readonly IUsuarioServicio _usarioServicio;
 
-        public CuentaServicioImplcs(ModelContext contexto, ICuentaPasarADAO pasaraDAO, ICuentaPasarADTO pasaraDTO)
+        public CuentaServicioImplcs(ModelContext contexto, ICuentaPasarADAO pasaraDAO, ICuentaPasarADTO pasaraDTO, IUsuarioServicio usarioServicio)
         {
             _contexto = contexto;
             _pasaraDAO = pasaraDAO;
             _pasaraDTO = pasaraDTO;
+            _usarioServicio = usarioServicio;
         }
 
-        public CuentaDTO registrarCuenta(CuentaDTO cuentDTO)
+        public CuentaDTO registrarCuenta(/*CuentaDTO cuentDTO,*/ String emailDueño)
         {
             try
             {
-                CuentaDAO cuentaDao = _pasaraDAO.cuentaToDao(cuentDTO);
+                CuentaDTO cuentDTO = new CuentaDTO(); // Borrar despues de las Pruebas
+
+                CuentaDAO cuentaDao = new CuentaDAO();
 
                 cuentaDao.fch_apertura = DateTime.Now.ToUniversalTime();
                 cuentaDao.saldo = 0;
                 cuentaDao.con_nomina = false;
                 cuentaDao.numero_cuenta = "ES9420805801101234567891";
+                
+                // Relacionar Cuenta con Usuario
+                UsuarioDTO usuario = _usarioServicio.obtenerUsuarioPorEmail(emailDueño);
+                cuentaDao.id_usuario = usuario.id_usuario;
 
                 _contexto.cuentaDAO.Add(cuentaDao);
                 _contexto.SaveChanges();

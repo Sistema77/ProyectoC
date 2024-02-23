@@ -1,121 +1,58 @@
 ﻿﻿@{
-    ViewData["Title"] = "administracionUsuarios";
+    ViewData["Title"] = "dashboard";
+    var noAdmin = ViewData["noAdmin"] as string;
     var noSePuedeEliminar = ViewData["noSePuedeEliminar"] as string;
-    var elUsuarioTieneQuedadas = ViewData["elUsuarioTieneQuedadas"] as string;
-    var eliminacionCorrecta = ViewData["eliminacionCorrecta"] as string;
-    var EdicionCorrecta = ViewData["EdicionCorrecta"] as string;
-    var mensajeRegistroExitoso = ViewData["MensajeRegistroExitoso"] as string;
-    var cuentaNoVerificada = ViewData["EmailNoConfirmado"] as string;
-    var noTePuedesEliminar = ViewData["noTePuedesEliminar"] as string;
-    var usuarioNoEncontrado = ViewData["usuarioNoEncontrado"] as string;
     var error = ViewData["error"] as string;
 }
-
 <div class="container py-4">
-    <div class="card bg-light cardPrincipal cardAdminUser">
-        <div class="card-header border-bottom border-3">
-            <h3 class="subtituloSecundario">Administración</h3>
-        </div>
-        <div class="card-body">
-            <div class="row">
+    <div class="row cardPrincipal">
+        <div class="col">
+            <h3 class="text-center mt-5 subtituloSecundario3">Dashboard</h3>
+            <hr class="border border-primary border-2 opacity-55 mb-5 mt-4">
+            <h4 class="text-primary text-center subtituloSecundario">Cuentas de <span>@User.Identity.Name</span></h4>
+            <div class="text-center mt-4">
             </div>
-            @if (ViewBag.Cuenta != null)
-            {
-                <table class="table table-striped table-bordered">
-                    <thead class="thead-inverse">
-                        <tr>
-                            <th class="tableCustom">id</th>
-                            <th class="tableCustom">Numero Cuenta</th>
-                            <th class="tableCustom">con Nomina</th>
-                            <th class="tableCustom">Saldo</th>
-                            <th class="tableCustom">Fecha Apertura</th>
-                            <th class="tableCustom" asp:authorize="User.IsInRole('ROLE_ADMIN')">Edición</th>
-                            <th class="tableCustom" asp:authorize="User.IsInRole('ROLE_ADMIN')">Eliminado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var cuenta in ViewBag.Cuenta)
-                        {
-                            <tr>
-                                <td>@cuenta.id_cuenta</td>
-                                <td>@cuenta.numero_cuenta</td>
-                                <td>@cuenta.con_nomina</td>
-                                <td class="text-center">@cuenta.fch_apertura</td>
-                                <td asp:authorize="User.IsInRole('ROLE_ADMIN')">
-                                    <a class="btn btn-primary" asp-action="FormularioEdicion"
-                                       asp-controller="Administracion" asp-route-id="@cuenta.id_cuenta">
-                                        <i class="bi bi-pencil-square"> Editar</i>
-                                    </a>
-                                </td>
-                                <td asp-authorize="User.IsInRole('ROLE_ADMIN')">
-                                    <a class="btn btn-danger" asp-route-id="@cuenta.id_cuenta"
-                                       asp-action="eliminarUsuario" asp-controller="Administracion">
-                                        <i class="bi bi-trash"> Eliminar</i>
-                                    </a>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            }
-            else
-            {
-                <h5 class="card-title text-center text-danger">No hay usuarios registrados</h5>
-            }
         </div>
     </div>
-    @if (!string.IsNullOrEmpty(usuarioNoEncontrado))
-    {
-        <div class="alert alert-danger" role="alert">
-            ¡No se encontraron usuarios!, No hay ninguna coincidencia en ningún email con la busqueda introducida
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 dashboardCard border border-dark cardPrincipal">
+                <i class="bi bi-person-fill-gear fs-1 ms-4" style="color: #1f3c85"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Crear Cuestas</h5>
+                    <p class="card-text">Crear Cuenta asociada al Usuarios.</p>
+                    <a href="/privada/crear-cuenta" class="btn buttonPrincipal"><i class="bi bi-arrow-right-circle"> Crear Cuenta</i></a>
+                </div>
+             </div>
+         </div>
+        <div class="col-md-4">
+            <div class="card mb-4 dashboardCard border border-dark cardPrincipal">
+                <i class="bi bi-person-fill-gear fs-1 ms-4" style="color: #1f3c85"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Cuenta</h5>
+                    <p class="card-text">Acceda para gestionar Cuentas.</p>
+                    <a href="/privada/lista-cuenta" class="btn buttonPrincipal"><i class="bi bi-arrow-right-circle">Ver Cuenta</i></a>
+                </div>
+            </div>
         </div>
-    }
-    @if (!string.IsNullOrEmpty(mensajeRegistroExitoso))
+    </div>
+    @if (!string.IsNullOrEmpty(noAdmin))
     {
-        <div class="alert alert-danger" role="alert">
-            El usuario fue registrado!, Para usar la cuenta tiene que confirmar su cuenta de correo electrónico
+        <div class="alert alert-danger">
+            ¡Recurso prohibido!, No tiene los permisos suficientes para acceder a este recurso
         </div>
     }
     @if (!string.IsNullOrEmpty(noSePuedeEliminar))
     {
-        <div class="alert alert-danger" role="alert">
-            ¡Error!, No se puede eliminar al ultimo usuario con permisos de administrador
-        </div>
-    }
-    @if (!string.IsNullOrEmpty(elUsuarioTieneQuedadas))
-    {
-        <div class="alert alert-danger" role="alert">
-            ¡No se puede eliminar!, El usuario tiene quedadas pendientes en las que participa y para poder eliminarlo antes debe salir de todas ellas
-        </div>
-    }
-    @if (!string.IsNullOrEmpty(eliminacionCorrecta))
-    {
-        <div class="alert alert-danger" role="alert">
-            ¡Usuario eliminado!, El usuario ha sido eliminado correctamente
-        </div>
-    }
-    @if (!string.IsNullOrEmpty(cuentaNoVerificada))
-    {
-        <div class="alert alert-danger" role="alert">
-            ¡Email registrado pero sin verificar!, Para que pueda usar la cuenta, antes debe confirmar su cuenta de correo electrónico
-        </div>
-    }
-    @if (!string.IsNullOrEmpty(EdicionCorrecta))
-    {
-        <div class="alert alert-danger" role="alert">
-            ¡Cambios guardados!, El usuario ha sido modificado
-        </div>
-    }
-    @if (!string.IsNullOrEmpty(noTePuedesEliminar))
-    {
-        <div class="alert alert-danger" role="alert">
-            ¡No puede eliminarse a sí mismo!, Debe ser otro administrador quien realice esta acción
+        <div class="alert alert-danger">
+            ¡Error!, No se puede eliminar a un usuario con permisos de administrador
         </div>
     }
     @if (!string.IsNullOrEmpty(error))
     {
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-danger">
             ¡Error!, Ocurrio un error no esperado, intentelo de nuevo
         </div>
     }
+
 </div>

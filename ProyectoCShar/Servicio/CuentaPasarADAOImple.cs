@@ -21,6 +21,7 @@ namespace ProyectoCShar.Servicio
                 cuentaDao.fch_apertura = cuentaDTO.fch_apertura;
                 cuentaDao.numero_cuenta = cuentaDTO.numero_cuenta;
                 cuentaDao.con_nomina = cuentaDTO.con_nomina;
+                cuentaDao.id_usuario = cuentaDTO.id_usuario;
                 return cuentaDao;
             }
             catch (Exception e)
