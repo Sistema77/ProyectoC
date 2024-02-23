@@ -4,7 +4,7 @@
     {
         byte[] PasarAByte(IFormFile foto);
 
-        IFormFile PasarAFile(byte[] fotoByte);
+        String PasarAFile(byte[] fotoByte);
 
     }
 }

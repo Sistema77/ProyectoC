@@ -28,12 +28,12 @@ namespace ProyectoCShar.Util
             }
         }
 
-        public IFormFile PasarAFile(byte[] fotoByte)
+        public String PasarAFile(byte[] fotoByte)
         {
             try
             {
                 MemoryStream ms = new MemoryStream(fotoByte);
-                IFormFile file = new FormFile(ms, 0, fotoByte.Length, "foto", "foto");
+                String file = Convert.ToBase64String(fotoByte);
 
                 return file;
             }

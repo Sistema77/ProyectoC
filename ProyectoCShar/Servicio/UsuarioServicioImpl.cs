@@ -421,5 +421,20 @@ namespace ProyectoCShar.Servicio
             }
         }
 
+        public String mostrarFoto(String email)
+        {
+            try
+            {
+                ImagenesBinarios imagen = new ImagenesBinarios();
+
+                UsuarioDTO usuario = obtenerUsuarioPorEmail(email);
+
+                return imagen.PasarAFile(usuario.foto);
+            }catch(Exception e)
+            {
+                Logs.log("Error al Cargar la foto");
+            }
+            return null;
+        }
     }
 }

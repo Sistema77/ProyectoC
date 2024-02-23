@@ -49,5 +49,8 @@ namespace ProyectoCShar.Interfaces
         // Actualiza el usuario con nuevos datos
         public void actualizarUsuario(UsuarioDTO usuario);
 
+        // Pasar a la vista la Foto del Usuario
+        public String mostrarFoto(String email);
+
     }
 }

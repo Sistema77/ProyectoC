@@ -44,6 +44,9 @@ namespace ProyectoCShar.Controllers
                     // Si el usuario intenta eliminarse a sí mismo, mostrar mensaje y redirigir
                     ViewData["noTePuedesEliminar"] = "Un administrador no puede eliminarse a sí mismo";
                     ViewBag.Usuarios = usuarios;
+
+                    // Pasa a la vista la foto del usuario
+                    ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
                     return View("~/Views/Home/administracion.cshtml");
                 }
                 // Verificar si el usuario actual es administrador, y si es el último, no permitir la eliminación
@@ -51,6 +54,9 @@ namespace ProyectoCShar.Controllers
                 {
                     ViewData["noSePuedeEliminar"] = "No se puede eliminar al último administrador del sistema";
                     ViewBag.Usuarios = usuarios;
+
+                    // Pasa a la vista la foto del usuario
+                    ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
                     return View("~/Views/Home/administracion.cshtml");
                 }
 
@@ -101,12 +107,18 @@ namespace ProyectoCShar.Controllers
                     ViewBag.Usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
                 }
 
+                // Pasa a la vista la foto del usuario
+                ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
+                
                 return View("~/Views/Home/administracion.cshtml");
             }
             catch (Exception e)
             {
                 Logs.log("Error al obtener la lista de usuarios" + e); 
                 ViewData["error"] = "Ocurrió un error al obtener la lista de usuarios";
+
+                // Pasa a la vista la foto del usuario
+                ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
                 return View("~/Views/Home/dashboard.cshtml");
             }
         }
@@ -126,15 +138,21 @@ namespace ProyectoCShar.Controllers
                 if (usuarioDTO == null)
                 {
                     ViewData["usuarioNoEncontrado"] = "Ocurrió un error al obtener el usuario para editar";
+                    // Pasa a la vista la foto del usuario
+                    ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
                     return View("~/Views/Home/administracion.cshtml");
                 }
 
+                // Pasa a la vista la foto del usuario
+                ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
                 return View("~/Views/Home/editarUsuario.cshtml", usuarioDTO);
             }
             catch (Exception e)
             {
                 Logs.log("Error al obtener el usuario para editar" + e); 
                 ViewData["error"] = "Ocurrió un error al obtener el usuario para editar";
+                // Pasa a la vista la foto del usuario
+                ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
                 return View("~/Views/Home/dashboard.cshtml");
             }
         }
@@ -162,12 +180,16 @@ namespace ProyectoCShar.Controllers
                 ViewData["EdicionCorrecta"] = "El Usuario se ha editado correctamente";
                 ViewBag.Usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
 
+                // Pasa a la vista la foto del usuario
+                ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
                 return View("~/Views/Home/administracion.cshtml");
             }
             catch (Exception e)
             {
                 Logs.log("Error al editar el usuario" + e); 
                 ViewData["Error"] = "Ocurrió un error al editar el usuario";
+                // Pasa a la vista la foto del usuario
+                ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
                 return View("~/Views/Home/dashboard.cshtml");
             }
         }

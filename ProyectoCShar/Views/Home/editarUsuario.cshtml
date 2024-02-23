@@ -12,10 +12,11 @@
             <i class="bi bi-person-fill-gear" style="color: #1f3c85">Editar usuario</i>
         </h2>
         <div class="d-flex justify-content-center mt-4 mb-4">
-            @if (Model.foto != null)
+            @if (@ViewData["foto"] != null)
             {
-                <img src="data:image/jpeg;base64,@(Model.foto != null ? Convert.ToBase64String(Model.foto) : "")" 
-                class="rounded-circle img-fluid mx-auto" alt="Imagen de usuario" style="max-width: 200px; max-height: 200px;">
+                <img src="data:image/jpeg;base64,@ViewData["foto"]"
+                     class="rounded-circle img-fluid mx-auto" alt="Imagen de usuario" 
+                     style="max-width: 200px; max-height: 200px;">
             }
             else
             {
