@@ -368,3 +368,229 @@
 23/02/2024 20:28:49 - Usuario jose@gmail.com Autentificado
 23/02/2024 20:28:58 - Inicio de la creación de cuenta
 23/02/2024 20:29:02 - Inicio de la creación de cuenta
+24/02/2024 12:50:58 - Usuario Cerro Sesión
+24/02/2024 12:50:59 - Usuario Cerro Sesión
+24/02/2024 12:53:47 - Usuario  Autentificado
+24/02/2024 12:53:47 - Error al pasar Foto a IFormFile
+24/02/2024 12:53:48 - Usuario jose@gmail.com Autentificado
+24/02/2024 12:53:54 - Inicio de la creación de cuenta
+24/02/2024 13:01:46 - Usuario jose@gmail.com Autentificado
+24/02/2024 13:01:50 - Inicio de la creación de cuenta
+24/02/2024 18:16:03 - Usuario admin@admin.com Autentificado
+24/02/2024 18:16:03 - Error al pasar Foto a IFormFile
+24/02/2024 18:16:06 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:16:11 - Inicio de la creación de cuenta
+24/02/2024 18:16:14 - Inicio de la creación de cuenta
+24/02/2024 18:16:16 - Inicio de la creación de cuenta
+24/02/2024 18:17:52 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:18:09 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:21:08 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:21:13 - Inicio de la creación de cuenta
+24/02/2024 18:21:27 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:24:40 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:24:43 - Inicio de la creación de cuenta
+24/02/2024 18:24:43 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:24:47 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:28:08 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:28:10 - Inicio de la creación de cuenta
+24/02/2024 18:28:11 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:30:04 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:30:06 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:37:04 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:37:08 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:38:16 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:38:19 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:39:27 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:39:30 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:43:24 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:43:27 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:46:55 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:46:58 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:49:13 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:49:16 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:50:54 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:50:57 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:52:05 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:52:08 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:52:15 - Inicio Eliminación de cuenta
+24/02/2024 18:52:34 - Cuenta Eliminado
+24/02/2024 18:53:19 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:53:22 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:53:25 - Inicio Eliminación de cuenta
+24/02/2024 18:53:30 - Cuenta Eliminado
+24/02/2024 18:53:32 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:53:37 - Inicio Eliminación de cuenta
+24/02/2024 18:53:37 - Cuenta Eliminado
+24/02/2024 18:53:50 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:53:56 - Inicio Eliminación de cuenta
+24/02/2024 18:53:56 - Cuenta Eliminado
+24/02/2024 18:53:56 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:53:58 - Inicio Eliminación de cuenta
+24/02/2024 18:53:58 - Cuenta Eliminado
+24/02/2024 18:53:58 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:53:59 - Inicio Eliminación de cuenta
+24/02/2024 18:53:59 - Cuenta Eliminado
+24/02/2024 18:53:59 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:54:00 - Inicio Eliminación de cuenta
+24/02/2024 18:54:00 - Cuenta Eliminado
+24/02/2024 18:54:00 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:54:06 - Inicio Eliminación de cuenta
+24/02/2024 18:54:07 - Cuenta Eliminado
+24/02/2024 18:54:12 - Inicio de la obtención de la lista de cuenta
+24/02/2024 18:55:23 - usuario encontrado
+24/02/2024 18:55:23 - Error, Credenciales inválidas o cuenta no confirmada
+24/02/2024 18:55:41 - Token Generado
+24/02/2024 18:55:42 - Mensaje enviado
+24/02/2024 18:55:42 - Registro del nuevo usuario OK
+24/02/2024 18:55:47 - Usuario encontrado pero sin Confirmar
+24/02/2024 18:55:47 - Error, Credenciales inválidas o cuenta no confirmada
+24/02/2024 18:56:09 - Usuario jose@gmail.com Autentificado
+24/02/2024 18:56:13 - Inicio de la creación de cuenta
+24/02/2024 18:56:13 - Inicio de la obtención de la lista de cuenta
+24/02/2024 19:02:26 - Usuario jose2@gmail.com Autentificado
+24/02/2024 19:08:48 - Usuario jose@gmail.com Autentificado
+24/02/2024 19:09:22 - Usuario jose@gmail.com Autentificado
+24/02/2024 19:09:24 - Usuario admin@admin.com Autentificado
+24/02/2024 19:09:24 - Error al pasar Foto a IFormFile
+24/02/2024 19:09:26 - Inicio de la obtención de la lista de usuarios
+24/02/2024 19:09:26 - Error al pasar Foto a IFormFile
+24/02/2024 19:09:29 - Usuario Cerro Sesión
+24/02/2024 19:09:30 - Usuario Cerro Sesión
+24/02/2024 19:09:34 - Usuario  Autentificado
+24/02/2024 19:09:34 - Error al pasar Foto a IFormFile
+24/02/2024 19:09:36 - Inicio de la obtención de la lista de cuenta
+24/02/2024 19:18:49 - Usuario jose@gmail.com Autentificado
+24/02/2024 19:18:53 - Usuario admin@admin.com Autentificado
+24/02/2024 19:18:53 - Error al pasar Foto a IFormFile
+24/02/2024 19:18:54 - Inicio de la obtención de la lista de usuarios
+24/02/2024 19:18:54 - Error al pasar Foto a IFormFile
+24/02/2024 19:18:57 - Usuario Cerro Sesión
+24/02/2024 19:18:58 - Usuario Cerro Sesión
+24/02/2024 19:19:02 - Usuario  Autentificado
+24/02/2024 19:19:02 - Error al pasar Foto a IFormFile
+24/02/2024 19:23:56 - Usuario jose@gmail.com Autentificado
+24/02/2024 19:24:00 - Inicio de la obtención de la lista de cuenta
+24/02/2024 19:24:21 - Usuario jose@gmail.com Autentificado
+24/02/2024 19:26:04 - Usuario Cerro Sesión
+24/02/2024 19:26:04 - Usuario Cerro Sesión
+24/02/2024 19:30:04 - Usuario  Autentificado
+24/02/2024 19:30:04 - Error al pasar Foto a IFormFile
+24/02/2024 19:30:07 - Usuario jose@gmail.com Autentificado
+24/02/2024 19:30:33 - Inicio de la obtención de la lista de cuenta
+24/02/2024 19:30:36 - Inicio Eliminación de cuenta
+24/02/2024 19:30:37 - Cuenta Eliminado
+24/02/2024 19:30:37 - Inicio de la obtención de la lista de cuenta
+24/02/2024 19:30:40 - Inicio de la creación de cuenta
+24/02/2024 19:30:40 - Inicio de la obtención de la lista de cuenta
+24/02/2024 19:30:55 - Usuario Cerro Sesión
+24/02/2024 19:30:56 - Usuario Cerro Sesión
+24/02/2024 20:02:30 - Usuario  Autentificado
+24/02/2024 20:02:30 - Error al pasar Foto a IFormFile
+24/02/2024 20:02:33 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:02:52 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:03:45 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:03:47 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:07:55 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:07:57 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:08:04 - Inicio Eliminación de cuenta
+24/02/2024 20:08:04 - Cuenta Eliminado
+24/02/2024 20:08:04 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:09:36 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:09:39 - Inicio de la creación de cuenta
+24/02/2024 20:09:40 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:09:43 - Inicio Eliminación de cuenta
+24/02/2024 20:09:43 - Cuenta Eliminado
+24/02/2024 20:09:43 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:11:20 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:11:24 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:11:33 - Inicio de procesamiento de edición del Cuenta 13
+24/02/2024 20:11:58 - Cuenta Actualizado
+24/02/2024 20:12:11 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:18:23 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:18:26 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:19:25 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:19:27 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:22:39 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:22:42 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:23:18 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:23:21 - Inicio de la creación de cuenta
+24/02/2024 20:23:21 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:23:23 - Inicio de edición de Cuenta 13
+24/02/2024 20:25:11 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:25:13 - Inicio de la creación de cuenta
+24/02/2024 20:25:14 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:25:15 - Inicio de edición de Cuenta 14
+24/02/2024 20:25:22 - Inicio de procesamiento de edición del Cuenta 14
+24/02/2024 20:25:22 - Cuenta Actualizado
+24/02/2024 20:25:22 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:27:48 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:27:51 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:27:53 - Inicio de edición de Cuenta 15
+24/02/2024 20:28:24 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:28:27 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:28:29 - Inicio de edición de Cuenta 15
+24/02/2024 20:28:31 - Inicio de procesamiento de edición del Cuenta 15
+24/02/2024 20:28:32 - Cuenta Actualizado
+24/02/2024 20:28:32 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:29:34 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:29:37 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:29:39 - Inicio de edición de Cuenta 15
+24/02/2024 20:29:41 - Inicio de procesamiento de edición del Cuenta 15
+24/02/2024 20:29:41 - Cuenta Actualizado
+24/02/2024 20:29:41 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:30:31 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:30:33 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:30:36 - Inicio de edición de Cuenta 15
+24/02/2024 20:30:38 - Inicio de procesamiento de edición del Cuenta 15
+24/02/2024 20:30:38 - Cuenta Actualizado
+24/02/2024 20:30:38 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:31:48 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:31:50 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:31:52 - Inicio de edición de Cuenta 14
+24/02/2024 20:31:53 - Inicio de procesamiento de edición del Cuenta 14
+24/02/2024 20:31:53 - Cuenta Actualizado
+24/02/2024 20:31:53 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:33:53 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:33:56 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:33:59 - Inicio de edición de Cuenta 15
+24/02/2024 20:34:02 - Inicio de procesamiento de edición del Cuenta 15
+24/02/2024 20:34:02 - Cuenta Actualizado
+24/02/2024 20:34:02 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:35:43 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:35:45 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:35:47 - Inicio de edición de Cuenta 14
+24/02/2024 20:35:49 - Inicio de procesamiento de edición del Cuenta 14
+24/02/2024 20:35:49 - Cuenta Actualizado
+24/02/2024 20:35:49 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:39:17 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:40:49 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:40:52 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:41:28 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:41:30 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:42:21 - Inicio de edición de Cuenta 14
+24/02/2024 20:42:24 - Inicio de procesamiento de edición del Cuenta 14
+24/02/2024 20:42:24 - Cuenta Actualizado
+24/02/2024 20:42:24 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:42:28 - Inicio de edición de Cuenta 15
+24/02/2024 20:42:30 - Inicio de procesamiento de edición del Cuenta 15
+24/02/2024 20:42:30 - Cuenta Actualizado
+24/02/2024 20:42:30 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:48:24 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:48:27 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:48:28 - Inicio de edición de Cuenta 13
+24/02/2024 20:48:31 - Inicio de procesamiento de edición del Cuenta 13
+24/02/2024 20:48:31 - Cuenta Actualizado
+24/02/2024 20:48:31 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:48:35 - Inicio de edición de Cuenta 14
+24/02/2024 20:49:37 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:49:39 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:49:41 - Inicio de edición de Cuenta 14
+24/02/2024 20:49:42 - Inicio de procesamiento de edición del Cuenta 14
+24/02/2024 20:49:43 - Cuenta Actualizado
+24/02/2024 20:49:43 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:53:57 - Usuario jose@gmail.com Autentificado
+24/02/2024 20:53:59 - Inicio de la obtención de la lista de cuenta
+24/02/2024 20:54:01 - Inicio de edición de Cuenta 13
+24/02/2024 20:54:03 - Inicio de procesamiento de edición del Cuenta 13
+24/02/2024 20:54:03 - Cuenta Actualizado
+24/02/2024 20:54:03 - Inicio de la obtención de la lista de cuenta

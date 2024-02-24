@@ -57,11 +57,22 @@ namespace ProyectoCShar.Servicio
             }
         }
 
-        public List<CuentaDTO> obtenerTodosLasCuentas()
+        public List<CuentaDTO> obtenerTodosLasCuentas(long idUsuario)
         {
             try
             {
-                return _pasaraDTO.listaCuentaToDto(_contexto.cuentaDAO.ToList());
+                List<CuentaDTO> listaCompletaDeCuentas = _pasaraDTO.listaCuentaToDto(_contexto.cuentaDAO.ToList());
+                List<CuentaDTO> listaCuemtaDelUsuario = new List<CuentaDTO>();
+
+                foreach(CuentaDTO cuentaDTO in listaCompletaDeCuentas)
+                {
+                    if(cuentaDTO.id_usuario == idUsuario)
+                    {
+                        listaCuemtaDelUsuario.Add(cuentaDTO);
+                    }
+                }
+
+                return listaCuemtaDelUsuario;
             }
             catch (Exception e)
             {
@@ -102,6 +113,35 @@ namespace ProyectoCShar.Servicio
             catch (DbUpdateException dbe)
             {
                 Logs.log("Error al Eliminar la Cuenta");
+            }
+        }
+
+        public void actualizarCuenta(CuentaDTO cuenta)
+        {
+            try
+            {
+
+                CuentaDAO? cuentaActual = _contexto.cuentaDAO.Find(cuenta.id_cuenta);
+
+                if (cuentaActual != null)
+                {
+                    cuentaActual.con_nomina = cuenta.con_nomina;
+                    cuentaActual.saldo = cuenta.saldo;
+                    
+
+                    _contexto.cuentaDAO.Update(cuentaActual);
+                    _contexto.SaveChanges();
+
+                    Logs.log("Cuenta Actualizado");
+                }
+                else
+                {
+                    Logs.log("Cuenta no encontrado");
+                }
+            }
+            catch (DbUpdateException e)
+            {
+                Logs.log("Error al Actualizar el Cuenta");
             }
         }
     }

@@ -1,0 +1,27 @@
+﻿@model ProyectoCShar.DTOs.CuentaDTO
+
+@{
+    ViewData["Title"] = "Editar cuenta";
+}
+
+<div class="container py-4">
+    <form class="custom-form cardPrincipal" asp-action="EditarCuenta" asp-controller="Cuenta"
+          enctype="multipart/form-data" method="post" asp-route-id="@Model.id_cuenta">
+        <h2 class="text-center mb-5">
+            <i class="bi bi-person-fill-gear" style="color: #1f3c85">Editar Cuenta</i>
+        </h2>
+        <input type="hidden" name="id" value="@Model.id_cuenta" />
+        <div class="mb-3 form-check">
+            <input type="checkbox" id="con_nomina" name="con_nomina" class="form-check-input" @(Model.con_nomina ? "checked" : "") />
+
+            <label class="form-check-label" for="con_nomina">Con Nomina</label>
+        </div>
+        <div class="mb-3">
+            <label for="saldo" class="form-label textoPrincipal">Saldo</label>
+            <input type="number" id="saldo" name="saldo" class="form-control" value="@Model.saldo" required />
+        </div>
+        <button type="submit" class="btn btn-primary mt-5">
+            <i class="bi bi-person-fill-gear fs-5"> Guardar cambios</i>
+        </button>
+    </form>
+</div>

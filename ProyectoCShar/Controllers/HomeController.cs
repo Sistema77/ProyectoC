@@ -13,9 +13,9 @@ namespace ProyectoCShar.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult dashboard()
         {
-            return View();
+            return View("~/Views/Home/dashboard.cshtml");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -23,5 +23,15 @@ namespace ProyectoCShar.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        //Control de Errores Extras
+       /* public IActionResult NotFound(int? statusCode = null)
+        {
+            if (statusCode.HasValue && statusCode.Value == 404)
+            {
+                return View("Error");
+            }
+            return View("Error");
+        }*/
     }
 }

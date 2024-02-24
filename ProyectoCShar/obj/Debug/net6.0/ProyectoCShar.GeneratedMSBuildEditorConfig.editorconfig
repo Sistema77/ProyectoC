@@ -28,8 +28,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/editarCuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxlZGl0YXJDdWVudGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/editarUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxlZGl0YXJVc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/Index.cshtml]
@@ -58,10 +66,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Home/solicitarRecuperacionPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzb2xpY2l0YXJSZWN1cGVyYWNpb25QYXNzd29yZC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/josem/OneDrive/Escritorio/Proyect/DWS/ProyectoC/ProyectoCShar/Views/Shared/_ValidationScriptsPartial.cshtml]
