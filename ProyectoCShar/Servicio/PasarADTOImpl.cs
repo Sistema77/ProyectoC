@@ -17,6 +17,7 @@ namespace ProyectoCShar.Servicio
                 // Pasar de DAO a DTO
 
                 dto.name = UsuarioDAO.name;
+                dto.last_name = UsuarioDAO.last_name;
                 dto.tlf = UsuarioDAO.tlf;
                 dto.email = UsuarioDAO.email;
                 dto.foto = UsuarioDAO.foto; 

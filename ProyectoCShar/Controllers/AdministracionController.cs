@@ -19,6 +19,7 @@ namespace ProyectoCShar.Controllers
         }
 
         // Metodo Para redirigir 
+        [Authorize(Roles = "ROLE_ADMIN")]
         [HttpGet]
         [Route("/privada/administracion")]
         public IActionResult Administracion()
@@ -66,7 +67,7 @@ namespace ProyectoCShar.Controllers
 
                     // Pasa a la vista la foto del usuario
                     ViewBag.foto = _usuarioServicio.mostrarFoto(User.Identity.Name);
-                    string url = Url.Action("Login", "Login") + "?timestamp=" + DateTime.Now.Ticks;
+                    string url = Url.Action("Administracion", "Administracion") + "?timestamp=" + DateTime.Now.Ticks;
                     return Redirect(url);
                 }
                 // Verificar si el usuario actual es administrador, y si es el último, no permitir la eliminación

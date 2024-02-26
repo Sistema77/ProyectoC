@@ -594,3 +594,416 @@
 24/02/2024 20:54:03 - Inicio de procesamiento de edición del Cuenta 13
 24/02/2024 20:54:03 - Cuenta Actualizado
 24/02/2024 20:54:03 - Inicio de la obtención de la lista de cuenta
+25/02/2024 20:23:16 - Token Generado
+25/02/2024 20:23:18 - Mensaje enviado
+25/02/2024 20:23:18 - Registro del nuevo usuario OK
+25/02/2024 20:23:26 - Usuario Confirmado
+25/02/2024 20:23:26 - La dirección de correo ha sido confirmada correctamente
+25/02/2024 20:24:02 - Token Generado
+25/02/2024 20:24:03 - Mensaje enviado
+25/02/2024 20:24:03 - Registro del nuevo usuario OK
+25/02/2024 20:24:08 - Usuario encontrado pero sin Confirmar
+25/02/2024 20:24:08 - Error, Credenciales inválidas o cuenta no confirmada
+25/02/2024 20:24:13 - Usuario Confirmado
+25/02/2024 20:24:13 - La dirección de correo ha sido confirmada correctamente
+25/02/2024 20:24:21 - Usuario jose@gmail.com Autentificado
+25/02/2024 20:24:46 - Usuario parafirebaseestudiar@gmail.com Autentificado
+25/02/2024 20:24:48 - Usuario admin@admin.com Autentificado
+25/02/2024 20:24:49 - Error al pasar Foto a IFormFile
+25/02/2024 20:24:52 - Usuario admin@admin.com Autentificado
+25/02/2024 20:24:52 - Error al pasar Foto a IFormFile
+25/02/2024 20:25:04 - Inicio de la obtención de la lista de cuenta
+25/02/2024 20:25:09 - Inicio de la creación de cuenta
+25/02/2024 20:25:09 - Inicio de la obtención de la lista de cuenta
+25/02/2024 20:25:24 - Usuario Cerro Sesión
+25/02/2024 20:25:42 - Token Generado
+25/02/2024 20:25:43 - Mensaje enviado
+25/02/2024 20:25:43 - Proceso de recuperacion iniciado
+25/02/2024 20:25:43 - Proceso de recuperación OK
+25/02/2024 20:25:49 - Iniciol procesar a recuperar Contraseña
+25/02/2024 20:25:51 - Contraseña Actualizada
+25/02/2024 20:25:51 - Contraseña modificada OK
+25/02/2024 20:25:56 - usuario encontrado
+25/02/2024 20:25:56 - Error, Credenciales inválidas o cuenta no confirmada
+25/02/2024 20:26:02 - usuario encontrado
+25/02/2024 20:26:02 - Error, Credenciales inválidas o cuenta no confirmada
+25/02/2024 20:26:21 - Token Generado
+25/02/2024 20:26:22 - Mensaje enviado
+25/02/2024 20:26:22 - Proceso de recuperacion iniciado
+25/02/2024 20:26:22 - Proceso de recuperación OK
+25/02/2024 20:26:27 - Iniciol procesar a recuperar Contraseña
+25/02/2024 20:26:32 - Contraseña Actualizada
+25/02/2024 20:26:32 - Contraseña modificada OK
+25/02/2024 20:26:37 - usuario encontrado
+25/02/2024 20:26:37 - Error, Credenciales inválidas o cuenta no confirmada
+25/02/2024 20:26:59 - Usuario no encontrado
+25/02/2024 20:26:59 - No se inició el proceso de recuperación, cuenta de correo electrónico no encontrada.
+25/02/2024 20:27:14 - usuario encontrado
+25/02/2024 20:27:14 - Error, Credenciales inválidas o cuenta no confirmada
+25/02/2024 20:27:18 - usuario encontrado
+25/02/2024 20:27:18 - Error, Credenciales inválidas o cuenta no confirmada
+25/02/2024 20:27:30 - Token Generado
+25/02/2024 20:27:31 - Mensaje enviado
+25/02/2024 20:27:31 - Registro del nuevo usuario OK
+25/02/2024 20:27:49 - usuario encontrado
+25/02/2024 20:27:49 - Error, Credenciales inválidas o cuenta no confirmada
+25/02/2024 20:27:53 - Usuario Confirmado
+25/02/2024 20:27:53 - La dirección de correo ha sido confirmada correctamente
+25/02/2024 20:27:58 - usuario encontrado
+25/02/2024 20:27:58 - Error, Credenciales inválidas o cuenta no confirmada
+25/02/2024 20:28:37 - Usuario  Autentificado
+25/02/2024 20:28:37 - Error al pasar Foto a IFormFile
+25/02/2024 20:28:45 - Usuario parafirebaseestudiar@gmail.com Autentificado
+25/02/2024 20:28:47 - Usuario Cerro Sesión
+25/02/2024 20:28:57 - Token Generado
+25/02/2024 20:28:57 - Mensaje enviado
+25/02/2024 20:28:57 - Proceso de recuperacion iniciado
+25/02/2024 20:28:57 - Proceso de recuperación OK
+25/02/2024 20:29:03 - Iniciol procesar a recuperar Contraseña
+25/02/2024 20:29:06 - Contraseña Actualizada
+25/02/2024 20:29:06 - Contraseña modificada OK
+25/02/2024 20:29:13 - usuario encontrado
+25/02/2024 20:29:13 - Error, Credenciales inválidas o cuenta no confirmada
+25/02/2024 20:29:23 - Usuario  Autentificado
+25/02/2024 20:29:23 - Error al pasar Foto a IFormFile
+25/02/2024 20:29:30 - Inicio de la creación de cuenta
+25/02/2024 20:29:30 - Inicio de la obtención de la lista de cuenta
+25/02/2024 20:29:34 - Inicio Eliminación de cuenta
+25/02/2024 20:29:34 - Cuenta Eliminado
+25/02/2024 20:29:34 - Inicio de la obtención de la lista de cuenta
+25/02/2024 20:30:58 - Inicio de la creación de cuenta
+25/02/2024 20:30:58 - Inicio de la obtención de la lista de cuenta
+25/02/2024 20:31:09 - Inicio de edición de Cuenta 18
+25/02/2024 20:31:15 - Inicio de procesamiento de edición del Cuenta 18
+25/02/2024 20:31:15 - Cuenta Actualizado
+25/02/2024 20:31:15 - Inicio de la obtención de la lista de cuenta
+25/02/2024 20:31:23 - Usuario Cerro Sesión
+25/02/2024 20:31:35 - Usuario  Autentificado
+25/02/2024 20:31:35 - Error al pasar Foto a IFormFile
+25/02/2024 20:31:37 - Inicio de la obtención de la lista de cuenta
+25/02/2024 20:31:43 - Usuario Cerro Sesión
+25/02/2024 20:31:48 - Usuario  Autentificado
+25/02/2024 20:31:48 - Error al pasar Foto a IFormFile
+25/02/2024 20:31:50 - Usuario admin@admin.com Autentificado
+25/02/2024 20:31:50 - Error al pasar Foto a IFormFile
+25/02/2024 20:31:51 - Inicio de la obtención de la lista de usuarios
+25/02/2024 20:31:51 - Error al pasar Foto a IFormFile
+25/02/2024 20:31:58 - Inicio de edición de usuario 15
+25/02/2024 20:31:58 - Error al pasar Foto a IFormFile
+25/02/2024 20:32:23 - Inicio de procesamiento de edición del usuario 15
+25/02/2024 20:32:23 - Usuario Actualizado
+25/02/2024 20:32:23 - Error al pasar Foto a IFormFile
+25/02/2024 20:32:36 - Inicio de edición de usuario 10
+25/02/2024 20:32:36 - Error al pasar Foto a IFormFile
+25/02/2024 20:32:39 - Inicio de procesamiento de edición del usuario 10
+25/02/2024 20:32:39 - Usuario Actualizado
+25/02/2024 20:32:39 - Error al pasar Foto a IFormFile
+25/02/2024 20:32:44 - Inicio de Eliminación del usuario 10
+25/02/2024 20:32:44 - Usuario Eliminado
+25/02/2024 20:32:44 - Usuario 10 Eliminado
+25/02/2024 20:32:44 - Error al pasar Foto a IFormFile
+26/02/2024 0:19:17 - Usuario Cerro Sesión
+26/02/2024 0:19:17 - Usuario Cerro Sesión
+26/02/2024 0:22:14 - Usuario  Autentificado
+26/02/2024 0:22:14 - Error al pasar Foto a IFormFile
+26/02/2024 0:22:16 - Usuario admin@admin.com Autentificado
+26/02/2024 0:22:16 - Error al pasar Foto a IFormFile
+26/02/2024 0:22:18 - Inicio de la obtención de la lista de usuarios
+26/02/2024 0:22:18 - Error al pasar Foto a IFormFile
+26/02/2024 0:22:23 - Inicio de edición de usuario 12
+26/02/2024 0:22:23 - Error al pasar Foto a IFormFile
+26/02/2024 0:24:14 - Usuario admin@admin.com Autentificado
+26/02/2024 0:24:14 - Error al pasar Foto a IFormFile
+26/02/2024 0:24:15 - Inicio de la obtención de la lista de usuarios
+26/02/2024 0:24:15 - Error al pasar Foto a IFormFile
+26/02/2024 0:24:19 - Inicio de edición de usuario 12
+26/02/2024 0:24:19 - Error al pasar Foto a IFormFile
+26/02/2024 0:25:47 - Usuario admin@admin.com Autentificado
+26/02/2024 0:25:47 - Error al pasar Foto a IFormFile
+26/02/2024 0:25:49 - Inicio de la obtención de la lista de usuarios
+26/02/2024 0:25:49 - Error al pasar Foto a IFormFile
+26/02/2024 0:25:53 - Inicio de edición de usuario 2
+26/02/2024 0:25:53 - Error al pasar Foto a IFormFile
+26/02/2024 0:25:53 - Error al pasar Foto a IFormFile
+26/02/2024 0:25:58 - Inicio de Eliminación del usuario 2
+26/02/2024 0:25:58 - Error al pasar Foto a IFormFile
+26/02/2024 0:26:06 - Usuario admin@admin.com Autentificado
+26/02/2024 0:26:06 - Error al pasar Foto a IFormFile
+26/02/2024 0:26:07 - Inicio de la obtención de la lista de usuarios
+26/02/2024 0:26:07 - Error al pasar Foto a IFormFile
+26/02/2024 0:27:52 - Usuario admin@admin.com Autentificado
+26/02/2024 0:27:52 - Error al pasar Foto a IFormFile
+26/02/2024 0:27:53 - Inicio de la obtención de la lista de usuarios
+26/02/2024 0:27:53 - Error al pasar Foto a IFormFile
+26/02/2024 0:27:55 - Inicio de Eliminación del usuario 2
+26/02/2024 0:27:55 - Error al pasar Foto a IFormFile
+26/02/2024 0:28:02 - Inicio de la obtención de la lista de usuarios
+26/02/2024 0:28:02 - Error al pasar Foto a IFormFile
+26/02/2024 0:28:19 - Inicio de Eliminación del usuario 12
+26/02/2024 0:28:19 - Usuario Eliminado
+26/02/2024 0:28:19 - Usuario 12 Eliminado
+26/02/2024 0:28:19 - Error al pasar Foto a IFormFile
+26/02/2024 0:28:24 - Inicio de Eliminación del usuario 15
+26/02/2024 0:28:24 - Usuario Eliminado
+26/02/2024 0:28:24 - Usuario 15 Eliminado
+26/02/2024 0:28:24 - Error al pasar Foto a IFormFile
+26/02/2024 0:28:33 - Usuario Cerro Sesión
+26/02/2024 0:28:34 - Usuario Cerro Sesión
+26/02/2024 0:28:50 - Token Generado
+26/02/2024 0:28:52 - Mensaje enviado
+26/02/2024 0:28:52 - Registro del nuevo usuario OK
+26/02/2024 0:29:04 - Usuario Confirmado
+26/02/2024 0:29:04 - La dirección de correo ha sido confirmada correctamente
+26/02/2024 0:29:10 - Usuario  Autentificado
+26/02/2024 0:29:10 - Error al pasar Foto a IFormFile
+26/02/2024 0:29:13 - Inicio de la creación de cuenta
+26/02/2024 0:29:13 - Inicio de la obtención de la lista de cuenta
+26/02/2024 0:29:18 - Usuario Cerro Sesión
+26/02/2024 0:29:22 - Usuario  Autentificado
+26/02/2024 0:29:22 - Error al pasar Foto a IFormFile
+26/02/2024 0:29:24 - Usuario admin@admin.com Autentificado
+26/02/2024 0:29:24 - Error al pasar Foto a IFormFile
+26/02/2024 0:29:26 - Inicio de la obtención de la lista de usuarios
+26/02/2024 0:29:26 - Error al pasar Foto a IFormFile
+26/02/2024 0:29:35 - Inicio de Eliminación del usuario 16
+26/02/2024 0:29:35 - Usuario Eliminado
+26/02/2024 0:29:35 - Usuario 16 Eliminado
+26/02/2024 0:29:35 - Error al pasar Foto a IFormFile
+26/02/2024 0:30:06 - Usuario Cerro Sesión
+26/02/2024 0:30:06 - Usuario Cerro Sesión
+26/02/2024 0:30:28 - Usuario no encontrado
+26/02/2024 0:30:28 - No se inició el proceso de recuperación, cuenta de correo electrónico no encontrada.
+26/02/2024 0:30:38 - Usuario Cerro Sesión
+26/02/2024 0:31:06 - Token Generado
+26/02/2024 0:31:07 - Mensaje enviado
+26/02/2024 0:31:07 - Registro del nuevo usuario OK
+26/02/2024 0:31:22 - Usuario  Autentificado
+26/02/2024 0:31:22 - Error al pasar Foto a IFormFile
+26/02/2024 0:31:24 - Inicio de la obtención de la lista de cuenta
+26/02/2024 0:31:35 - Inicio de la creación de cuenta
+26/02/2024 0:31:35 - Inicio de la obtención de la lista de cuenta
+26/02/2024 0:31:37 - Inicio Eliminación de cuenta
+26/02/2024 0:31:37 - Cuenta Eliminado
+26/02/2024 0:31:37 - Inicio de la obtención de la lista de cuenta
+26/02/2024 0:37:51 - usuario encontrado
+26/02/2024 0:37:51 - Error, Credenciales inválidas o cuenta no confirmada
+26/02/2024 0:37:56 - Usuario Cerro Sesión
+26/02/2024 0:37:57 - Usuario Cerro Sesión
+26/02/2024 0:38:07 - usuario encontrado
+26/02/2024 0:38:07 - Error, Credenciales inválidas o cuenta no confirmada
+26/02/2024 0:38:10 - usuario encontrado
+26/02/2024 0:38:10 - Error, Credenciales inválidas o cuenta no confirmada
+26/02/2024 0:38:24 - Token Generado
+26/02/2024 0:38:25 - Mensaje enviado
+26/02/2024 0:38:25 - Registro del nuevo usuario OK
+26/02/2024 0:38:31 - Usuario encontrado pero sin Confirmar
+26/02/2024 0:38:31 - Error, Credenciales inválidas o cuenta no confirmada
+26/02/2024 0:38:36 - Usuario Confirmado
+26/02/2024 0:38:36 - La dirección de correo ha sido confirmada correctamente
+26/02/2024 0:38:44 - Usuario  Autentificado
+26/02/2024 0:38:44 - Error al pasar Foto a IFormFile
+26/02/2024 0:38:47 - Usuario parafirebaseestudiar@gmail.com Autentificado
+26/02/2024 0:38:55 - Inicio de la obtención de la lista de cuenta
+26/02/2024 0:38:58 - Inicio de la creación de cuenta
+26/02/2024 0:38:59 - Inicio de la obtención de la lista de cuenta
+26/02/2024 0:39:02 - Inicio de edición de Cuenta 21
+26/02/2024 0:39:07 - Inicio de procesamiento de edición del Cuenta 21
+26/02/2024 0:39:07 - Cuenta Actualizado
+26/02/2024 0:39:07 - Inicio de la obtención de la lista de cuenta
+26/02/2024 0:39:09 - Inicio Eliminación de cuenta
+26/02/2024 0:39:09 - Cuenta Eliminado
+26/02/2024 0:39:09 - Inicio de la obtención de la lista de cuenta
+26/02/2024 0:39:17 - Usuario Cerro Sesión
+26/02/2024 0:39:57 - Usuario  Autentificado
+26/02/2024 0:39:57 - Error al pasar Foto a IFormFile
+26/02/2024 0:39:59 - Usuario admin@admin.com Autentificado
+26/02/2024 0:39:59 - Error al pasar Foto a IFormFile
+26/02/2024 0:40:02 - Inicio de la obtención de la lista de usuarios
+26/02/2024 0:40:02 - Error al pasar Foto a IFormFile
+26/02/2024 0:40:05 - Inicio de edición de usuario 18
+26/02/2024 0:40:05 - Error al pasar Foto a IFormFile
+26/02/2024 0:40:09 - Inicio de procesamiento de edición del usuario 18
+26/02/2024 0:40:09 - Error al Actualizar el Usuario
+26/02/2024 0:40:09 - Error al pasar Foto a IFormFile
+26/02/2024 0:40:13 - Inicio de Eliminación del usuario 18
+26/02/2024 0:40:13 - Usuario Eliminado
+26/02/2024 0:40:13 - Usuario 18 Eliminado
+26/02/2024 0:40:13 - Error al pasar Foto a IFormFile
+26/02/2024 0:40:17 - Usuario Cerro Sesión
+26/02/2024 0:40:19 - Usuario Cerro Sesión
+26/02/2024 0:46:02 - usuario encontrado
+26/02/2024 0:46:02 - Error, Credenciales inválidas o cuenta no confirmada
+26/02/2024 0:46:13 - Usuario  Autentificado
+26/02/2024 0:46:13 - Error al pasar Foto a IFormFile
+26/02/2024 0:47:25 - Usuario Cerro Sesión
+26/02/2024 0:47:26 - Usuario Cerro Sesión
+26/02/2024 0:47:32 - Usuario  Autentificado
+26/02/2024 0:47:32 - Error al pasar Foto a IFormFile
+26/02/2024 0:49:15 - Usuario admin@admin.com Autentificado
+26/02/2024 0:49:15 - Error al pasar Foto a IFormFile
+26/02/2024 0:49:17 - Usuario admin@admin.com Autentificado
+26/02/2024 0:49:17 - Error al pasar Foto a IFormFile
+26/02/2024 0:49:19 - Usuario admin@admin.com Autentificado
+26/02/2024 0:49:19 - Error al pasar Foto a IFormFile
+26/02/2024 0:49:21 - Usuario Cerro Sesión
+26/02/2024 0:49:25 - Usuario  Autentificado
+26/02/2024 0:49:25 - Error al pasar Foto a IFormFile
+26/02/2024 0:49:27 - Usuario jose@gmail.com Autentificado
+26/02/2024 0:49:34 - Usuario Cerro Sesión
+26/02/2024 0:49:35 - Usuario Cerro Sesión
+26/02/2024 0:49:40 - Usuario  Autentificado
+26/02/2024 0:49:40 - Error al pasar Foto a IFormFile
+26/02/2024 0:49:42 - Usuario admin@admin.com Autentificado
+26/02/2024 0:49:42 - Error al pasar Foto a IFormFile
+26/02/2024 1:09:06 - Token Generado
+26/02/2024 1:09:08 - Mensaje enviado
+26/02/2024 1:09:08 - Registro del nuevo usuario OK
+26/02/2024 1:09:14 - Usuario encontrado pero sin Confirmar
+26/02/2024 1:09:14 - Error, Credenciales inválidas o cuenta no confirmada
+26/02/2024 1:09:36 - Usuario Confirmado
+26/02/2024 1:09:36 - La dirección de correo ha sido confirmada correctamente
+26/02/2024 1:09:42 - Usuario admin@admin.com Autentificado
+26/02/2024 1:09:42 - Error al pasar Foto a IFormFile
+26/02/2024 1:09:45 - Usuario Cerro Sesión
+26/02/2024 1:09:45 - Usuario Cerro Sesión
+26/02/2024 1:09:57 - Usuario no encontrado
+26/02/2024 1:09:57 - No se inició el proceso de recuperación, cuenta de correo electrónico no encontrada.
+26/02/2024 1:10:01 - Token Generado
+26/02/2024 1:10:02 - Mensaje enviado
+26/02/2024 1:10:02 - Proceso de recuperacion iniciado
+26/02/2024 1:10:02 - Proceso de recuperación OK
+26/02/2024 1:10:07 - Iniciol procesar a recuperar Contraseña
+26/02/2024 1:10:10 - Contraseña Actualizada
+26/02/2024 1:10:10 - Contraseña modificada OK
+26/02/2024 1:10:14 - Usuario  Autentificado
+26/02/2024 1:10:14 - Error al pasar Foto a IFormFile
+26/02/2024 1:10:16 - Usuario parafirebaseestudiar@gmail.com Autentificado
+26/02/2024 1:10:24 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:10:27 - Inicio de la creación de cuenta
+26/02/2024 1:10:27 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:10:30 - Inicio de edición de Cuenta 22
+26/02/2024 1:10:36 - Inicio de procesamiento de edición del Cuenta 22
+26/02/2024 1:10:36 - Cuenta Actualizado
+26/02/2024 1:10:36 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:10:39 - Inicio Eliminación de cuenta
+26/02/2024 1:10:40 - Cuenta Eliminado
+26/02/2024 1:10:40 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:10:43 - Inicio de la creación de cuenta
+26/02/2024 1:10:43 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:10:46 - Inicio de la creación de cuenta
+26/02/2024 1:10:47 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:10:52 - Usuario Cerro Sesión
+26/02/2024 1:10:52 - Usuario Cerro Sesión
+26/02/2024 1:10:57 - Usuario  Autentificado
+26/02/2024 1:10:57 - Error al pasar Foto a IFormFile
+26/02/2024 1:10:59 - Usuario admin@admin.com Autentificado
+26/02/2024 1:10:59 - Error al pasar Foto a IFormFile
+26/02/2024 1:11:03 - Inicio de la obtención de la lista de usuarios
+26/02/2024 1:11:03 - Error al pasar Foto a IFormFile
+26/02/2024 1:11:07 - Inicio de edición de usuario 17
+26/02/2024 1:11:07 - Error al pasar Foto a IFormFile
+26/02/2024 1:11:11 - Inicio de procesamiento de edición del usuario 17
+26/02/2024 1:11:11 - Error al Actualizar el Usuario
+26/02/2024 1:11:11 - Error al pasar Foto a IFormFile
+26/02/2024 1:11:14 - Inicio de Eliminación del usuario 17
+26/02/2024 1:11:14 - Usuario Eliminado
+26/02/2024 1:11:14 - Usuario 17 Eliminado
+26/02/2024 1:11:14 - Error al pasar Foto a IFormFile
+26/02/2024 1:11:19 - Usuario Cerro Sesión
+26/02/2024 1:11:20 - Usuario Cerro Sesión
+26/02/2024 1:18:39 - Token Generado
+26/02/2024 1:18:41 - Mensaje enviado
+26/02/2024 1:18:41 - Registro del nuevo usuario OK
+26/02/2024 1:18:46 - Usuario encontrado pero sin Confirmar
+26/02/2024 1:18:46 - Error, Credenciales inválidas o cuenta no confirmada
+26/02/2024 1:18:50 - Usuario Confirmado
+26/02/2024 1:18:50 - La dirección de correo ha sido confirmada correctamente
+26/02/2024 1:18:56 - Usuario  Autentificado
+26/02/2024 1:18:56 - Error al pasar Foto a IFormFile
+26/02/2024 1:18:59 - Usuario parafirebaseestudiar@gmail.com Autentificado
+26/02/2024 1:19:05 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:19:11 - Inicio de la creación de cuenta
+26/02/2024 1:19:11 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:19:15 - Inicio de la creación de cuenta
+26/02/2024 1:19:15 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:19:18 - Inicio de edición de Cuenta 25
+26/02/2024 1:19:26 - Inicio de procesamiento de edición del Cuenta 25
+26/02/2024 1:19:26 - Cuenta Actualizado
+26/02/2024 1:19:26 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:19:29 - Inicio Eliminación de cuenta
+26/02/2024 1:19:29 - Cuenta Eliminado
+26/02/2024 1:19:29 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:19:32 - Usuario Cerro Sesión
+26/02/2024 1:19:36 - Usuario  Autentificado
+26/02/2024 1:19:36 - Error al pasar Foto a IFormFile
+26/02/2024 1:19:38 - Usuario admin@admin.com Autentificado
+26/02/2024 1:19:38 - Error al pasar Foto a IFormFile
+26/02/2024 1:19:40 - Inicio de la obtención de la lista de usuarios
+26/02/2024 1:19:40 - Error al pasar Foto a IFormFile
+26/02/2024 1:19:44 - Inicio de edición de usuario 1
+26/02/2024 1:19:44 - Error al pasar Foto a IFormFile
+26/02/2024 1:19:44 - Error al pasar Foto a IFormFile
+26/02/2024 1:19:50 - Inicio de procesamiento de edición del usuario 1
+26/02/2024 1:19:50 - Error al Actualizar el Usuario
+26/02/2024 1:19:50 - Error al pasar Foto a IFormFile
+26/02/2024 1:19:56 - Inicio de Eliminación del usuario 20
+26/02/2024 1:19:56 - Usuario Eliminado
+26/02/2024 1:19:56 - Usuario 20 Eliminado
+26/02/2024 1:19:56 - Error al pasar Foto a IFormFile
+26/02/2024 1:20:00 - Usuario Cerro Sesión
+26/02/2024 1:21:24 - Usuario Cerro Sesión
+26/02/2024 1:21:32 - Usuario Cerro Sesión
+26/02/2024 1:22:09 - Token Generado
+26/02/2024 1:22:11 - Mensaje enviado
+26/02/2024 1:22:11 - Registro del nuevo usuario OK
+26/02/2024 1:22:16 - Usuario encontrado pero sin Confirmar
+26/02/2024 1:22:16 - Error, Credenciales inválidas o cuenta no confirmada
+26/02/2024 1:22:21 - Usuario Confirmado
+26/02/2024 1:22:21 - La dirección de correo ha sido confirmada correctamente
+26/02/2024 1:22:28 - Usuario  Autentificado
+26/02/2024 1:22:28 - Error al pasar Foto a IFormFile
+26/02/2024 1:22:29 - Usuario parafirebaseestudiar@gmail.com Autentificado
+26/02/2024 1:22:34 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:22:41 - Inicio de la creación de cuenta
+26/02/2024 1:22:41 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:22:45 - Inicio de la creación de cuenta
+26/02/2024 1:22:45 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:22:47 - Inicio de edición de Cuenta 28
+26/02/2024 1:22:52 - Inicio de procesamiento de edición del Cuenta 28
+26/02/2024 1:22:52 - Cuenta Actualizado
+26/02/2024 1:22:52 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:22:56 - Inicio Eliminación de cuenta
+26/02/2024 1:22:56 - Cuenta Eliminado
+26/02/2024 1:22:56 - Inicio de la obtención de la lista de cuenta
+26/02/2024 1:22:59 - Usuario Cerro Sesión
+26/02/2024 1:23:01 - Usuario Cerro Sesión
+26/02/2024 1:23:05 - Usuario  Autentificado
+26/02/2024 1:23:05 - Error al pasar Foto a IFormFile
+26/02/2024 1:23:07 - Usuario admin@admin.com Autentificado
+26/02/2024 1:23:07 - Error al pasar Foto a IFormFile
+26/02/2024 1:23:08 - Inicio de la obtención de la lista de usuarios
+26/02/2024 1:23:08 - Error al pasar Foto a IFormFile
+26/02/2024 1:23:14 - Inicio de edición de usuario 1
+26/02/2024 1:23:14 - Error al pasar Foto a IFormFile
+26/02/2024 1:23:14 - Error al pasar Foto a IFormFile
+26/02/2024 1:23:19 - Inicio de procesamiento de edición del usuario 1
+26/02/2024 1:23:19 - Error al Actualizar el Usuario
+26/02/2024 1:23:19 - Error al pasar Foto a IFormFile
+26/02/2024 1:23:26 - Inicio de Eliminación del usuario 1
+26/02/2024 1:23:26 - Usuario Eliminado
+26/02/2024 1:23:26 - Usuario 1 Eliminado
+26/02/2024 1:23:26 - Error al pasar Foto a IFormFile
+26/02/2024 1:23:28 - Usuario Cerro Sesión
+26/02/2024 1:23:29 - Usuario Cerro Sesión
+26/02/2024 1:23:35 - Token Generado
+26/02/2024 1:23:36 - Mensaje enviado
+26/02/2024 1:23:36 - Proceso de recuperacion iniciado
+26/02/2024 1:23:36 - Proceso de recuperación OK
+26/02/2024 1:23:41 - Iniciol procesar a recuperar Contraseña
+26/02/2024 1:23:45 - Contraseña Actualizada
+26/02/2024 1:23:45 - Contraseña modificada OK
+26/02/2024 1:23:50 - usuario encontrado
+26/02/2024 1:23:50 - Error, Credenciales inválidas o cuenta no confirmada
+26/02/2024 1:23:54 - Usuario  Autentificado
+26/02/2024 1:23:54 - Error al pasar Foto a IFormFile
+26/02/2024 1:23:56 - Usuario parafirebaseestudiar@gmail.com Autentificado

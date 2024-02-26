@@ -25,6 +25,7 @@ namespace ProyectoCShar.Controllers
         }
 
         //Control de Errores Extras
+
        /* public IActionResult NotFound(int? statusCode = null)
         {
             if (statusCode.HasValue && statusCode.Value == 404)

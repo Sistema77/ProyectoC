@@ -19,6 +19,7 @@ namespace ProyectoCShar.Controllers
         }
 
         // Metodo Para redirigir
+        [Authorize(Roles = "ROLE_USER")]
         [HttpGet]
         [Route("/privada/cuenta")]
         public IActionResult cuentas()
